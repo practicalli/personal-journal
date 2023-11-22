@@ -11,7 +11,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/personal-journal/2023/11/21/21st-november-continuing-debian-move/</loc>
+         <loc>https://practical.li/personal-journal/2023/11/21/continuing-the-move-to-debian-linux/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2023/11/22/onboarding-to-a-new-role/</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
