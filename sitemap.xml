@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://practical.li/personal-journal/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/assets/images/social/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2023/11/21/21st-november-continuing-debian-move/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/archive/2023/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/category/journal/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
