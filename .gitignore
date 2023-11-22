@@ -1,0 +1,28 @@
+# Exclude all files from root directory
+/*
+
+# ------------------------
+# Common project files
+!CHANGELOG.md
+!README.md
+
+# ------------------------
+# Include MkDocs files
+!docs/
+!includes/
+!overrides/
+!mkdocs.yml
+
+# ------------------------
+# Project automation
+!Makefile
+
+# ------------------------
+# Version Control
+!.gitignore
+!.gitattributes
+!.github/
+
+
+
+
