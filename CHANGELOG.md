@@ -9,3 +9,6 @@
 - dev: add mkdocs authors and topics for journal blog
 - post: front page of journal with Practicalli sponsorship
 - post: 21st November 2023 journal entry
+
+## Changed
+- post: updated naming scheme and corrected date

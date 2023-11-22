@@ -1,5 +1,5 @@
 ---
-title: "21st November - continuing Debian move"
+title: "Continuing the move to Debian Linux"
 date: 2023-11-21
 categories:
   - journal
@@ -13,6 +13,7 @@ I really enjoyed using the EzePc laptops as they were so easy to carry around to
 
 Debian is very useful for older i686 to i386 cpu based hardware.  Firefox-esr is the only browser that seems to still support these older chipsets.
 
+<!-- more -->
 
 ## New Journal
 
