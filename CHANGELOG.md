@@ -6,3 +6,4 @@
 - dev: add Practicalli Makefile tasks to build journal website locally
 - dev: repository readme to describe the project
 - dev: add standard stylesheets and icon images
+- dev: add mkdocs authors and topics for journal blog
