@@ -12,7 +12,7 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/personal-journal/2023/11/22/onboarding-to-a-new-role/">
+        <link rel="canonical" href="https://practical.li/personal-journal/2023/11/22/onboarding-to-a-new-role-hacking-clojure-neovim/">
       
       
         <link rel="prev" href="../../21/continuing-the-move-to-debian-linux/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Onboarding to a new role - Practicalli Personal Journal</title>
+        <title>Onboarding to a new role, hacking Clojure & Neovim - Practicalli Personal Journal</title>
       
     
     
@@ -69,7 +69,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Onboarding to a new role - Practicalli Personal Journal" >
+        <meta  property="og:title"  content="Onboarding to a new role, hacking Clojure & Neovim - Practicalli Personal Journal" >
       
         <meta  property="og:description"  content="Daily journal of thoughts and experiences" >
       
@@ -81,11 +81,11 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/personal-journal/2023/11/22/onboarding-to-a-new-role/" >
+        <meta  property="og:url"  content="https://practical.li/personal-journal/2023/11/22/onboarding-to-a-new-role-hacking-clojure-neovim/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Onboarding to a new role - Practicalli Personal Journal" >
+        <meta  name="twitter:title"  content="Onboarding to a new role, hacking Clojure & Neovim - Practicalli Personal Journal" >
       
         <meta  name="twitter:description"  content="Daily journal of thoughts and experiences" >
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Onboarding to a new role
+              Onboarding to a new role, hacking Clojure & Neovim
             
           </span>
         </div>
@@ -646,7 +646,7 @@
   
 
 
-  <h1>Onboarding to a new role</h1>
+  <h1>Onboarding to a new role, hacking Clojure & Neovim</h1>
 
 <p><strong>Thought of the day</strong></p>
 <p>Nervous excitement about starting a new role and hopeful I dont mess it up.</p>
@@ -663,7 +663,7 @@
 <p>The mulog maintainer created the <a href="https://github.com/BrunoBonacci/where">where project</a> to define Human readable conditions to filter data. </p>
 <div class="admonition example">
 <p class="admonition-title">where is a DSL for powerful predicate functions</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nf">u/start-publisher!</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nf">mulog/start-publisher!</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:type</span><span class="w"> </span><span class="ss">:console</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="ss">:pretty?</span><span class="w"> </span><span class="nv">true</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span><span class="ss">:transform</span>
@@ -689,6 +689,33 @@
 <li><code>:help usr_22</code> has a good introduction</li>
 </ul>
 <p><a class="md-button" href="https://clojurians.slack.com/archives/C0DF8R51A/p1700651248926689" target="_blank">Clojurians Slack - navigating code in neovim discussion</a> </p>
+<div class="admonition todo">
+<p class="admonition-title">Neovim plugin: nvim-treesitter-sexp</p>
+<p>Evalaute the <a href="https://github.com/PaterJason/nvim-treesitter-sexp">nvim-treesitter-sexp</a> plugin with the Practialli AstorNvim User configuration and see if it is a valuable way to navigate Clojure expressions.</p>
+<div class="highlight"><span class="filename">plugins/clojure.lua</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">return</span> <span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s2">&quot;PaterJason/nvim-treesitter-sexp&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">ft</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;clojure&quot;</span><span class="p">,</span> <span class="s2">&quot;fennel&quot;</span><span class="p">,</span> <span class="s2">&quot;janet&quot;</span> <span class="p">},</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      <span class="c1">-- configuration:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      <span class="c1">-- https://github.com/PaterJason/nvim-treesitter-sexp#configuration</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      <span class="n">enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      <span class="n">set_cursor</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      <span class="n">keymaps</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">commands</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>          <span class="n">promote_elem</span> <span class="o">=</span> <span class="s2">&quot;&lt;LocalLeader&gt;kO&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>          <span class="n">promote_form</span> <span class="o">=</span> <span class="s2">&quot;&lt;LocalLeader&gt;ko&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>          <span class="n">splice</span> <span class="o">=</span> <span class="s2">&quot;&lt;LocalLeader&gt;k@&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="p">},</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        <span class="n">motions</span> <span class="o">=</span> <span class="p">{},</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="n">textobjects</span> <span class="o">=</span> <span class="p">{},</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>      <span class="p">},</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="p">},</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  <span class="p">},</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span>
+</code></pre></div>
+<p>If the plugin is successful, add it to the AstroNvim Community Clojure pack</p>
+</div>
 <h2 id="new-role">New role<a class="headerlink" href="#new-role" title="Permanent link">λ︎</a></h2>
 <p>I'm starting a new role (references allowing) as an Engineering Manager at a very nice Fintech company.</p>
 <p>I've signed a contract and started completing the inital onboarding forms.  Hopefully the people I have put as references have positive things to say about me and the company is satisfied.</p>
