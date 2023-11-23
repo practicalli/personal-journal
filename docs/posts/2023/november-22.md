@@ -1,5 +1,5 @@
 ---
-title: "Onboarding to a new role"
+title: "Onboarding to a new role, hacking Clojure & Neovim"
 date: 2023-11-22
 categories:
   - journal
@@ -32,7 +32,7 @@ The mulog maintainer created the [where project](https://github.com/BrunoBonacci
 
 !!! EXAMPLE "where is a DSL for powerful predicate functions"
     ```clojure
-    (u/start-publisher!
+    (mulog/start-publisher!
       {:type :console
        :pretty? true
        :transform
@@ -59,8 +59,37 @@ Neovim commands to investigate further
 - `:help Explore` and related commands
 - `:help usr_22` has a good introduction
 
-
 [Clojurians Slack - navigating code in neovim discussion](https://clojurians.slack.com/archives/C0DF8R51A/p1700651248926689){target=_blank .md-button} 
+
+!!! TODO "Neovim plugin: nvim-treesitter-sexp"
+    Evalaute the [nvim-treesitter-sexp](https://github.com/PaterJason/nvim-treesitter-sexp) plugin with the Practialli AstorNvim User configuration and see if it is a valuable way to navigate Clojure expressions.
+
+    ```lua title="plugins/clojure.lua"
+    return {
+      {
+        "PaterJason/nvim-treesitter-sexp",
+        ft = { "clojure", "fennel", "janet" },
+        opts = {
+          -- configuration:
+          -- https://github.com/PaterJason/nvim-treesitter-sexp#configuration
+          enabled = true,
+          set_cursor = true,
+          keymaps = {
+            commands = {
+              promote_elem = "<LocalLeader>kO",
+              promote_form = "<LocalLeader>ko",
+              splice = "<LocalLeader>k@",
+            },
+            motions = {},
+            textobjects = {},
+          },
+        },
+      },
+    }
+    ```
+
+    If the plugin is successful, add it to the AstroNvim Community Clojure pack
+
 
 ## New role
 
