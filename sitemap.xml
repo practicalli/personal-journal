@@ -2,67 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://practical.li/personal-journal/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/assets/images/social/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2018/12/16/day-94-coaching-and-emacs-talk-at-linux-in-london/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2018/12/17/day-95-ai-startup-team-lunch-4clojure-exercises/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2018/12/18/day-96-user-feedback-session-4clojure-exercises/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2018/12/20/day-97-planning-2019-and-4clojure/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/2018/12/21/day-98-coaching-and-4clojure-53/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/2018/12/22/day-100-4clojure/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/2018/12/23/day-100-4clojure/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/2018/12/24/day-101-an-extra-day-of-code/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/2018/12/29/day-106-tictactoe-for-virtual-study-group/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2023/11/19/planing-practicalli-2024/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2023/11/20/debian-linux-migration/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/2023/11/21/continuing-the-move-to-debian-linux/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/2023/11/22/onboarding-to-a-new-role-hacking-clojure-neovim/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/2023/11/23/practicalli-email/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/archive/2023/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/archive/2018/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/category/journal/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/personal-journal/category/100daysofcode/</loc>
-         <lastmod>2023-11-23</lastmod>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/page/2/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
