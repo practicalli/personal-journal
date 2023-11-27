@@ -2,7 +2,7 @@
 title: Planing Practicalli 2024
 date: 2023-11-19
 categories:
-  - journal
+  - practicalli
 ---
 
 **Thoughts for today**

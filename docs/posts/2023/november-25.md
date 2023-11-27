@@ -2,7 +2,7 @@
 title: Cycling in the cold
 date: 2023-11-25
 categories:
-  - journal
+  - practicalli
 ---
 
 **Thoughts for today**

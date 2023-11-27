@@ -2,7 +2,7 @@
 title: "Practicalli Email"
 date: 2023-11-23
 categories:
-  - journal
+  - practicalli
 ---
 
 **Thought of the day**

@@ -2,7 +2,7 @@
 title: Debian Linux migration
 date: 2023-11-20
 categories:
-  - journal
+  - practicalli
 ---
 
 **Thoughts for today**

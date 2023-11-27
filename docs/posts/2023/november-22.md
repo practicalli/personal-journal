@@ -2,14 +2,14 @@
 title: "Onboarding to a new role, hacking Clojure & Neovim"
 date: 2023-11-22
 categories:
-  - journal
+  - practicalli
 ---
 
 **Thought of the day**
 
 Nervous excitement about starting a new role and hopeful I dont mess it up.
 
-Enjoying writing a regular journal again, which is something I missed when not working.
+Enjoying writing a regular practicalli again, which is something I missed when not working.
 
 <!-- more -->
 

@@ -2,7 +2,7 @@
 title: "Neovim search replace & Debian DRM"
 date: 2023-11-24
 categories:
-  - journal
+  - practicalli
   - debian
   - neovim
 ---

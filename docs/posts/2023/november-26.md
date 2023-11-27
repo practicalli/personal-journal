@@ -2,7 +2,7 @@
 title: Neovim basics
 date: 2023-11-26
 categories:
-  - journal
+  - practicalli
   - neovim
 ---
 

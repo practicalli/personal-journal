@@ -2,7 +2,7 @@
 title: "Continuing the move to Debian Linux"
 date: 2023-11-21
 categories:
-  - journal
+  - practicalli
 ---
 
 **Though of the day**
