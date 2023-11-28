@@ -101,6 +101,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/personal-journal/2023/11/28/health-and-new-chair/</loc>
+         <lastmod>2023-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/personal-journal/2020/08/31/clojurists-together-q3---practicalli---update-1/</loc>
          <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
@@ -217,6 +222,11 @@
     </url>
     <url>
          <loc>https://practical.li/personal-journal/page/4/</loc>
+         <lastmod>2023-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/personal-journal/archive/2023/page/2/</loc>
          <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
