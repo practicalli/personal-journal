@@ -1,5 +1,5 @@
 ---
-title: Job onboarding 
+title: Discussing new role expectations
 date: 2023-11-27
 categories:
   - practicalli
