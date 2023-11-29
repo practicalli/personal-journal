@@ -3,6 +3,7 @@ title: Lightening my life
 date: 2023-11-29
 categories:
   - practicalli
+  - neovim
 ---
 
 **Thoughts for today**
