@@ -1,5 +1,5 @@
 ---
-title: 
+title: On-boarding at the new job
 date: 2023-12-05
 categories:
   - practicalli
@@ -23,4 +23,6 @@ The most noticable difference between Linux and MacOSX isthe `Command`+c/v/x for
 The other big difference is the MacOSX window manager.  It seems very mouse driven and all the Apple docs are very mouse focused.  Coming from a Linux tiling window manager (i3) the MacOSX desktop seems very complex.  The split window feature seemed promising, but it seems limited to two windows (one split).  I am trying the stage manager feature which does remind me of one of the early compositors from Linux from a decade ago.  Stage manager looks the least painful way to interact with multiple windows, but still seems mouse control heavy.
 
 Hopefully there are key bindings to control more of the MacOSX desktop and I can be more productive.
+
+People have suggested Rectangle as a way to have a more keyboard controlled experience with the MacOSX desktop.
 
