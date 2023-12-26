@@ -855,7 +855,7 @@
 <p>Work for Practicalli that is at the top of my very long TODO list :)</p>
 <ul>
 <li>DONE: Advising on and researching for Arqivist project </li>
-<li>DOING: Git Signing article - Engineering Playbook</li>
+<li>DOING: <a href="https://practical.li/engineering-playbook/source-control/git-configuration/">Git Signing article - Engineering Playbook</a></li>
 <li>Add ssh key to RangerOne and GKar laptops</li>
 <li>Git config enhancements - practicalli/dotfiles</li>
 <li>Neovim, Conjure &amp; Portal video</li>
@@ -897,23 +897,25 @@
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Enter<span class="w"> </span>passphrase<span class="w"> </span><span class="k">for</span><span class="w"> </span>id_ed25519:<span class="w"> </span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Identity<span class="w"> </span>added:<span class="w"> </span>id_ed25519<span class="w"> </span><span class="o">(</span>engineering@practical.li<span class="o">)</span>
 </code></pre></div>
-<p>Not sure if this is neccessary </p>
+<div class="admonition info">
+<p class="admonition-title">SSH Config for MacOSX</p>
 <p>Edit the SSH configuration, <code>~/.ssh/config</code>, and configure SSH to use the operating system keychain for the passphrase.</p>
-<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Host<span class="w"> </span>github.com
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>AddKeysToAgent<span class="w"> </span>yes
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>UseKeychain<span class="w"> </span>yes
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
 </code></pre></div>
+<p>This configuration does not seem neccessary (or correct) for Linux</p>
 </div>
 <p>Run git commands to configure Git to use SSH signing for commits and tags.  Or edit the Git client configuration, <code>~/.config/git/config</code> </p>
-<div class="admonition note"></div>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>gpg.format<span class="w"> </span>ssh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.signingkey<span class="w"> </span><span class="nv">$HOME</span>/.ssh/id_ed25519.pub<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>commit.gpgsign<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>tag.gpgsign<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>git<span class="w"> </span>config<span class="w"> </span>gpg.ssh.allowedSignersFile<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.config/git/allowed-signatures&quot;</span>
 </code></pre></div>
+</div>
 <p>Added the new SSH key to my GitHub account twice, onces as an authorisation key and second as a signing key.</p>
 <p>The public key was copied by opening in neovim and yanking the line, <span class="keys"><kbd>y</kbd></span> <span class="keys"><kbd>y</kbd></span></p>
 <p>Opened GitHub Settings &gt; <a href="https://github.com/settings/keys">SSH and GPG keys</a> page and selected New SSH key</p>
@@ -956,7 +958,7 @@
 <p>This was the first time I had tried the close riding with a group, swapping the front rider every few minutes.  I found it unnatural and constraining for most of the ride.  I enjoyed it when I was either at the front where I wouldnt need to slow down when decending.  Or I would drop back a little from the group so I didnt have to ride the breaks down hill, as my bicycle seems to freewheel faster than the other bikes in the group (it is supposed to be an Aero bike, so it seems like that aero works).</p>
 <p>I was tired once I got home after the ride, although had enough engergy to make brown rice with beetroot powder and walnut pieces.  I didnt need to have a big sleep </p>
 <p>A walk on Sunday for an hour helped streatch my legs.  Walking is a good way to recover from the ride.</p>
-<p>I joined the local 5 km park run event on December 25h and manage a time of 34 minutes and 34 seconds, although on Strava it was 33 minutes and 59 seconds.</p>
+<p>I joined the local 5 km park run event on December 25h and manage a time of 34 minutes and 34 seconds, although <a href="https://www.strava.com/activities/10433750076">the run on Strava it was 33 minutes and 59 seconds</a>.</p>
 
 
 
