@@ -1,10 +1,3 @@
----
-title: Practicalli Team
-date: 2023-10-21
-categories:
-  - practicalli
----
-
 Practicalli was created in 2019 by Johnny Stevenson as an idea born from the years spent learning Clojure in the community.  I consider Practicalli a team effort as it relies on feedback and questions from the wider Clojure community, as well as the legion of libraries that have been created.
 
 My interest in Clojure was accidental at first but eventually became a passion it is hard to live without.
