@@ -1,6 +1,6 @@
 ---
 title: Visiting the new office
-date: 2023-12-01
+date: 2023-12-06
 categories:
   - practicalli
 ---

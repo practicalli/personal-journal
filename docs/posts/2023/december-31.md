@@ -1,6 +1,6 @@
 ---
 title: End of line...
-date: 2023-12-01
+date: 2023-12-31
 categories:
   - practicalli
 ---
