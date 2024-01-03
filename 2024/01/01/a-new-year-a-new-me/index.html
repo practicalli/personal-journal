@@ -912,7 +912,8 @@
 </div>
 <h2 id="clojure">Clojure<a class="headerlink" href="#clojure" title="Permanent link">λ︎</a></h2>
 <p>Ran the latest Clojure CLI pre-release with the Practicalli Clojure CLI Config aliases.  Had an issue with Cider-nrepl, though it seems to have been from a corrupted library download rather than the CLI version.</p>
-<p>Nuked the local maven directory to test out the Clojure CLI pre-release at downloading dependencies again and there were no more issues.</p>
+<p>Nuked the local maven directory, <code>.m2/repository</code>, to test out the Clojure CLI pre-release at downloading dependencies again and there were no more issues.</p>
+<p>Also tested the Clojure CLI with a directory containing an empty <code>deps.edn</code> file and was able to run the Rebel repl (<code>clojure -M:repl/rebel</code>) without any problems.  This release treats an empty <code>deps.edn</code> file as if it contained a valid data structure, i.e. <code>{}</code>, an empty hash-map.</p>
 <h2 id="health">Health<a class="headerlink" href="#health" title="Permanent link">λ︎</a></h2>
 <p>Over the Winter Solstace break I manage</p>
 <ul>
