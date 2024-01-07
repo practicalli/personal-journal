@@ -796,6 +796,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#practicalli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practicalli
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#health" class="md-nav__link">
     <span class="md-ellipsis">
       Health
@@ -863,7 +872,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -927,6 +936,23 @@
 <p>Ran the latest Clojure CLI pre-release with the Practicalli Clojure CLI Config aliases.  Had an issue with Cider-nrepl, though it seems to have been from a corrupted library download rather than the CLI version.</p>
 <p>Nuked the local maven directory, <code>.m2/repository</code>, to test out the Clojure CLI pre-release at downloading dependencies again and there were no more issues.</p>
 <p>Also tested the Clojure CLI with a directory containing an empty <code>deps.edn</code> file and was able to run the Rebel repl (<code>clojure -M:repl/rebel</code>) without any problems.  This release treats an empty <code>deps.edn</code> file as if it contained a valid data structure, i.e. <code>{}</code>, an empty hash-map.</p>
+<h2 id="practicalli">Practicalli<a class="headerlink" href="#practicalli" title="Permanent link">λ︎</a></h2>
+<p>Monthly scheduled updates</p>
+<ul>
+<li>Clojure CLI Config library updates and CI actions</li>
+<li>Project Templates megalinter upload-artifact v4, setup-java v4 and using Java version 21, </li>
+</ul>
+<p><a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file">GitHub health check files</a> are added to practicalli/.github repository and apply to all repositories in that organisation, unless they provide their own file.</p>
+<ul>
+<li><code>CONTRIBUTING.md</code> defines how to contribute to Practicalli</li>
+<li><code>FUNDING.yml</code> defines ways to sponsor Practicalli work</li>
+<li><code>LICENSE.md</code> Creative Commons Attribution Share-a-like license for all Practialli work</li>
+<li><code>SECURITY.md</code> how to raise security related issues</li>
+<li><code>SUPPORT.md</code> how to get support from Practicalli</li>
+<li><code>PULL_REQUEST_TEMPLATE</code></li>
+<li><code>clojure_code_contribution.md</code></li>
+<li><code>practicalli_book_contribution.md</code></li>
+</ul>
 <h2 id="health">Health<a class="headerlink" href="#health" title="Permanent link">λ︎</a></h2>
 <p>Over the Winter Solstace break I manage</p>
 <ul>
