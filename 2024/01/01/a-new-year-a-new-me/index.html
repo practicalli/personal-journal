@@ -805,6 +805,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#health" class="md-nav__link">
     <span class="md-ellipsis">
       Health
@@ -872,7 +881,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -953,6 +962,47 @@
 <li><code>clojure_code_contribution.md</code></li>
 <li><code>practicalli_book_contribution.md</code></li>
 </ul>
+<h2 id="debian">Debian<a class="headerlink" href="#debian" title="Permanent link">λ︎</a></h2>
+<p>The <code>ifconfig</code> command used to be the way to view the local network address of the computer in Linux. This command has been retired in favor of the <code>ip</code> command.</p>
+<div class="admonition note">
+<p class="admonition-title">Show the network addresses for the computer</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ip<span class="w"> </span>address
+</code></pre></div>
+</div>
+<p>The command may show one or more sections</p>
+<ul>
+<li><code>loopback</code></li>
+<li>ethernet cable, named similar to <code>enp0</code></li>
+<li>wifi adaptor, named similar to <code>wlp</code></li>
+<li>docker if the docker daemon is installed</li>
+</ul>
+<details class="example">
+<summary>Example output from ip address</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>❯<span class="w"> </span>ip<span class="w"> </span>address
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="m">1</span>:<span class="w"> </span>lo:<span class="w"> </span>&lt;LOOPBACK,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">65536</span><span class="w"> </span>qdisc<span class="w"> </span>noqueue<span class="w"> </span>state<span class="w"> </span>UNKNOWN<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>link/loopback<span class="w"> </span><span class="m">00</span>:00:00:00:00:00<span class="w"> </span>brd<span class="w"> </span><span class="m">00</span>:00:00:00:00:00
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span>inet<span class="w"> </span><span class="m">127</span>.0.0.1/8<span class="w"> </span>scope<span class="w"> </span>host<span class="w"> </span>lo
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">       </span>valid_lft<span class="w"> </span>forever<span class="w"> </span>preferred_lft<span class="w"> </span>forever
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span>inet6<span class="w"> </span>::1/128<span class="w"> </span>scope<span class="w"> </span>host<span class="w"> </span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">       </span>valid_lft<span class="w"> </span>forever<span class="w"> </span>preferred_lft<span class="w"> </span>forever
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="m">2</span>:<span class="w"> </span>enp0s31f6:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>qdisc<span class="w"> </span>fq_codel<span class="w"> </span>state<span class="w"> </span>UP<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span>link/ether<span class="w"> </span><span class="m">48</span>:2a:e3:6b:11:46<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span>inet<span class="w"> </span><span class="m">192</span>.168.0.212/24<span class="w"> </span>metric<span class="w"> </span><span class="m">100</span><span class="w"> </span>brd<span class="w"> </span><span class="m">192</span>.168.0.255<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>dynamic<span class="w"> </span>enp0s31f6
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">       </span>valid_lft<span class="w"> </span>5155sec<span class="w"> </span>preferred_lft<span class="w"> </span>5155sec
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span>inet6<span class="w"> </span>fe80::4a2a:e3ff:fe6b:1146/64<span class="w"> </span>scope<span class="w"> </span>link<span class="w"> </span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">       </span>valid_lft<span class="w"> </span>forever<span class="w"> </span>preferred_lft<span class="w"> </span>forever
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="m">3</span>:<span class="w"> </span>wlp82s0:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>qdisc<span class="w"> </span>noqueue<span class="w"> </span>state<span class="w"> </span>UP<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span>link/ether<span class="w"> </span><span class="m">60</span>:f2:62:15:1f:53<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span>inet<span class="w"> </span><span class="m">192</span>.168.0.191/24<span class="w"> </span>brd<span class="w"> </span><span class="m">192</span>.168.0.255<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>dynamic<span class="w"> </span>noprefixroute<span class="w"> </span>wlp82s0
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">       </span>valid_lft<span class="w"> </span>6617sec<span class="w"> </span>preferred_lft<span class="w"> </span>6617sec
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span>inet6<span class="w"> </span>fe80::bf0a:872b:9380:fb98/64<span class="w"> </span>scope<span class="w"> </span>link<span class="w"> </span>noprefixroute<span class="w"> </span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">       </span>valid_lft<span class="w"> </span>forever<span class="w"> </span>preferred_lft<span class="w"> </span>forever
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="m">4</span>:<span class="w"> </span>docker0:<span class="w"> </span>&lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>qdisc<span class="w"> </span>noqueue<span class="w"> </span>state<span class="w"> </span>DOWN<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span>link/ether<span class="w"> </span><span class="m">02</span>:42:6e:e0:5f:c8<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span>inet<span class="w"> </span><span class="m">172</span>.17.0.1/16<span class="w"> </span>brd<span class="w"> </span><span class="m">172</span>.17.255.255<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>docker0
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">       </span>valid_lft<span class="w"> </span>forever<span class="w"> </span>preferred_lft<span class="w"> </span>forever
+</code></pre></div>
+</details>
 <h2 id="health">Health<a class="headerlink" href="#health" title="Permanent link">λ︎</a></h2>
 <p>Over the Winter Solstace break I manage</p>
 <ul>
