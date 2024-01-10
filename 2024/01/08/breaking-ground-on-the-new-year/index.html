@@ -769,9 +769,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#neovide-on-macosx" class="md-nav__link">
+  <a href="#macosx-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Neovide on MacOSX
+      MacOSX environment variables
     </span>
   </a>
   
@@ -905,11 +905,22 @@
 <h2 id="building-teams">Building teams<a class="headerlink" href="#building-teams" title="Permanent link">λ︎</a></h2>
 <p>It can be challenging joining a very busy team. Blalancing the need to minimise disruption of the existing teams work with taking the teams time to enable new people to have enough knowledge to start contributing.</p>
 <p>Identifying specific knowledge transfer topics and timeboxed meetings are an effective approach, especially when coupled with good documentation and architecture diagrams.</p>
-<h2 id="neovide-on-macosx">Neovide on MacOSX<a class="headerlink" href="#neovide-on-macosx" title="Permanent link">λ︎</a></h2>
-<p>Finally found a working approach to running Neovide GUI for Neovim with the AstroNvim configuration.  The <code>launchctl</code> command can set an environment variable that will be used with GUI apps launched from the MacOSX spotlight (or similar desktop launchers).</p>
+<h2 id="macosx-environment-variables">MacOSX environment variables<a class="headerlink" href="#macosx-environment-variables" title="Permanent link">λ︎</a></h2>
+<p>Finally found a working approach to running desktop apps that are configured with an environment variable, e.g. Neovide GUI for Neovim with the AstroNvim configuration and Emacs with a custom location (XDG) Spacemacs user configuration.  </p>
+<p>The <code>launchctl</code> command can set an environment variable that will be used with GUI apps launched from the MacOSX spotlight (or similar desktop launchers).</p>
+<div class="admonition example">
+<p class="admonition-title">Neovide with Astronvim config</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>launchctl<span class="w"> </span>setenv<span class="w"> </span>NVIM_APPNAME<span class="w"> </span>astronvim
 </code></pre></div>
-<p>Adding a neovide alias that sets <code>NVIM_APPNAME</code> in the <code>.profile</code> or <code>.zprofile</code> file did not seem to make a difference, even after a reboot of MacOSX.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Emacs with Spacemacs config</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>launchctl<span class="w"> </span>setenv<span class="w"> </span>SPACEMACSDIR<span class="w"> </span>/User/practicalli/.config/spacemacs
+</code></pre></div>
+</div>
+<blockquote>
+<p>Adding environment variables in the user <code>.profile</code> or <code>.zprofile</code> files did not make a difference, even after a reboot of MacOSX.</p>
+</blockquote>
 <h2 id="github-statistics">GitHub statistics<a class="headerlink" href="#github-statistics" title="Permanent link">λ︎</a></h2>
 <p><a href="https://www.githubwrapped.io/">GitHub Wrapped</a> is an online app that generates visualisation from contributions for a specific GitHub account. </p>
 <p><img alt="GitHub Wrapped practicalli-johnny 2023 statistics visualisation" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/github/github-wrapped-2023-practicalli-johnny.png?raw=true" /></p>
@@ -920,7 +931,7 @@
 <p><a href="https://api.githubtrends.io/auth/signup/public">Create an account with GitHub Trends</a> Then, paste this string into your Markdown content, substituting your username.</p>
 <div class="admonition example">
 <p class="admonition-title">Markdown Code for GitHub trends language view</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[<span class="nt">![GitHub Trends SVG</span>](<span class="na">https://api.githubtrends.io/user/svg/github-username/langs</span>)](https://githubtrends.io)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[<span class="nt">![GitHub Trends SVG</span>](<span class="na">https://api.githubtrends.io/user/svg/github-username/langs</span>)](https://githubtrends.io)
 </code></pre></div>
 </div>
 <p>Communicate directly with <a href="https://github.com/avgupta456/github-trends/blob/main/docs/API.md">Use the GitHub Trends API</a> to create customize cards.</p>
