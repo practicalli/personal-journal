@@ -19,3 +19,8 @@ Luckily I found some semi-respectable clothes to wear and was pleasently surpris
 
 I joined in time to take part in the company dinner so this week is a great chance to meet lots of people in person and start building relationships.
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

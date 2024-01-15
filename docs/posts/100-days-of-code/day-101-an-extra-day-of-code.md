@@ -31,3 +31,8 @@ The test report buffer is shown, replacing an an existing buffer if the test buf
 
 The [Spacemacs Window Purpose layer](https://github.com/bmag/spacemacs-config/tree/master/layers/window-purpose) could be used to modify the behaviour of the test report buffer placement and window positions for other kinds of buffer (not something I have tried yet)
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

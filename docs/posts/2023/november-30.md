@@ -91,3 +91,8 @@ Debian documentation recommends a full upgrade after making such a change
 
 Continuing with Debian Linux install on Thinkpad with AMD chipset, using trixie (current testing) as the distribution verion.
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

@@ -72,3 +72,9 @@ The Google account App Password is used to send @practical.li emails via Google 
 Backing up a Lenovo laptop to get ready to install Debian Linux.
 
 Backup [Asus Eze PC 900](https://en.wikipedia.org/wiki/Asus_Eee_PC) and installed Debian Linux using i386 net iso image.
+
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

@@ -51,3 +51,9 @@ Carry out adminsitrative tasks as required and type `exit` to leave the root aco
     Terminal applications (e.g. [Kitty](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank}) can open multiple tabs, so one of the tabs can be used to `su` to the root account.
 
     [:fontawesome-solid-book-open: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank .md-button}
+
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

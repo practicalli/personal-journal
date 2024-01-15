@@ -274,3 +274,8 @@ Practicalli Neovim
         b6bed92 Add config (3 months ago)
     ```
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

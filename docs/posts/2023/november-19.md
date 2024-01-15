@@ -35,3 +35,8 @@ The first phase of the project would provide a website that included the most co
 
 [mkdocks-:fontawesome-brands-github: Which Libraries Project - GitHub issue](https://github.com/practicalli/which-clojure-library/issues/1){target=_blank .md-button} 
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

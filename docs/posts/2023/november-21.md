@@ -91,3 +91,8 @@ Ubuntu adds the user account created during initial install to the sudo list, wh
 
 The debian approach does require remembering two passwords, one for the daily user account and one for root administration account.  However, the root password could be added to a secure password manager, e.g. NordPass.
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

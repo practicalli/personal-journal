@@ -160,4 +160,8 @@ A walk on Sunday for an hour helped streatch my legs.  Walking is a good way to 
 I joined the local 5 km park run event on December 25h and manage a time of 34 minutes and 34 seconds, although [the run on Strava it was 33 minutes and 59 seconds](https://www.strava.com/activities/10433750076).
 
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
 

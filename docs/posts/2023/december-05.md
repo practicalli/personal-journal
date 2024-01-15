@@ -26,3 +26,8 @@ Hopefully there are key bindings to control more of the MacOSX desktop and I can
 
 People have suggested Rectangle as a way to have a more keyboard controlled experience with the MacOSX desktop.
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

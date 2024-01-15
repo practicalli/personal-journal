@@ -31,3 +31,10 @@ Set up Zsh on the Lenovo AMD laptop using the [:fontawesome-brands-github: prezt
 The prezto configuration includes an option for fish shell style completion, showing the last matching command in full as a command is typed.  This completion is a nice complement to the command line history.
 
 A nice dark powerline10k terminal prompt theme was defined and added to the [:fontawesome-brands-github: practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository.
+
+
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

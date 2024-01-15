@@ -65,3 +65,8 @@ This kind of Git issue rarely occurs, so having an inline help message if very h
 
 Its assumed the root cause is some change to the LuaSnip commit history after the plugin was previously installed locally.  Or something locally was added by Neovim.  As the fix is very simple and fast to implement, there isnt much value in digging deeper unless this kind of issue occurs much more often.
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

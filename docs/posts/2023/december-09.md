@@ -147,3 +147,8 @@ Today I did 5km in 35 minutes and 5 seconds, which is 20 seconds faster than las
 
 I came 37th in my age group with an age-graded score of 42.42% (double the meaning of life).  The age-graded score is a measure against world record running times for a specific age range, so it seems I wont be breaking any world records for a while :)
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

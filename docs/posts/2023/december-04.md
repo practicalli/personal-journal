@@ -24,3 +24,8 @@ Using Notion.so which has a Daily Journal template to keep a work specific histo
 
 I am sure there was an Emacs mode for Notion :)
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

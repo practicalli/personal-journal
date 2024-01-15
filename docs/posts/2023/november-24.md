@@ -67,3 +67,8 @@ Firefox ESR has DRM disabled by default, so streaming video sites like Amazon Pr
 
 Amazon Prime shows an error describing how to enable the Widevine Content Decryption Module, however this plugin will not show in the `about:plugins` until the Settings > General > Play DRM Content option is checked.
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

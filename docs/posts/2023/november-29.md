@@ -140,3 +140,9 @@ Update AstroNvim to 3.39.0 from within AstroNvim, using `SPC p A`.
 
         ○ telescope.nvim  Telescope  nvim-neoclip.lua  telescope-file-browser.nvim 
     ```
+
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

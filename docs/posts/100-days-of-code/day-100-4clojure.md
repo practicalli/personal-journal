@@ -35,3 +35,8 @@ Continuing to write up a description on how I solved each 4Clojure exercise, exp
 
 Today was a write up and elaboration on the exercises I covered in yesterdays Clojure study group broadcast.
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

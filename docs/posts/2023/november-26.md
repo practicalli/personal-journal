@@ -33,3 +33,8 @@ Interesting articles:
 
 [Global Find and Replace in Neovim](https://elanmed.dev/blog/global-find-and-replace-in-neovim){target=_blank .md-button}
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

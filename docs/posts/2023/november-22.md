@@ -106,3 +106,8 @@ My previous experience with MacBook was mared by the elusive `#` character, so I
 [MacBook Keyboard guide](https://keyshorts.com/blogs/blog/41999105-the-ultimate-guide-to-macbook-keyboard){target=_blank .md-button} 
 
 
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+

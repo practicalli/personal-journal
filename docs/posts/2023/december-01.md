@@ -78,3 +78,10 @@ A summary of the tooling projects created and regularly maintained by Practicall
 ## Social visits
 
 Catch up with the neighbour who looks after my cats when away and I look after theirs.  Making plans for cat sitting over the holidays.
+
+
+---
+Thank you.
+
+[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+
