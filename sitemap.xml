@@ -181,6 +181,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/journal/2023/01/15/start-of-a-long-journey/</loc>
+         <lastmod>2024-01-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/journal/2020/08/31/clojurists-together-q3---practicalli---update-1/</loc>
          <lastmod>2024-01-15</lastmod>
          <changefreq>daily</changefreq>
