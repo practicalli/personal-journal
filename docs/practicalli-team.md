@@ -8,7 +8,9 @@ Although the published content is the sole effort of one person, it would not ha
 
 I thank Bruce Durling for starting my journey into Clojure and the 100's of people I've met in person and online from the community that have motivated and inspired me.
 
-!!! WARNING "Work In Progress"
+!!! INFO "Practicalli Journal weekly updates"
+    Updates to Practicalli and general learning experiences are published in weekly articles on the [Practicalli Journal](https://practical.li/journal) website
+
 
 <!-- more -->
 
