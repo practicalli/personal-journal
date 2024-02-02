@@ -191,6 +191,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/journal/2024/01/29/no-one-is-omnipotent/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/journal/2020/08/31/clojurists-together-q3---practicalli---update-1/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
