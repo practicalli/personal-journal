@@ -959,12 +959,21 @@
 <p>Material for MkDocs is subtly different in organising content with Markdown, so there are changes to link paths and callouts (admonitions) syntax is different too.</p>
 <p>Most of the screenshots and graphic design images have moved to a central practicalli/graphic-design repository.  Initially the links to these images used the raw.githubusercontent.com domain, which did not always render the images efficiently and was a different domain to other GitHub links.</p>
 <p>Images from GitHub now use the direct URL to the resource (the same github.com domain as a link) and include the <code>?raw=true</code> option to indicate it should be shown as the raw image rather than withing the surrounding GitHub page.</p>
-<div class="highlight"><span class="filename">GitHub raw image view</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>![<span class="nt">Clojure REPL Drive Development</span>](<span class="na">https://github.com/practicalli/graphic-design/blob/live/clojure/clojure-repl-workflow-concept.png?raw=true</span>)
+<div class="highlight"><span class="filename">Markdown code for GitHub raw image view</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>![<span class="nt">Clojure REPL Drive Development</span>](<span class="na">https://github.com/practicalli/graphic-design/blob/live/clojure/clojure-repl-workflow-concept.png?raw=true</span>)
 </code></pre></div>
 <h2 id="tweak-github-language-detection">Tweak GitHub language detection<a class="headerlink" href="#tweak-github-language-detection" title="Permanent link">λ︎</a></h2>
 <p>The Practicalli repositories for the books are often labeled as HTML language, even thought they are written in Markdown.</p>
 <p>GitHub uses <a href="https://github.com/github-linguist/linguist/" target="_blank">Linguist</a> to understand the languages used.  It seems Lingusta also includes the gh-branch when identifying languages. </p>
 <p>For a Practicalli book repository, <a href="https://github.com/github-linguist/linguist/" target="_blank">Linguist</a> is detecting the HTML generated from Markdown that is committed to the <code>gh-branch</code> and therefore considers HTML as the main language.</p>
+<div class="admonition example">
+<p class="admonition-title">Markdown override used for Practicalli Websites</p>
+<div class="highlight"><span class="filename">.gitattributes</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docs/** linguist-detectable
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>*.md linguist-detectable=true 
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>*.css linguist-detectable=false
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>*.js linguist-detectable=false
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>*.html linguist-detectable=false  
+</code></pre></div>
+</div>
 <details class="warning">
 <summary>Language detection not immediately updated</summary>
 <p>It may take many minutes for GitHub to update the languages statistics on the repository page.</p>
@@ -975,18 +984,11 @@
 <p>Paths or languages can be excluded or included.</p>
 <p>File extensions can be classified as a specific (non default) language</p>
 <div class="admonition example">
-<p class="admonition-title">Ensure specific languages from generated site are ignored</p>
-<div class="highlight"><span class="filename">.gitattributes</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>*.html linguist-detectable=false
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>*.css linguist-detectable=false
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>*.js linguist-detectable=false
-</code></pre></div>
-</div>
-<div class="admonition example">
 <p class="admonition-title">Markdown is detectable, ignore html, js and css languages</p>
 <div class="highlight"><span class="filename">.gitattributes</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>*.md linguist-detectable=true 
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>*.css linguist-detectable=false
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>*.js linguist-detectable=false
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>*.html linguist-detectable=false  
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>*.html linguist-detectable=false  
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>*.css linguist-detectable=false
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>*.js linguist-detectable=false
 </code></pre></div>
 </div>
 <div class="admonition example">
@@ -1004,9 +1006,8 @@
 </code></pre></div>
 </div>
 <div class="admonition example">
-<p class="admonition-title">ignore all files, except for markdown</p>
+<p class="admonition-title">ignore all files</p>
 <div class="highlight"><span class="filename">.gitattributes</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>* linguist-vendored
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>*.md linguist-vendored=false
 </code></pre></div>
 </div>
 <p><a class="md-button" href="https://github.com/github-linguist/linguist/blob/master/lib/linguist/vendor.yml" target="_blank">Linguist - Vendor paths ignored</a></p>
