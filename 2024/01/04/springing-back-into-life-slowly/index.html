@@ -122,7 +122,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#secure-password-manager" class="md-skip">
+        <a href="#book-quality-and-workflow" class="md-skip">
           Skip to content
         </a>
       
@@ -762,6 +762,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#book-quality-and-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Book quality and workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#secure-password-manager" class="md-nav__link">
     <span class="md-ellipsis">
       Secure password manager
@@ -857,7 +866,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -912,9 +921,18 @@
 <p>I though the Practicalli Project Templates had broken when I tried to create a new service project.  It took me an hour or so to realise I had simply been using the command with the wrong argument, doh!</p>
 <!-- more -->
 
+<h2 id="book-quality-and-workflow">Book quality and workflow<a class="headerlink" href="#book-quality-and-workflow" title="Permanent link">λ︎</a></h2>
+<p>Improvements have been made to the quality checks each of the Practicalli books undergow before publishing.</p>
+<p>These improvements are helping me maintain and improve the books, especially around avoiding broken links and images during refactor of the book content.</p>
+<p>Moving to the Material for MkDocs tool for building the books does produce a rich experience, improving the visual appeal, navigation and content presentation options.</p>
+<p>Material for MkDocs is subtly different in organising content with Markdown, so there are changes to link paths and callouts (admonitions) syntax is different too.</p>
+<p>Most of the screenshots and graphic design images have moved to a central practicalli/graphic-design repository.  Initially the links to these images used the raw.githubusercontent.com domain, which did not always render the images efficiently and was a different domain to other GitHub links.</p>
+<p>Images from GitHub now use the direct URL to the resource (the same github.com domain as a link) and include the <code>?raw=true</code> option to indicate it should be shown as the raw image rather than withing the surrounding GitHub page.</p>
+<div class="highlight"><span class="filename">GitHub raw image view</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>![<span class="nt">Clojure REPL Drive Development</span>](<span class="na">https://github.com/practicalli/graphic-design/blob/live/clojure/clojure-repl-workflow-concept.png?raw=true</span>)
+</code></pre></div>
 <h2 id="secure-password-manager">Secure password manager<a class="headerlink" href="#secure-password-manager" title="Permanent link">λ︎</a></h2>
 <p>I've been using NordVPN and NordPass for the last year and they provide a reliable service.  Although recently the NordPass desktop app has stopped working on my Ubuntu 22.04 LTS Linux server.</p>
-<p>The NordPass app is okay, but has some constraints I dont really enjoy</p>
+<p>The NordPass app is okay) but has some constraints I dont really enjoy</p>
 <ul>
 <li>only available as a snap</li>
 <li>two approaches to browser extension, one that requires the desktop app to be installed</li>
