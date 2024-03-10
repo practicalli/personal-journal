@@ -2,17 +2,76 @@
 
 A series of articles covering a practical approach to software development practices and tooling.
 
+```none
+██████╗ ██████╗  █████╗  ██████╗████████╗██╗ ██████╗ █████╗ ██╗     ██╗     ██╗
+██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██║██╔════╝██╔══██╗██║     ██║     ██║
+██████╔╝██████╔╝███████║██║        ██║   ██║██║     ███████║██║     ██║     ██║
+██╔═══╝ ██╔══██╗██╔══██║██║        ██║   ██║██║     ██╔══██║██║     ██║     ██║
+██║     ██║  ██║██║  ██║╚██████╗   ██║   ██║╚██████╗██║  ██║███████╗███████╗██║
+╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
+```
 
-## Material for MkDocs Commands
+## Sponsor Practicalli
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+[![Sponsor Practicalli via GitHub](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-johnny/)
 
-## Project layout
+All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/), although most work is done at personal cost and time.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Thanks to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
+
+## Contributing
+
+Contributions are most welcome for Practicalli Books and project.  However, as this is a personal journal, this specific repository does not take pull requests.
+
+Please read the [detailed Practicalli contributing page](https://practical.li/contributing/) to help you to help Practicalli.
+
+
+## GitHub Actions
+
+The megalinter GitHub actions will run when a pull request is created,checking basic markdown syntax.
+
+A review of the change will be carried out by the Practicalli team and the PR merged if the change is acceptable.
+
+The Publish Book GitHub action will run when PR's are merged into main (or the Practicalli team pushes changes to the default branch).
+
+Publish book workflow installs Material for MkDocs version 9
+
+
+## Local development
+
+Install mkdocs version 9 using the Python pip package manager
+
+```shell
+pip install mkdocs-material=="9.*"
+```
+
+Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
+
+```shell
+pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
+```
+
+> pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
+
+Fork the GitHub repository and clone that fork to your computer,
+
+```shell
+git clone https://github.com/<your-github-account>/<repository>.git
+```
+
+Run a local server from the root of the cloned project
+
+```shell
+make docs
+```
+
+The website will open at <http://localhost:8000>
+
+If making smaller changes, then only rebuild the content that changes, speeding up the local development process
+
+```shell
+make docs-changed
+```
+
+> NOTE: navigation changes may not be correctly reflected without reloading the page in the web browser or carrying out a full `make docs` build
+
