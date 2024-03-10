@@ -14,7 +14,6 @@ I thank Bruce Durling for starting my journey into Clojure and the 100's of peop
 
 <!-- more -->
 
-
 ## Accidental Clojure
 
 Over a decade of of Java development, including lots of Enterprise Java, Object Oriented databases and Corba integration work, I was looking for something to invigerate my career.
@@ -50,7 +49,9 @@ I was also attracted by the thought of using Emacs for development, an editor th
 
 To focus my efforts to learn Clojure and share my enthusiasm, I started submitting talk proposals for conferences.  An additional benefit was to go to the conferences for free.
 
-JAX London accepted my first Clojure talk proposal.  I was very nervous giving the first talk and was still struggling to explain some of the concepts.  However, the audience was very supportive apart from one person sat right at the front who started to heckle me half way through.  They wanted 'real world' examples of Clojure even though the talk was advertised as a simple introduction.  Out of frustration I replied, "this isnt the real world, its JAX London".  The audience laught out quite loudly, exept for the heckler who I think became more annoyed.
+JAX London accepted my first Clojure talk proposal.  I was very nervous giving the first talk and was still struggling to explain some of the concepts.  However, the audience was very supportive in general.
+
+One person sat right at the front of the audience started to heckle me half way through.  They wanted 'real world' examples of Clojure even though the talk was advertised as a simple introduction.  Out of frustration I replied, "this isnt the real world, its JAX London".  The audience laught out quite loudly, exept for the heckler who I think became more annoyed.
 
 I learned a lot about what I didnt understand about Clojure and undeterred I worked on creating better talks.
 
@@ -60,9 +61,12 @@ The talk I enjoyed the most was at JavaDays in Sofia, Bulgaria.  I had moved awa
 
 Working at Salesforce I was also encouraged to submit talks to conferences (as well as present with other community members at Salesforce specific events).  I would submit talks and workshops on Salesforce and Clojure topics to double the chance of being accepted.  Almost all conferences accepted Clojure talks over the Salesforce talks, although CodeMotion Rome did accept a Salesforce workshop as well as a Clojure talk.
 
-The most sureal environment I gave a Clojure talk at was CeBit, a huge conference in Hanover, Germany.  The conference is so huge it is spread over 18 aircraft hanger sized buildings and there are busses to shuttle people around the conference as it takes at least 30 minutes to walk from one side of the conference to the other.  I gave a talk at their "Developer Zone" which was a small stage in one of the huge buildings, with about 30 chairs lined up.  Before I was introduced there was only a few people sitting, although by the time I had introduced myself it was standing room only (and quite a few people very slowly walking past).  I recorded the presentation on a GoPro camera, which did a surprisingly good job of capturing the talk (I believe I used a separate microphone to capture the audio at a good quality). 
+The most sureal environment I gave a Clojure talk at was CeBit, a huge conference in Hanover, Germany.  The conference is so huge it is spread over 18 aircraft hanger sized buildings and there are busses to shuttle people around the conference as it takes at least 30 minutes to walk from one side of the conference to the other.  I gave a talk at their "Developer Zone" which was a small stage in one of the huge buildings, with about 30 chairs lined up.  Before I was introduced there was only a few people sitting, although by the time I had introduced myself it was standing room only (and quite a few people very slowly walking past).  I recorded the presentation on a GoPro camera, which did a surprisingly good job of capturing the talk (I believe I used a separate microphone to capture the audio at a good quality).
 
-[Video: Clojure presentation at CeBit - Germany](){target=_blank .md-button}
+<p style="text-align:center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mEfqULqChZs" title="Clojure presentation at CeBit Germany" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p> 
+
 
 ## London Clojurians
 
