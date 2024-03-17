@@ -813,6 +813,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#donut-practical-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Donut practical guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#clojure-essentials" class="md-nav__link">
     <span class="md-ellipsis">
       Clojure essentials
@@ -1519,6 +1528,20 @@
 <blockquote>
 <p>Environment variables for ports and other things that may change between environments and deploys helps keep the configuration simple.  Using juxt/aero is nice, but it adds a little more complexity to the configuration.</p>
 </blockquote>
+<h2 id="donut-practical-guide">Donut practical guide<a class="headerlink" href="#donut-practical-guide" title="Permanent link">λ︎</a></h2>
+<p>Update Practicalli Clojure Web Services guide on donut with recent lessons learned:</p>
+<p>The guide should include: </p>
+<ul>
+<li>overview</li>
+<li>add dependency</li>
+<li>defining a system configuration</li>
+<li>named-systems</li>
+<li>overriding values in a system configuration</li>
+<li>REPL workflow</li>
+<li>helper functions to start, stop &amp; restart the system components. A system function to show the current value of the system should issues arise.</li>
+</ul>
+<p>juxt/aero
+- consider using environment variables instead, especially if there is minimal difference between environments (prod, stage, test, dev)</p>
 <h2 id="clojure-essentials">Clojure essentials<a class="headerlink" href="#clojure-essentials" title="Permanent link">λ︎</a></h2>
 <p>What are the essentials that any Clojure developer should know?  Some initial thoughts:</p>
 <p>Syntax:</p>
