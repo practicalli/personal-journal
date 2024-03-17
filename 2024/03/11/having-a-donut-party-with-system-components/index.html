@@ -812,6 +812,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#clojure-essentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clojure essentials
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -890,7 +899,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              20 min read
+                              21 min read
                             
                           </span>
                         </div>
@@ -1510,6 +1519,37 @@
 <blockquote>
 <p>Environment variables for ports and other things that may change between environments and deploys helps keep the configuration simple.  Using juxt/aero is nice, but it adds a little more complexity to the configuration.</p>
 </blockquote>
+<h2 id="clojure-essentials">Clojure essentials<a class="headerlink" href="#clojure-essentials" title="Permanent link">λ︎</a></h2>
+<p>What are the essentials that any Clojure developer should know?  Some initial thoughts:</p>
+<p>Syntax:</p>
+<ul>
+<li>define a custom function</li>
+<li>define a value using simple &amp; complex values, anonymous and/or partial functions (or even a transducer)</li>
+<li>define a namespace and require libraries (when to use an alias and :refer)</li>
+<li>let for local names</li>
+<li>conditionals (if when cond some - and their variants)</li>
+<li>list, vector, hash-map and set data structures</li>
+<li>working with data structures (conj, get, into)</li>
+<li>generating &amp; transforming data, e.g. map, reduce, partition, filter, group-by</li>
+<li>sequences and the basics of lazyness</li>
+<li>threading macro - flow and navigating paths to data</li>
+</ul>
+<p>Tooling and Workflow</p>
+<ul>
+<li>starting and configuring a REPL</li>
+<li>Clojure CLI configuration and aliases</li>
+<li>a REPL connected editor and evaluation options</li>
+<li>keeping a clean REPL state</li>
+<li>a test runner, e.g Kaocha</li>
+<li>data inspector, e.g. Portal (highly recommended)</li>
+<li>REPL reloaded Workflow (optional)</li>
+</ul>
+<p>Topics that can wait until there is a specific use case</p>
+<ul>
+<li>writing macros (unless designing an extension to the language)</li>
+<li>polymorphism (unles dispatching by custom types)</li>
+<li>Java interop (largely skipped as there are many wrapper libraries)</li>
+</ul>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a> </p>
