@@ -946,6 +946,21 @@
 </code></pre></div>
 </div>
 <p>The <code>practicalli</code> host alias is replaced by its <code>HostName</code> domain.</p>
+<p>Use Git clone aliases to simplify the command line</p>
+<div class="admonition example">
+<p class="admonition-title">Git Clone aliases</p>
+<div class="highlight"><span class="filename">.config/git/config</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">[</span>url<span class="w"> </span><span class="s2">&quot;git@company:company-org/&quot;</span><span class="o">]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nv">insteadOf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>c:
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">[</span>url<span class="w"> </span><span class="s2">&quot;git@engineering:practicalli/&quot;</span><span class="o">]</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nv">insteadOf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>p:
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Clone using alias</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>p:clojure
+</code></pre></div>
+</div>
 <h2 id="neogit-rebase">Neogit rebase<a class="headerlink" href="#neogit-rebase" title="Permanent link">λ︎</a></h2>
 <p>Hopefully more rebase functions in Neogit.</p>
 <details class="example">
