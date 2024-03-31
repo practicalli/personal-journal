@@ -122,7 +122,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#neogit-rebase" class="md-skip">
+        <a href="#git-and-multiple-ssh-keys" class="md-skip">
           Skip to content
         </a>
       
@@ -762,6 +762,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#git-and-multiple-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git and Multiple SSH keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#neogit-rebase" class="md-nav__link">
     <span class="md-ellipsis">
       Neogit rebase
@@ -914,6 +923,29 @@
 <p>I will update Neovim to 0.10 when AstroNvim confirms it is working well with that release.</p>
 <!-- more -->
 
+<h2 id="git-and-multiple-ssh-keys">Git and Multiple SSH keys<a class="headerlink" href="#git-and-multiple-ssh-keys" title="Permanent link">λ︎</a></h2>
+<p>Use the SSH config to define <code>Host</code> aliases for different GitHub accounts.  Each host defines the hostname it will use for the connection.</p>
+<div class="admonition example">
+<p class="admonition-title">Multiple Host definitions</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Host community
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  HostName github.com
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  IdentityFile ~/.ssh/community
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Host commercial
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  HostName github.com
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  IdentityFile ~/.ssh/commercial
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Host personal
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  HostName github.com
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  IdentityFile ~/.ssh/practicalli
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Clone using personal Host alias</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@personal:practicalli/clojure
+</code></pre></div>
+</div>
+<p>The <code>practicalli</code> host alias is replaced by its <code>HostName</code> domain.</p>
 <h2 id="neogit-rebase">Neogit rebase<a class="headerlink" href="#neogit-rebase" title="Permanent link">λ︎</a></h2>
 <p>Hopefully more rebase functions in Neogit.</p>
 <details class="example">
