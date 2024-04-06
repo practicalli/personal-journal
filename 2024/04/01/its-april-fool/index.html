@@ -957,15 +957,29 @@
 <li>astrolsp.lua</li>
 <li>astroui.lua</li>
 </ul>
-<p>AstroNvim 4 is now a user configuration that pulls in the <a href="https://docs.astronvim.com/configuration/core_plugins/">core AstroNvim plugins</a>.  There is no longer a need to clone the AstorNvim repository. This approach provides a single configuration that is simple to install and extend.</p>
-<p>To get started, fork the AstroNvim 4 user template repository to your own GitHub repository. </p>
+<p>AstroNvim 4 is now a <a href="https://github.com/AstroNvim/template">user configuration</a> that pulls in the <a href="https://docs.astronvim.com/configuration/core_plugins/">core AstroNvim plugins</a>.  This approach provides a single configuration that is simple to install, configure and extend.</p>
+<p>To get started, fork the <a href="https://github.com/AstroNvim/template">AstroNvim 4 user template repository</a> to your own GitHub repository. </p>
 <p>Alternatively, use the <a href="https://github.com/practicalli/astronvim-user-config">Practicalli AstroNvim user config repository</a>, which is a fork of the AstroNvim user template, adding Clojure and other nice tools automatically.</p>
 <h3 id="post-install-tasks">Post install tasks<a class="headerlink" href="#post-install-tasks" title="Permanent link">λ︎</a></h3>
 <p>Neotree
 - <code>H</code> to toggle hidden files and directories</p>
 <p>Neovim
 - ++SPC++ <span class="keys"><kbd>u</kbd></span> <span class="keys"><kbd>w</kbd></span> to toggle wraping of text, useful for Markdown files and other content file types.</p>
-<p>TODO: how to set wrap globally or at least the default for Markdown files</p>
+<p>Set <code>wrap</code> to true in <code>lua/plugins/astrocore.lua</code></p>
+<div class="admonition example">
+<p class="admonition-title">Vim options set in astrocore plug</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="c1">-- vim options can be configured here</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      <span class="n">opt</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">-- vim.opt.&lt;key&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="n">relativenumber</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- sets vim.opt.relativenumber</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">number</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- sets vim.opt.number</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">spell</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- sets vim.opt.spell</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">signcolumn</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="c1">-- sets vim.opt.signcolumn to auto</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">wrap</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- sets vim.opt.wrap</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="n">guifont</span> <span class="o">=</span> <span class="s2">&quot;Fira Code:h16&quot;</span><span class="p">,</span> <span class="c1">-- neovide font family &amp; size</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      <span class="p">},</span>
+</code></pre></div>
 <p>Config
 - enable user.lua config 
   - add custom practicalli logo for startup
@@ -974,65 +988,65 @@
 <p>After enabling the <code>plugins/user.lua</code> configuration, the Noice plugin added via an AstroNvim Community import in <code>lua/community.lua</code> started reporting a conflict error.</p>
 <div class="admonition warning">
 <p class="admonition-title">LSP signature help conflict reported by noice plugin</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>`vim.lsp.handlers[&quot;textDocument/signatureHelp&quot;]` has been overwritten by another plugin?
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> Either disable the other plugin or set `config.lsp.signature.enabled = false` in your **Noice** config.
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   - plugin: nvim
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   - file: /tmp/.mount_nvimRUiD7m/usr/share/nvim/runtime/lua/vim/lsp.lua
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   - line: 2318
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>`vim.lsp.handlers[&quot;textDocument/signatureHelp&quot;]` has been overwritten by another plugin?
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> Either disable the other plugin or set `config.lsp.signature.enabled = false` in your **Noice** config.
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   - plugin: nvim
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   - file: /tmp/.mount_nvimRUiD7m/usr/share/nvim/runtime/lua/vim/lsp.lua
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>   - line: 2318
 </code></pre></div>
 </div>
 <p>The root of the conflict was the Discord "andweeb/presence.nvim" plugin, which included configuration to set a lsp handler</p>
 <div class="admonition example">
 <p class="admonition-title">Presence plugin sets LSP signature help</p>
-<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  <span class="s2">&quot;andweeb/presence.nvim&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s2">&quot;ray-x/lsp_signature.nvim&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">event</span> <span class="o">=</span> <span class="s2">&quot;BufRead&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;lsp_signature&quot;</span><span class="p">).</span><span class="n">setup</span><span class="p">()</span> <span class="kr">end</span><span class="p">,</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="p">},</span>
+<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  <span class="s2">&quot;andweeb/presence.nvim&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="s2">&quot;ray-x/lsp_signature.nvim&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">event</span> <span class="o">=</span> <span class="s2">&quot;BufRead&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;lsp_signature&quot;</span><span class="p">).</span><span class="n">setup</span><span class="p">()</span> <span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  <span class="p">},</span>
 </code></pre></div>
 </div>
 <p>The Discord plugin is not required so the plugin configuration was commented in <code>lua/plugins/user.lua</code></p>
 <p>Should both plugins been needed, then the Noice plugin warning can be managed by disabling its LSP signature</p>
 <div class="admonition example">
 <p class="admonition-title">Disable Noice LSP Signature</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  <span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="s2">&quot;folke/noice.nvim&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">event</span> <span class="o">=</span> <span class="s2">&quot;VeryLazy&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">dependencies</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;MunifTanjim/nui.nvim&quot;</span> <span class="p">},</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>      <span class="kd">local</span> <span class="n">utils</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;astrocore&quot;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      <span class="kr">return</span> <span class="n">utils</span><span class="p">.</span><span class="n">extend_tbl</span><span class="p">(</span><span class="n">opts</span><span class="p">,</span> <span class="p">{</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">lsp</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>          <span class="c1">-- override markdown rendering so that **cmp** and other plugins use **Treesitter**</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>          <span class="n">override</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>            <span class="p">[</span><span class="s2">&quot;vim.lsp.util.convert_input_to_markdown_lines&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>            <span class="p">[</span><span class="s2">&quot;vim.lsp.util.stylize_markdown&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            <span class="p">[</span><span class="s2">&quot;cmp.entry.get_documentation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>          <span class="p">},</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>          <span class="c1">-- config.lsp.signature.enabled = false</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>          <span class="c1">-- signature = {</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>          <span class="c1">--   enabled = false,</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>          <span class="c1">-- },</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        <span class="p">},</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="n">presets</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>          <span class="n">bottom_search</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- use a classic bottom cmdline for search</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>          <span class="n">command_palette</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- position the cmdline and popupmenu together</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>          <span class="n">long_message_to_split</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- long messages will be sent to a split</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>          <span class="n">inc_rename</span> <span class="o">=</span> <span class="n">utils</span><span class="p">.</span><span class="n">is_available</span> <span class="s2">&quot;inc-rename.nvim&quot;</span><span class="p">,</span> <span class="c1">-- enables an input dialog for inc-rename.nvim</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>          <span class="n">lsp_doc_border</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- add a border to hover docs and signature help</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        <span class="p">},</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>      <span class="p">})</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    <span class="kr">end</span><span class="p">,</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>  <span class="p">},</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  <span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="s2">&quot;folke/noice.nvim&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">event</span> <span class="o">=</span> <span class="s2">&quot;VeryLazy&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">dependencies</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;MunifTanjim/nui.nvim&quot;</span> <span class="p">},</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>      <span class="kd">local</span> <span class="n">utils</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;astrocore&quot;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      <span class="kr">return</span> <span class="n">utils</span><span class="p">.</span><span class="n">extend_tbl</span><span class="p">(</span><span class="n">opts</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="n">lsp</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>          <span class="c1">-- override markdown rendering so that **cmp** and other plugins use **Treesitter**</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>          <span class="n">override</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>            <span class="p">[</span><span class="s2">&quot;vim.lsp.util.convert_input_to_markdown_lines&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>            <span class="p">[</span><span class="s2">&quot;vim.lsp.util.stylize_markdown&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>            <span class="p">[</span><span class="s2">&quot;cmp.entry.get_documentation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>          <span class="p">},</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>          <span class="c1">-- config.lsp.signature.enabled = false</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>          <span class="c1">-- signature = {</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>          <span class="c1">--   enabled = false,</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>          <span class="c1">-- },</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        <span class="p">},</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        <span class="n">presets</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>          <span class="n">bottom_search</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- use a classic bottom cmdline for search</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>          <span class="n">command_palette</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- position the cmdline and popupmenu together</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>          <span class="n">long_message_to_split</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- long messages will be sent to a split</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>          <span class="n">inc_rename</span> <span class="o">=</span> <span class="n">utils</span><span class="p">.</span><span class="n">is_available</span> <span class="s2">&quot;inc-rename.nvim&quot;</span><span class="p">,</span> <span class="c1">-- enables an input dialog for inc-rename.nvim</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>          <span class="n">lsp_doc_border</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- add a border to hover docs and signature help</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        <span class="p">},</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>      <span class="p">})</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    <span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>  <span class="p">},</span>
 </code></pre></div>
 </div>
 <h2 id="ssh-key-and-yubikey">SSH key and YubiKey<a class="headerlink" href="#ssh-key-and-yubikey" title="Permanent link">λ︎</a></h2>
 <p>Use the ,,, key type to create an SSH key pair that will be resident on a FIDO2 supporting hardware key, e.g. a recent YubiKey</p>
 <div class="admonition note">
 <p class="admonition-title">Generate a FIDO2 Compliant resident key</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519-sk<span class="w"> </span>-O<span class="w"> </span>resident<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;email-name@domain.com&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519-sk<span class="w"> </span>-O<span class="w"> </span>resident<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;email-name@domain.com&quot;</span>
 </code></pre></div>
 </div>
 <p><code>-O resident</code> indicates the key should be stored on the FIDO authenticator. </p>
