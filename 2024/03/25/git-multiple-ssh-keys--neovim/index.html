@@ -781,15 +781,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ```
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -897,6 +888,18 @@
       <span class="md-tag">clojure</span>
     
   
+    
+    
+    
+      <span class="md-tag">git</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">neovim</span>
+    
+  
 </nav>
 
 
@@ -970,33 +973,33 @@
 <p>Hopefully more rebase functions in Neogit.</p>
 <details class="example">
 <summary>AstroNvim new version</summary>
-<p>```config
-○ neogit  User AstroGitFile  <leader>gs  <leader>gnt  <leader>gnc  <leader>gnd  <leader>gnk
-    20ab5a6 Merge pull request #1213 from kjughx/rebase-drop
-    d44bf7f Add test for rebase_drop
-    5185d91 Add rebase "drop a commit" to rebase
-    660d1f0 Use git.rev_parse.abbreviate_commit instead of abbreviated_size()
-    2ec7c25 Merge pull request #1211 from kjughx/rebase-modify
-    3d2aaec Update tests/specs/neogit/popups/rebase_spec.lua
-    d20d16d Update lua/neogit/lib/git/log.lua
-    c940678 Add tests for rebase_modify
-    de6ecfb Fix existing unit tests for test_reword
-    a5d5cc6 Add "modify a commit" to rebase
-    87b7fc6 Add helper function to get length of hash
-    b195cf3 Merge pull request #1212 from NeogitOrg/backport-logging (4 hours ago)
-    9f9eb8e Spelling (4 hours ago)
-    ffab01c Rename json -&gt; record since it's not json anymore (4 hours ago)
-    dd1de78 Update json spec (4 hours ago)
-    04dcfd0 Better parsing with fewer loops/allocations (4 hours ago)
-    78655a6 Use record separators instead of eval'ing the git output. (4 hours ago)
-    c27fcb2 Handle multi-line commit messages by joining all lines, then re-splitting on the record separators. (4 hours ago)
-    7f3e0d3 Replace json parsing with string eval to lua tables. Having bug reports that we don't properly escape string fields, and this approach basically sidesteps all that. (4 hours ago)
-    10feeec Update README.md (11 hours ago)
-    bf2a353 Update README.md (2 days ago)
-    4c29337 Merge pull request #1206 from NeogitOrg/CKolkey-patch-1 (2 days ago)
-    16aa16e Update README.md (2 days ago)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>○ neogit  User AstroGitFile  &lt;leader&gt;gs  &lt;leader&gt;gnt  &lt;leader&gt;gnc  &lt;leader&gt;gnd  &lt;leader&gt;gnk
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    20ab5a6 Merge pull request #1213 from kjughx/rebase-drop
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    d44bf7f Add test for rebase_drop
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    5185d91 Add rebase &quot;drop a commit&quot; to rebase
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    660d1f0 Use git.rev_parse.abbreviate_commit instead of abbreviated_size()
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    2ec7c25 Merge pull request #1211 from kjughx/rebase-modify
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    3d2aaec Update tests/specs/neogit/popups/rebase_spec.lua
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    d20d16d Update lua/neogit/lib/git/log.lua
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    c940678 Add tests for rebase_modify
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    de6ecfb Fix existing unit tests for test_reword
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    a5d5cc6 Add &quot;modify a commit&quot; to rebase
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    87b7fc6 Add helper function to get length of hash
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    b195cf3 Merge pull request #1212 from NeogitOrg/backport-logging (4 hours ago)
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    9f9eb8e Spelling (4 hours ago)
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    ffab01c Rename json -&gt; record since it&#39;s not json anymore (4 hours ago)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    dd1de78 Update json spec (4 hours ago)
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    04dcfd0 Better parsing with fewer loops/allocations (4 hours ago)
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    78655a6 Use record separators instead of eval&#39;ing the git output. (4 hours ago)
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    c27fcb2 Handle multi-line commit messages by joining all lines, then re-splitting on the record separators. (4 hours ago)
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    7f3e0d3 Replace json parsing with string eval to lua tables. Having bug reports that we don&#39;t properly escape string fields, and this approach basically sidesteps all that. (4 hours ago)
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    10feeec Update README.md (11 hours ago)
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    bf2a353 Update README.md (2 days ago)
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    4c29337 Merge pull request #1206 from NeogitOrg/CKolkey-patch-1 (2 days ago)
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    16aa16e Update README.md (2 days ago)
+</code></pre></div>
 </details>
-<h2 id="_1">```<a class="headerlink" href="#_1" title="Permanent link">λ︎</a></h2>
+<hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a> </p>
 <p><a class="md-button" href="https://github.com/practicalli" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Practical.li GitHub Org</a> 
