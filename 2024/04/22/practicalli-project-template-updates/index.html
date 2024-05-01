@@ -28,7 +28,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
     
     
       
@@ -770,6 +770,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#neovim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neovim
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -904,13 +913,35 @@
 <!-- more -->
 
 <h2 id="practicalli-project-template">Practicalli Project template<a class="headerlink" href="#practicalli-project-template" title="Permanent link">λ︎</a></h2>
-<p>Noticed an issue was raised that highlighted the docker caching was not correct.  Initially it seemed I was not using an approprate alias to cache the project aliases.</p>
+<p>Noticed an issue was raised that highlighted the docker caching was not correct.  Initially it seemed I was not using an appropriate alias to cache the project aliases.</p>
 <div class="admonition example">
 <p class="admonition-title">Revised command to Prepare library dependencies</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-P<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clojure<span class="w"> </span>-P<span class="w"> </span>-X:build
 </code></pre></div>
 </div>
 <p>After adding a revised command, there were still dependencies being downloaded during the <code>make dist</code> phase, where tools.built creates the uberjar.</p>
+<h2 id="neovim">Neovim<a class="headerlink" href="#neovim" title="Permanent link">λ︎</a></h2>
+<p>Update shell aliases for the new AstroNvim 4 configuration.</p>
+<p><code>astro4</code> added whist testing the new version of AstroNvim.</p>
+<p><code>astro</code> changed to point to new AstroNvim version 4 user configuration by Practicalli once it was functionally comparable to AstroNvim version 3 user config by Practicalli.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># ------------------------------------------ 
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># Neovim Aliases for multiple configurations
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>alias astro=&quot;NVIM_APPNAME=astronvim nvim&quot;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>alias astro4=&quot;NVIM_APPNAME=astronvim4 nvim&quot;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>alias astro=&quot;NVIM_APPNAME=astronvim4 nvim&quot;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>alias astrotemplate=&quot;NVIM_APPNAME=astronvim-template nvim&quot;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>alias kickstart=&quot;NVIM_APPNAME=kickstart-nvim nvim&quot;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>alias cajus=&quot;NVIM_APPNAME=cajus nvim&quot;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>alias neovim-config=&quot;NVIM_APPNAME=neovim-config nvim&quot;
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a># Neovide alias with AstroNvim configuration
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>alias neovide=&quot;NVIM_APPNAME=astronvim neovide&quot;
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>alias neovide=&quot;NVIM_APPNAME=astronvim4 neovide&quot;
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a># ------------------------------------------ 
+</code></pre></div>
+</div>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a> </p>
