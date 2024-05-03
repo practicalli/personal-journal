@@ -28,7 +28,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
     
     
       
@@ -924,9 +924,17 @@
 <!-- more -->
 
 <h2 id="neovim">Neovim<a class="headerlink" href="#neovim" title="Permanent link">λ︎</a></h2>
-<p>In <a href="https://github.com/practicalli/astronvim-user-config">Practicalli User Config</a> the theme changes have been moved from <code>lua/plugins/astroui.lua</code> to <code>practicalli.lua</code> to minimise changes to the original </p>
+<p><a href="https://github.com/practicalli/astronvim-user-config">Practicalli User Config</a> theme changes have been moved from <code>lua/plugins/astroui.lua</code> to <code>practicalli.lua</code> to minimise changes from the original <a href="https://github.com/AstroNvim/template/">AstroNvim template repository</a>.  </p>
+<p>Minimising changes in the AstroNvim template simplifies merging updates from the <a href="https://github.com/AstroNvim/template/">AstroNvim template repository</a>, which are more likely due to AstroNvim 4 release being relatively recent.</p>
+<p>Using separate files where possible also allows everyone to easily customise their experience when using <a href="https://github.com/practicalli/astronvim-user-config">Practicalli User Config</a>.  By adding or removing a comment from the <code>if</code> statement, the specific configuration file can be included or excluded when Neovim loads the configuration.</p>
+<p>By essentially toggling one line in each file, a very minimal change is made and again makes merging changes between Practicalli configuration and anyone else configure much simpler.</p>
+<div class="admonition example">
+<p class="admonition-title">Comment if statement to include the configuration in the file</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE</span>
+</code></pre></div>
+</div>
 <h2 id="sustainability">Sustainability<a class="headerlink" href="#sustainability" title="Permanent link">λ︎</a></h2>
-<p>Joined a sustainability group within the company and will be co-charing the group.</p>
+<p>Joined a sustainability group within the company and will be co-chairing the group.</p>
 <p>Making milk from Hemp Seeds today, delicious.  Reminds me I should update the <a href="https://practical.li/sustainable-life/">Practicalli Sustainable Life</a> book to MkDocs and add a lot more content.</p>
 <p>My life is more sustainable that the average persons, although there is always more I can adapt to.</p>
 <p>Joining the group via work I can share my personal experiences with others to inspire them.  I also aim to learn more about larger scoped initiatives and how the company can influence our potential partners and customers.</p>
@@ -1104,7 +1112,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
       
     
   </body>
