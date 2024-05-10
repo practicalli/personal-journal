@@ -857,7 +857,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -914,7 +914,14 @@
 <!-- more -->
 
 <h2 id="practicalli-clojure-cli-config">Practicalli Clojure CLI Config<a class="headerlink" href="#practicalli-clojure-cli-config" title="Permanent link">λ︎</a></h2>
-<p>Monthly library updates and published a new release.</p>
+<p>Monthly library updates and published a new release. Used AstroNvim &amp; Neovim to update the libraries, instead of the usual Emacs approach.</p>
+<p>A combination of search, highlight, jump and dot repeat commands were used to update the same version number of a specific library.</p>
+<p><span class="keys"><kbd class="key-slash">/</kbd></span> followed by the library name to update to find the next occurrance, then ++dollar++ to jump to the end of the line and back a word to land on the string containing the version number.</p>
+<p>++hash++ to highlight all matching version number values (hopefully the same number of occurrances that antq found to update) </p>
+<p><span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>w</kbd></span> to change the current version value and type in the updated version.</p>
+<p><span class="keys"><kbd>n</kbd></span> jumps to next occurrance and <span class="keys"><kbd>N</kbd></span> jumps to previous occurance.</p>
+<p><span class="keys"><kbd class="key-period">.</kbd></span> repeats the change word action using dot-repeat, updating the next (or previous) matching version to update.</p>
+<p>Jump through all library statements and dot-repeat to update all the versions.</p>
 <h2 id="practicalli-web-services">Practicalli Web Services<a class="headerlink" href="#practicalli-web-services" title="Permanent link">λ︎</a></h2>
 <p>Generated a working Clojure API project from the <code>practicalli/service</code> template, using donut-party/system to manage the service components.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:template<span class="w"> </span>practicalli/service<span class="w"> </span>:name<span class="w"> </span>practicalli/gameboard<span class="w"> </span>:component<span class="w"> </span>:donut<span class="w">  </span>
