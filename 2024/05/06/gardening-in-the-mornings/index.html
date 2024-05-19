@@ -20,7 +20,7 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/journal/2024/05/06/short-week-at-work/">
+        <link rel="canonical" href="https://practical.li/journal/2024/05/06/gardening-in-the-mornings/">
       
       
         <link rel="prev" href="../../../04/29/500-commit-streak-on-github/">
@@ -32,7 +32,7 @@
     
     
       
-        <title>Short week at work - Practicalli Personal Journal</title>
+        <title>Gardening in the mornings - Practicalli Personal Journal</title>
       
     
     
@@ -79,7 +79,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Short week at work - Practicalli Personal Journal" >
+        <meta  property="og:title"  content="Gardening in the mornings - Practicalli Personal Journal" >
       
         <meta  property="og:description"  content="Daily journal of thoughts and experiences" >
       
@@ -91,11 +91,11 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/journal/2024/05/06/short-week-at-work/" >
+        <meta  property="og:url"  content="https://practical.li/journal/2024/05/06/gardening-in-the-mornings/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Short week at work - Practicalli Personal Journal" >
+        <meta  name="twitter:title"  content="Gardening in the mornings - Practicalli Personal Journal" >
       
         <meta  name="twitter:description"  content="Daily journal of thoughts and experiences" >
       
@@ -192,7 +192,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Short week at work 
+             Gardening in the mornings 
           </span>
         </div>
       </div>
@@ -779,6 +779,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#neovim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neovim
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -857,7 +866,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -906,13 +915,14 @@
   
 
 
-  <h1>Short week at work</h1>
+  <h1>Gardening in the mornings</h1>
 
 <p><strong>Thoughts for the week</strong></p>
 <p>A new month so time to update libraries across Practicalli projects.</p>
-<p>Bank holiday Monday and two personal holidays this week, so only two days at work and very few meetings, yay!.</p>
+<p>Bank holiday Monday and two personal holidays this week, so only two days at work and very few meetings, yay!.  Time to prepare for the company offsite event next week and see how lightly I can pack.</p>
 <p>I made a big impact on upgrading the garden this week.  All the paving stones at the end of the garden were levelled so the shed is no longer on a slope.  A thick weed surpressing membrane was fitted underneath all the paving stones. </p>
 <p>The raised garden bed was be reworked by adjusting the top of the railway sleepers to be level to the top of the paving stones.  This adds a nice clean line with the garden and makes maintenance in and around the garden easier. Weed surpressing membrane was added to the side and underneath of each sleeper.  Spare wood panels was used to keep the membrane in plate and to also add more robustness to the sleepers.</p>
+<p>Most of the work was done in the early mornings as the weather was quite hot.</p>
 <!-- more -->
 
 <h2 id="practicalli-clojure-cli-config">Practicalli Clojure CLI Config<a class="headerlink" href="#practicalli-clojure-cli-config" title="Permanent link">λ︎</a></h2>
@@ -929,6 +939,13 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:template<span class="w"> </span>practicalli/service<span class="w"> </span>:name<span class="w"> </span>practicalli/gameboard<span class="w"> </span>:component<span class="w"> </span>:donut<span class="w">  </span>
 </code></pre></div>
 <p>Pushed the code to <a href="https://github.com/practicalli/gameboard-donut">practicalli/gameboard-donut</a> to help others see how such a project is organised.</p>
+<h2 id="neovim">Neovim<a class="headerlink" href="#neovim" title="Permanent link">λ︎</a></h2>
+<p>Pressing <span class="keys"><kbd class="key-slash">/</kbd></span> in insert mode causes Neovim to lock up, rather than showing completion for the file system path.  Some testing is required to see what could be the cause.</p>
+<p>Test using the following</p>
+<ul>
+<li>run <code>nvim</code> without any config (check if this is a neovim bug or perhaps a missing feature)</li>
+<li>run <code>nvim</code> with the astro-template config (check if its any of my plugins that are causing the issue or if it also appears in the default AstroNvim config)</li>
+</ul>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a> </p>
