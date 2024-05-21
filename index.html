@@ -28,7 +28,7 @@
       
       
       <link rel="icon" href="assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -846,6 +846,62 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-05-20 00:00:00">May 20, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/practicalli/" class="md-meta__link">practicalli</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="refactor-astronvim-clojure-pack"><a class="toclink" href="2024/05/20/refactor-astronvim-clojure-pack/">Refactor AstroNvim Clojure pack</a></h2>
+<p><strong>Thoughts for the week</strong></p>
+<p>Time to refactor the AstroNvim Community Clojure language pack that I contributed in 2023?  </p>
+<ul>
+<li>add nvim-treesitter-sexp plugin</li>
+<li>add example of disabling / configuring parinfer plugin</li>
+<li>add ts-comment.nvim to support <code>;;</code> and <code>;</code> comment characters</li>
+<li>remove autocmd from conjure plugin (no longer needed)</li>
+<li>remove most of the opinionated conjure configuration overrides, although still hiding the repl log buffer (HUD) by default as its nicer as a separate tab.  Maybe if I can have it open by default as a tab, then I could live with having the HUD open on REPL startup (a nice way to check things are working)</li>
+</ul>
+<p>Still sleepy from travel to the company offsite last week and the cycle ride on Saturday.  Although I did manage some work in the garden on Sunday.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2024/05/20/refactor-astronvim-clojure-pack/">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true" alt="Practicalli Johnny">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-05-13 00:00:00">May 13, 2024</time></li>
         
           <li class="md-meta__item">
@@ -1282,55 +1338,6 @@
   </div>
 </article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true" alt="Practicalli Johnny">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-02-26 00:00:00">February 26, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/practicalli/" class="md-meta__link">practicalli</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="alias-shell-that-updates-shell"><a class="toclink" href="2024/02/26/alias-shell-that-updates-shell/">Alias Shell that updates Shell</a></h2>
-<p><strong>Thoughts for the week</strong></p>
-<p>As this week is mosly tweaks for Zsh history, I've titled this journal entry to be a play on words from the Shakesphere play 'Alls well that ends well'.</p>
-<p>The <code>fd</code> built-in command for Zsh is a very effective way to keep the command history clean.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/02/26/alias-shell-that-updates-shell/">
-          Continue reading
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
       
         
           
@@ -1484,7 +1491,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "navigation.sections"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
