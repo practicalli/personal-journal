@@ -19,11 +19,11 @@ Debian is very useful for older i686 to i386 cpu based hardware.  Firefox-esr is
 
 Use Material for MkDocs blog feature to create a rich experience for journal entries written in markdown.
 
-[Practicalli Personal Journal](https://practical.li/personal-journal){target=_blank .md-button} 
+[Practicalli Journal](https://practical.li/journal){target=_blank .md-button} 
 
 The journal will match the appearance of other Practicalli content and therefore have a light and dark theme built in.
 
-Older developer journal content will be added to the new journal to make it easier to find and consume this content, e.g. [practicalli-john/developer-journal](https://github.com/practicalli-john/developer-journal) and [practicalli-john/100-days-of-code](https://github.com/practicalli-john/100-days-of-clojure-code)
+Older developer journal content will be added to the new journal to make it easier to find and consume this content, e.g. [practicalli-johnny/developer-journal](https://github.com/practicalli-johnny/developer-journal) and [practicalli-johnny/100-days-of-code](https://github.com/practicalli-johnny/100-days-of-clojure-code)
 
 > Consider creating a 100 Days of Clojure guide to those new to learning Clojure
 
@@ -87,12 +87,17 @@ Requires `ssh` package on the system that will connect to the Openssh-server (no
 
 Debian creates a proper `root` account with password during the initial install, e.g. from the net.iso.  The root account is expected to be used to install packages and other administrative tasks, so the user account created is not added to a sudo list to carry out administration.
 
-Ubuntu adds the user account created during initial install to the sudo list, which is a little more convienient but also increases the risk of security breaches.  If a user password is discovered or account otherwise compromised, then any administration task can be carried out.
+Ubuntu adds the user account created during initial install to the sudo list, which is a little more convenient but also increases the risk of security breaches if the sudo package is ever compromised.  If a user password is discovered or account otherwise compromised, then any administration task can be carried out.
 
-The debian approach does require remembering two passwords, one for the daily user account and one for root administration account.  However, the root password could be added to a secure password manager, e.g. NordPass.
+The debian approach does require remembering two passwords, one for the daily user account and one for root administration account.  However, the root password could be added to a secure password manager, e.g. NordPass or 1Password.
 
 ---
 Thank you.
 
-[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
+
+[:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
+[:fontawesome-brands-twitter: @practical_li](https://twitter.com/practcial_li){target=_blank .md-button}
