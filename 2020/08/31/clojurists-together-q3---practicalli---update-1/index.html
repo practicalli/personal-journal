@@ -897,29 +897,33 @@
   <h1>Clojurists Together Q3 - Practicalli - Update 1</h1>
 
 <p><img align="right" alt="Clojurists Together Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-clojurists-together-button.svg" style="height:150px;width:150px" /></p>
-<p>Continued support for Practicalli by Clojurists together is much appreciated and there are <a href="https://practicalli.github.io/clojure-webapps/relational-databases-and-sql/managing-connections.html">several hundred content ideas</a> for the continued work.</p>
+<p>Continued support for Practicalli by Clojurists together is much appreciated and there are <a href="https://practical.li/clojure-web-services/relational-databases-and-sql/managing-connections/">several hundred content ideas</a> for the continued work.</p>
 <p>Highlights of the last two weeks includes:</p>
 <ul>
 <li><a href="https://www.youtube.com/playlist?list=PLpr9V-R8ZxiDjyU7cQYWOEFBDR1t7t0wv">Live broadcasts</a> - continuing the Banking on Clojure project with next.jdbc, H2 database and DBeaver.</li>
-<li><a href="https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/development-database.html">Database access and design</a> for Banking on Clojure project</li>
-<li>Updated <a href="https://github.com/practicalli/clojure-deps-edn">practicalli/clojure-deps-edn</a> repository to <a href="https://practicalli.github.io/clojure/clojure-tools/data-browsers/rebl-data-visualization.html">use Congnitect dev-tools for REBL</a> and a way to <a href="https://practicalli.github.io/clojure/clojure-tools/data-browsers/rebl-data-visualization.html#run-rebl-with-nrepl">configure CIDER to work with REBL</a>.</li>
+<li><a href="https://practical.li/clojure-web-services/projects/banking-on-clojure/development-database/">Database access and design</a> for Banking on Clojure project</li>
+<li>Updated practicalli/clojure-deps-edn repository to use Congnitect dev-tools for REBL and a way to configure CIDER to work with REBL - UPDATE: approach since deprecated in favour of <a href="https://practical.li/clojure/data-inspector/portal/">Portal</a></li>
 <li>Test drive of <a href="https://github.com/Olical/conjure">Conjure</a>, an impressive Clojure environment for Neovim</li>
 </ul>
 <!-- more -->
 
 <h2 id="clojure-webapps">Clojure WebApps<a class="headerlink" href="#clojure-webapps" title="Permanent link">λ︎</a></h2>
-<p>Continuing the <a href="https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/database-tables.html">Banking on Clojure project</a> as a major project, which started from the specifications created in Practicalli study group and will be expanded into a production grade web application.</p>
+<p>Continuing the <a href="https://practical.li/clojure-web-services/projects/banking-on-clojure/database-tables/">Banking on Clojure project</a> as a major project, which started from the specifications created in Practicalli study group and will be expanded into a production grade web application.</p>
 <p>The application server system, UI, routing and initial handler have been defined and CircleCI used for system integration and generative testing, deploying to a staging environment on Heroku on successful builds.</p>
 <p>Currently adding content for database connectivity, database design and using next.jdbc and H2 for a development environment database.</p>
 <p>PostgreSQL provisioned using Heroku for staging and production database.  Explored JDBC database connection strings, understanding well formed jdbc connection strings, very useful for working with Heroku environment variable for Postgres databases. Using different variations on the db-spec mapping for next.jdbc to minimise the number of environment variables to create.</p>
 <ul>
-<li><a href="https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/database-tables.html">Design and create database tables</a></li>
-<li><a href="https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/namespace-design.html">Namespace design</a></li>
-<li><a href="https://practicalli.github.io/clojure-webapps/relational-databases-and-sql/h2-database/">h2 Relational database</a> and <a href="https://practicalli.github.io/clojure-webapps/relational-databases-and-sql/h2-database/database-tools.html">development tools for H2</a></li>
-<li><a href="https://practicalli.github.io/clojure-webapps/relational-databases-and-sql/managing-connections.html">Relational databases - Managing connections</a></li>
-<li><a href="https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/production-database.html">Production dabase - Heroku Postgres</a></li>
+<li><a href="https://practical.li/clojure-web-services/projects/banking-on-clojure/database-tables/">Design and create database tables</a></li>
+<li><a href="https://practical.li/clojure-web-services/projects/banking-on-clojure/namespace-design/">Namespace design</a></li>
+<li><a href="https://practical.li/clojure-web-services/relational-databases-and-sql/h2-database/">h2 Relational database</a> and <a href="https://practical.li/clojure-web-services/relational-databases-and-sql/h2-database/database-tools/">development tools for H2</a></li>
+<li><a href="https://practical.li/clojure-web-services/relational-databases-and-sql/managing-connections/">Relational databases - Managing connections</a></li>
+<li><a href="https://practical.li/clojure-web-services/projects/banking-on-clojure/production-database/">Production dabase - Heroku Postgres</a></li>
 </ul>
 <p>Once the project is completed with compojure, other routing libraries (bidi, reitit) will be used to show a working comparison, communicating the different approaches taken in a practical way.  The same will be done for component lifecycle libraries, eg. mount, integrant and component.</p>
+<div class="admonition warning">
+<p class="admonition-title">Heroku only commercially available</p>
+<p>Heroku stopped providing user accounts with free compute credits, so either Heroku must be paid for or use an alternate approach to deployment in the cloud.</p>
+</div>
 <h2 id="clojure-depsedn">Clojure deps.edn<a class="headerlink" href="#clojure-depsedn" title="Permanent link">λ︎</a></h2>
 <p>Added new aliases and updated existing aliases</p>
 <ul>
@@ -927,13 +931,13 @@
 <li><code>:database-h2</code> library dependency to separate the development environment database from staging and production deployment</li>
 <li><code>:outdated</code> unsing antq rather than depot (which is no longer under development) to manage dependency versions</li>
 </ul>
-<p>[Additional aliases added for lambdaisland/kaocha][<a href="https://github.com/practicalli/clojure-deps-edn/blob/live/deps.edn#L318-L350">https://github.com/practicalli/clojure-deps-edn/blob/live/deps.edn#L318-L350</a>] to support ClojureScript test runner, BDD style tests, code coverage and junit-xml reports for CI tools and wall-boards.</p>
+<p>[Additional aliases added for lambdaisland/kaocha][<a href="https://github.com/practicalli/clojure-cli-config/blob/live/deps.edn#L318-L350">https://github.com/practicalli/clojure-cli-config/blob/live/deps.edn#L318-L350</a>] to support ClojureScript test runner, BDD style tests, code coverage and junit-xml reports for CI tools and wall-boards.</p>
 <h2 id="practicalli-clojure">Practicalli Clojure<a class="headerlink" href="#practicalli-clojure" title="Permanent link">λ︎</a></h2>
 <p>Added <a href="https://practicalli.github.io/clojure/simple-projects/">several small projects</a> to help people learn the basics of Clojure, many of which cover the concept of data transformation using the Clojure standard library.</p>
-<p>Added docs to <a href="https://practicalli.github.io/clojure/clojure-tools/data-browsers/rebl-data-visualization.html#configure-rebl-with-cider-for-spacemacs--emacs">use CIDER and Calva with REBL</a></p>
+<p>Added docs to use CIDER and Calva with REBL.  UPDATE: replaced with <a href="https://practical.li/clojure/data-inspector/portal/">Portal</a></p>
 <h2 id="conjure-vim-tooling-for-clojure-development">Conjure - vim tooling for Clojure development<a class="headerlink" href="#conjure-vim-tooling-for-clojure-development" title="Permanent link">λ︎</a></h2>
 <p>Expanding the Clojure aware tools recommendations with Conjure, an excellent development environment for Neovim.</p>
-<p>Created a <a href="https://gist.github.com/jr0cket/6c475137ee57fbb14f9289bd76889512">install walk through guide for Conjure</a> that supports those new to Neovim (as I was) which will be added to the <a href="http://practicalli.github.io/clojure/clojure-editors/">Clojure aware editors section</a> in Practicalli Clojure.  Also adding an <a href="https://gist.github.com/jr0cket/fc7c6ec08d584675105667a0e483a643">example init.vim</a> configuration that is documented and explains the purpose of the plugins included, supporting the adoption of the Conjure tool.</p>
+<p>Created a install walk through guide for Conjure that supports those new to Neovim (as I was) which will be added to the <a href="http://practical.li/clojure/clojure-editors/">Clojure aware editors section</a> in Practicalli Clojure.  Also adding an example init.vim configuration that is documented and explains the purpose of the plugins included, supporting the adoption of the Conjure tool. (UPDATE: <a href="https://practical.li/neovim/configuration/astronvim/">AstroNvim Community Clojure pack</a> now used to configure Conjure for Practicalli)</p>
 <p>Planning a video of a REPL based workflow using <a href="https://github.com/Olical/conjure">Conjure</a> (and all other editors) to show the tool in action and support effective.</p>
 
 

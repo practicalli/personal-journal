@@ -929,11 +929,15 @@ Created a guide to develop a project that <a href="http://practicalli.github.io/
 Updated the <a href="http://practicalli.github.io/clojure/clojure-spec/projects/bank-account/">banking-on-clojure project</a> using a TDD approach with Clojure spec.</p>
 <p>Using Kaocha test runner run unit tests and Clojure spec generative tests locally and via CirceCI. Kaocha can run the same tests as clojure.spec.test.alpha/test function calls, without having to add code to the project. Adding the spect-check-plugin via the test.edn config did not run the generative tests, only the unit tests. Use the spec-test-check plugin to run the reports works when included as a command line flag.</p>
 <h2 id="practicalli-clojure-webapps">Practicalli Clojure Webapps<a class="headerlink" href="#practicalli-clojure-webapps" title="Permanent link">λ︎</a></h2>
-<p>Created <a href="https://practicalli.github.io/clojure-webapps/projects/status-monitor-deps/">a guide to deploy a Clojure application via CirceCI onto Heroku</a>. Think of Heroku as AWS without the cognative load to use it, simply push source code to Heroku and it builds and deploys the resulting application.</p>
+<p>Created <a href="https://practical.li/clojure-web-services/projects/status-monitor-deps/">a guide to deploy a Clojure application via CirceCI onto Heroku</a>. Think of Heroku as AWS without the cognitive load to use it, simply push source code to Heroku and it builds and deploys the resulting application.</p>
 <p>Updated the status monitor project to deps.edn to use as the basis for a guide to deploy Clojure applications via CircleCI to Heroku (a cloud platform as a service). The project takes a simple approach so the focus remains on the continuous integration pipeline.</p>
 <p>CircleCI has an Heroku Orb, providing common configuration for deploying to Heroku.  The Heroku orb is used to deploy the project from its source code, building an uberjar and running the application from that uberjar.</p>
 <p>Updated details of using postgresql with Clojure (documentation will be extended soon) and recommended next.java as a library to use for SQL.</p>
 <p>Simplified the overall navigation on the Practicalli Clojure Webapps book.</p>
+<div class="admonition warning">
+<p class="admonition-title">Heroku only commercially available</p>
+<p>Heroku stopped providing user accounts with free compute credits, so either Heroku must be paid for or use an alternate approach to deployment in the cloud.</p>
+</div>
 <h2 id="practicalli-spacemacs">Practicalli Spacemacs<a class="headerlink" href="#practicalli-spacemacs" title="Permanent link">λ︎</a></h2>
 <p>Rewrite of the switch to develop page, using in-page tabs to simplify the guide into the two different approaches.</p>
 <h2 id="hacking-on-spacemacs">Hacking on Spacemacs<a class="headerlink" href="#hacking-on-spacemacs" title="Permanent link">λ︎</a></h2>
