@@ -33,7 +33,7 @@ implicity `**/` in front of `gitdir` file path if it does not start with `~`, `/
 
 ignore, commit templates, and allowed-signatures files seem to need the full path on MacOSX or can be defined relative to the home directory using tilde `~` expansion, e.g. `~/.config/git/ignore`
 
-[Practicalli Dotfiles - Git config examples](https://github.com/practicalli/dotfiles/git){target=_blank .md-button}
+[Practicalli Dotfiles - Git config examples](https://github.com/practicalli/dotfiles/tree/main/git){target=_blank .md-button}
 
 
 ## Neovim
