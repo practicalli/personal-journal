@@ -943,12 +943,13 @@
 <p>Practicalli recommends <a href="https://practical.li/engineering-playbook/source-control/git-configuration/#commit-signing-with-ssh-key">SSH keys for commit &amp; tag signing</a> as the configuration is simpler than PGP key signing</p>
 </blockquote>
 <h2 id="ssh-keys-github_1">SSH Keys &amp; GitHub<a class="headerlink" href="#ssh-keys-github_1" title="Permanent link">λ︎</a></h2>
-<p>Multiple SSH keys can be used within the same GitHub account by defining a host for each key.</p>
+<p>Multiple SSH keys can be used to push commits to a GitHub account by defining a host for each key in <code>$HOME/.ssh/config</code>.</p>
+<p>A host can have a name expressing its purpose, e.g. <code>Host practicalli</code>, <code>Host company-name</code>.  Or a host can match all SSH calls with <code>Host *</code></p>
 <p>A host definition can be for the same service, e.g. <code>HostName github.com</code></p>
 <p>The URL in the git remote url should use the Host name rather than the service URL</p>
 <div class="admonition example">
 <p class="admonition-title">SSH Configuration with Multiple SSH keys</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># ------------------------------------------ 
+<div class="highlight"><span class="filename">$HOME/.ssh/config</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># ------------------------------------------ 
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># SSH Configuration - Practicalli
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>#
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a># - Remote Clojure Server nREPL connection
@@ -977,14 +978,15 @@
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a># ------------------------------------------ 
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
 <a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a># ------------------------------------------ 
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a># MacOSX
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a># MacOSX additional configuration
 <a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
 <a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a># `UseKeyChain` required for MacOSX keychain access
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a># Host github.com
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>#   AddKeysToAgent yes
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>#   UseKeychain yes
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>#   IdentityFile ~/.ssh/id_ed25519
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a># ------------------------------------------ 
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a># Host company-name
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    HostName github.com
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>#   AddKeysToAgent yes
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>#   UseKeychain yes
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>#   IdentityFile ~/.ssh/id_ed25519
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a># ------------------------------------------ 
 </code></pre></div>
 </div>
 <h3 id="sso-sign-on">SSO sign-on<a class="headerlink" href="#sso-sign-on" title="Permanent link">λ︎</a></h3>
