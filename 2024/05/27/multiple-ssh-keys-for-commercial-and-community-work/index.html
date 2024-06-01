@@ -122,7 +122,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ssh-keys-github" class="md-skip">
+        <a href="#ssh-keys-git-client" class="md-skip">
           Skip to content
         </a>
       
@@ -762,16 +762,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ssh-keys-github" class="md-nav__link">
+  <a href="#ssh-keys-git-client" class="md-nav__link">
     <span class="md-ellipsis">
-      SSH Keys &amp; GitHub
+      SSH Keys &amp; Git client
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssh-keys-github_1" class="md-nav__link">
+  <a href="#ssh-keys-github" class="md-nav__link">
     <span class="md-ellipsis">
       SSH Keys &amp; GitHub
     </span>
@@ -928,7 +928,7 @@
 <p>I realised there was a much simpler approach to managing multiple SSH keys, especially when one of those keys is for commercial work that requires Single Sign-On authorisation.</p>
 <!-- more -->
 
-<h2 id="ssh-keys-github">SSH Keys &amp; GitHub<a class="headerlink" href="#ssh-keys-github" title="Permanent link">λ︎</a></h2>
+<h2 id="ssh-keys-git-client">SSH Keys &amp; Git client<a class="headerlink" href="#ssh-keys-git-client" title="Permanent link">λ︎</a></h2>
 <p>There advantages to using separate SSH keys for work on commercial projects and open source projects.</p>
 <ul>
 <li>Increased security as only the SSH key with Single Sign-on (SSO) authorisation can send or receive data from the GitHub commercial Organisation.  SSO authorisation should always be require for commercial projects. </li>
@@ -942,7 +942,7 @@
 <blockquote>
 <p>Practicalli recommends <a href="https://practical.li/engineering-playbook/source-control/git-configuration/#commit-signing-with-ssh-key">SSH keys for commit &amp; tag signing</a> as the configuration is simpler than PGP key signing</p>
 </blockquote>
-<h2 id="ssh-keys-github_1">SSH Keys &amp; GitHub<a class="headerlink" href="#ssh-keys-github_1" title="Permanent link">λ︎</a></h2>
+<h2 id="ssh-keys-github">SSH Keys &amp; GitHub<a class="headerlink" href="#ssh-keys-github" title="Permanent link">λ︎</a></h2>
 <p>Multiple SSH keys can be used to push commits to a GitHub account by defining a host for each key in <code>$HOME/.ssh/config</code>.</p>
 <p>A host can have a name expressing its purpose, e.g. <code>Host practicalli</code>, <code>Host company-name</code>.  Or a host can match all SSH calls with <code>Host *</code></p>
 <p>A host definition can be for the same service, e.g. <code>HostName github.com</code></p>
@@ -992,6 +992,24 @@
 <h3 id="sso-sign-on">SSO sign-on<a class="headerlink" href="#sso-sign-on" title="Permanent link">λ︎</a></h3>
 <p>Using multiple Host definitions with SSH keys failed when a GitHub Organisation containing the repository requires Single Sign-on (SSO) authorisation.</p>
 <p>Setting the default host, <code>Host *</code> with the key that has SSO authorisation resolves this issue.</p>
+<div class="admonition example">
+<p class="admonition-title">SSH Configuration with Default Host</p>
+<div class="highlight"><span class="filename">$HOME/.ssh/config</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># ------------------------------------------ 
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># SSH Configuration - Practicalli
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># ------------------------------------------ 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># ------------------------------------------ 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Host *
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  HostName github.com
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  IdentityFile ~/.ssh/commercial
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a># Host for Community key commented
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a># Host engineering
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>#   HostName github.com
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>#   IdentityFile ~/.ssh/practicalli-engineering
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a># ------------------------------------------ 
+</code></pre></div>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Assumption: Pushing can be done with any SSH Key added to GitHub account</p>
 <p>Once a commit has been signed by the relevant key, the identity is part of that commit.</p>
