@@ -931,10 +931,10 @@
 <h2 id="ssh-keys-github">SSH Keys &amp; GitHub<a class="headerlink" href="#ssh-keys-github" title="Permanent link">λ︎</a></h2>
 <p>There advantages to using separate SSH keys for work on commercial projects and open source projects.</p>
 <ul>
-<li>Single Sign-on (SSO) authorisation should always require for an SSH on commercial projects. I've not seen this used for open source projects.</li>
-<li>Signing commits with SSH keys has providence as an email address is attached to an SSH key a comment, e.g. <code>-C "email@domain.com"</code> </li>
+<li>Increased security as only the SSH key with Single Sign-on (SSO) authorisation can send or receive data from the GitHub commercial Organisation.  SSO authorisation should always be require for commercial projects. </li>
+<li>Increased tracability as signing commits with SSH keys has identity, the generated key and email address attached to the key via a comment when created, e.g. <code>ssh-keygen -t ed25519 -C "email@domain.com"</code> </li>
 </ul>
-<p>Creating and using multiple keys requires only a little more Git and GitHub configuration and helps keep a good separation between commercial and community work.</p>
+<p>Using multiple keys only requires a little extra configuration and helps keep a good separation between commercial and community work.</p>
 <div class="admonition hint">
 <p class="admonition-title">Multiple Git Identities</p>
 <p><a href="https://practical.li/engineering-playbook/source-control/git-configuration/#multiple-git-identities">Configuration of a Git client for Multiple Git Identities</a> can define a specific SSH key for a subset of projects, e.g. all projects under a <code>company-name</code> directory</p>
