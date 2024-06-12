@@ -28,7 +28,7 @@
       
       
       <link rel="icon" href="assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -293,7 +293,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -868,9 +868,13 @@
   <div class="md-post__content md-typeset">
     <h2 id="fixing-neovim-treesitter-breaking-changes"><a class="toclink" href="2024/06/03/fixing-neovim-treesitter-breaking-changes/">Fixing Neovim Treesitter breaking changes</a></h2>
 <p><strong>Thoughts for the week</strong></p>
-<p>The sun is out, the sky is blue... </p>
-<p>nvim-treesitter has a breaking change though, which does affect <code>nvim-treesitter-sexp</code> which is used for paredit support in the AstroCommunity Clojure pack.</p>
-<p>An issue was raised with the  </p>
+<p>The sun is out, the sky is blue... and I had the opportunity to understand some Neovim plugins a little more, in order to fix a breaking change with Neovim Treesitter support for Clojure.</p>
+<div class="admonition info">
+<p class="admonition-title">Pull Requests this week</p>
+<ul>
+<li>MERGED: <a href="https://github.com/PaterJason/nvim-treesitter-sexp/pull/7">#7 queries: clojure has-type? updated to kind-eq?</a> for nvim-treesitter-sexp project</li>
+</ul>
+</div>
 
     
       <nav class="md-post__action">
@@ -1500,7 +1504,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "navigation.sections"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
