@@ -789,6 +789,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#noice-and-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noice and Notifications
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -951,8 +960,9 @@
   <h1>Conjure LSP bug & Cycling video editing</h1>
 
 <p><strong>Thoughts for the week</strong></p>
-<p>Diagnosed a 'new buffer' error in Neovim 0.9.0 when opening a Clojure file, although everything works well in 0.10.0.</p>
-<p><a class="md-button" href="https://github.com/Olical/conjure/issues/582" target="_blank">#582 CLOSED: Conjure throws new Buffer error</a> </p>
+<p>Updated to Kitty 0.35.1 easily and switching between dark and light themes working instantly again. </p>
+<p>Diagnosed a 'new buffer' error with Conjure when using Neovim 0.9.0 and when opening a Clojure file, although everything works well in 0.10.0.  EDIT: The maintainer added a fix to the <code>develop</code> branch for testing.</p>
+<p><a class="md-button" href="https://github.com/Olical/conjure/issues/582" target="_blank">#582 REVIEW: Conjure throws new Buffer error</a> </p>
 <p>Video editing of footage taken by the front mounted camera on my bicycle. Advanced cycle training at Gravesend at the start of June. 
 <a href="https://youtu.be/7PnCrLdTmUo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span> Bigfoot Cycling Club at Gravesent Cyclopark</a></p>
 <!-- more -->
@@ -983,10 +993,36 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="p">},</span>
 </code></pre></div>
 </div>
+<h3 id="noice-and-notifications">Noice and Notifications<a class="headerlink" href="#noice-and-notifications" title="Permanent link">λ︎</a></h3>
+<p>Move Noice options to <code>lua/plugins/user-practicalli.lua</code>.  It only has one option to set a boarder around LSP popups, e.g. <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>d</kbd></span> diagnostics popup. </p>
+<p><code>nvim-notify</code> adds options to show message popups fro the bottom upward (less distracting to me), a quicker time-out for showing the message (<span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>n</kbd></span> to see notification history) and fewer message types, <code>level = 3</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  <span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="s2">&quot;noice.nvim&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      <span class="kd">local</span> <span class="n">utils</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;astrocore&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      <span class="kr">return</span> <span class="n">utils</span><span class="p">.</span><span class="n">extend_tbl</span><span class="p">(</span><span class="n">opts</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="n">presets</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>          <span class="n">lsp_doc_border</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- add a border to hover docs and signature help</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="p">},</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      <span class="p">})</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  <span class="p">},</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  <span class="c1">-- nvim-notify controls how messages are displayed</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  <span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="s2">&quot;rcarriga/nvim-notify&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>      <span class="n">top_down</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>      <span class="n">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span> <span class="c1">-- shorter display duration, default 3000</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>      <span class="c1">-- log messages level - default 5 (everything), 1 (minimum)</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>      <span class="n">level</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>      <span class="c1">-- background_color = &quot;#000000&quot;,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="p">},</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  <span class="p">},</span>
+</code></pre></div>
 <h2 id="advanced-cycle-training">Advanced Cycle Training<a class="headerlink" href="#advanced-cycle-training" title="Permanent link">λ︎</a></h2>
 <p>Bigfoot trip to Gravesend Cycle park for 3 hours of advanced cycle training. Activities include</p>
 <ul>
-<li>persuit: lead rider cycles off to catch the pack from behind</li>
+<li>pursuit: lead rider cycles off to catch the pack from behind</li>
 <li>cornering: hitting the apex of the corner tight, using drops of handlebar to get really tight</li>
 <li>cornering in pairs: ensuring there is enough room for your partner</li>
 <li>cornering fast: solo cornering as fast as you can</li>
