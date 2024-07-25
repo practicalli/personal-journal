@@ -873,7 +873,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -939,17 +939,30 @@
 <p><strong>Thoughts for the week</strong></p>
 <p>Presented my experiences with Component libraries to London Clojurians this week, specifically comparing Integrant and Donut-party/system.  I discussed my Service REPL workflow to show the benefits and constraints of these two libraries.</p>
 <p>For component libraries to work well, then code should be reloadable.  Parts of Clojure language do make it harder to reload code, although I tend to avoid those parts anyway.</p>
+<p>Issues this week</p>
+<p>practicalli/astro:</p>
+<ul>
+<li>search: find text pattern in specific files and file types</li>
+<li>config: capitalise Leader &amp; LocalLeader - vim convention</li>
+<li>plugin: conjure sub-menu key labels in which-key version 3</li>
+<li>plugin: spectre moved to search category in astrocommunity</li>
+<li>plugin: better-escape.nvim rewrite required config change</li>
+</ul>
 <!-- more -->
 
 <h2 id="london-clojurians">London Clojurians<a class="headerlink" href="#london-clojurians" title="Permanent link">λ︎</a></h2>
-<p>Reviewing</p>
+<p>Sharing my experiences of using a REPL driven approach to Clojure services, including experiences of using Integrant and Donut-party/system libraries for managing the component parts of a service.</p>
 <ul>
 <li>Practicalli Clojure Web Services - Service REPL</li>
 <li>generated projects from the <code>:practicalli/service</code> template of Practicalli Project Templates</li>
+<li>Clojure API service managing components with an atom</li>
+<li>Clojure API service managing components with Integrant &amp; Integrant REPL</li>
+<li>Clojure API service managing components with Donut-party/system</li>
 </ul>
 <div class="admonition hint">
 <p class="admonition-title">Meld comparison of generated projects</p>
 <p>The projects purposely have a similar structure (after several refactor sessions) so should be easy to compare.</p>
+<p>TODO: add screenshots</p>
 </div>
 <hr />
 <p>Thank you.</p>
