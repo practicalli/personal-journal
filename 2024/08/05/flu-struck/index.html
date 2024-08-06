@@ -121,6 +121,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#http-message-signatures" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -775,6 +780,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#http-message-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Message Signatures
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -906,6 +928,10 @@
 <p>Not going to be a productive week as I am full of flu.  Given the time of year its most likely a variant of Covid.  So far I've only had a headache, congested chest / nose / ears and some fatigue.  Taking lots of paracetamol and drinking lots of water to try keep the inflammation at bay.</p>
 <!-- more -->
 
+<h2 id="http-message-signatures">HTTP Message Signatures<a class="headerlink" href="#http-message-signatures" title="Permanent link">λ︎</a></h2>
+<p>Investigating how to implements RFC9421 HTTP Message Signatures using Clojure.</p>
+<p>One aspect is choosing an algorithm for the private public key pair used to sign and validate a message. The ED25519 algorithm is recommended by GitHub for creating private public SSH keys to access their service.  This seems a reasonable choice for HTTP Message Signatures.</p>
+<p>A Clojure library for comparing an ED25519 signature against a public key would reduce the work required to check a signed HTTP message is valid.</p>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
