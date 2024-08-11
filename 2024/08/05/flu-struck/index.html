@@ -873,7 +873,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -926,12 +926,15 @@
 
 <p><strong>Thoughts for the week</strong></p>
 <p>Not going to be a productive week as I am full of flu.  Given the time of year its most likely a variant of Covid.  So far I've only had a headache, congested chest / nose / ears and some fatigue.  Taking lots of paracetamol and drinking lots of water to try keep the inflammation at bay.</p>
+<p>Edit: I was mostly okay by the weekend, although still had a sore throat and coughing.</p>
 <!-- more -->
 
 <h2 id="http-message-signatures">HTTP Message Signatures<a class="headerlink" href="#http-message-signatures" title="Permanent link">λ︎</a></h2>
 <p>Investigating how to implements RFC9421 HTTP Message Signatures using Clojure.</p>
 <p>One aspect is choosing an algorithm for the private public key pair used to sign and validate a message. The ED25519 algorithm is recommended by GitHub for creating private public SSH keys to access their service.  This seems a reasonable choice for HTTP Message Signatures.</p>
+<p>ED25519 is recommended as the safe choice for signing as it is a fast and efficient algorithm and has does not have the challenges of earlier algorithms.</p>
 <p>A Clojure library for comparing an ED25519 signature against a public key would reduce the work required to check a signed HTTP message is valid.</p>
+<p>If there are no other interesting libraries for validating signatures, then Bouncy Castle is a well known Java implementation and has some Clojure wrappers.</p>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
