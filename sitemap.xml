@@ -196,6 +196,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/journal/2024/08/12/tetris-and-the-fall-of-the-ussr/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/journal/2024/02/05/striving-toward-consistency/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -482,6 +487,11 @@
     </url>
     <url>
          <loc>https://practical.li/journal/archive/2024/page/3/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/journal/archive/2024/page/4/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
