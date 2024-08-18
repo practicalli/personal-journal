@@ -10,7 +10,8 @@
 - post: front page of journal with Practicalli sponsorship
 - post: 21st November 2023 journal entry
 - post: 22st November 2023 - onboarding to a new role
-- post: add clojurists together journals 
+- post: add clojurists together journals
+- mkdocs: practicalli style overrides for light theme
 
 ## Changed
 - post: updated naming scheme and corrected date
