@@ -28,7 +28,7 @@
       
       
       <link rel="icon" href="assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
@@ -871,6 +871,54 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-08-19 00:00:00">August 19, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/practicalli/" class="md-meta__link">practicalli</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="clojure-specific-which-key-menu"><a class="toclink" href="2024/08/19/clojure-specific-which-key-menu/">Clojure specific Which-key menu</a></h2>
+<p><strong>Thoughts for the week</strong></p>
+<p>Whilst looking for a Neovim way to have language specific configuration, I discovered the <code>after/ftplugin</code> approach.  This allows a configuration to be loaded when a buffer is switched to a specific language.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2024/08/19/clojure-specific-which-key-menu/">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true" alt="Practicalli Johnny">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-08-12 00:00:00">August 12, 2024</time></li>
         
           <li class="md-meta__item">
@@ -1318,70 +1366,6 @@
   </div>
 </article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true" alt="Practicalli Johnny">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-10 00:00:00">June 10, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/practicalli/" class="md-meta__link">practicalli</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="neovim-on-termux-enhancements"><a class="toclink" href="2024/06/10/neovim-on-termux-enhancements/">Neovim on Termux enhancements</a></h2>
-<p><strong>Thoughts for the week</strong></p>
-<p>More Neovim updates and getting closer to a release of Practicalli Astro-config</p>
-<p>I have been using Neovim (and Emacs) on Termux, so I can code on my Android tablet or Android smart phone.  I typically use an external keyboard (e.g. Keyboard.io Atreus or Model100), especially when considerable typing is involved.</p>
-<p>As the hardware and compilation tooling is different for Android Linux (compared to amd64 linux) the Clojure and Lua LSP language servers would not install via the Mason manager.  As these two languages are in the top 3 languages I use, then it is a great boost to get these servers working locally and configuring Neovim to use them instead.</p>
-<p>I use the <code>date</code> command when I had a need to tweak the time on my Linux computer, saves launching the <strong>Settings</strong> app and using the mouse.</p>
-<div class="admonition info">
-<p class="admonition-title">Timezones made easy</p>
-<p><a href="https://time.is/">time.is</a> makes figuring out timezones really simple.  See the current time in any timezone across the world.</p>
-<p>time.is very useful for events where people attend from different timezones.  Set the local time and share a link for others who will see the event time in their own timezone.</p>
-</div>
-<h3 id="neovim"><a class="toclink" href="2024/06/10/neovim-on-termux-enhancements/#neovim">Neovim</a></h3>
-<p>I'm making some changes to the Practicalli AstroNvim configuration (AstroNvim4) over the next few days.</p>
-<p>All my personal Neovim &amp; plugin options (and associated workflow biases) will only be in <code>lua/plugins/practicalli.lua</code>.  With these options only in one file, anyone else using the configuration can easily disable them.</p>
-<p>I will encourage other users to create there own <code>lua/plugins/personal.lua</code> customisation so any changes from upstream will be easier to merge.</p>
-<p>The GitHub repository will be renamed to <code>practicalli/astro-config</code> which its much easier to write and say during screencasts. GitHub should redirect when pulling updates</p>
-<p>This week I will update Practicalli Neovim book install guide with new repo and further info on how to use the config effectively (especially with your own customisations)</p>
-<p>Then the first official release of the config will be created via GitHub releases.</p>
-<p>If I have time, there are lots of things to add to Practicalli Neovim book too (including a few more plugins I'm using in the config) </p>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/06/10/neovim-on-termux-enhancements/">
-          Continue reading
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
       
         
           
@@ -1535,7 +1519,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "navigation.sections"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="assets/javascripts/bundle.af256bd8.min.js"></script>
       
     
   </body>
