@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/journal/2018/12/15/day-92---clojure-hack-day/</loc>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/journal/2018/12/16/day-93---clojure-study-group---clojurescript-reagent-website-with-svg/</loc>
          <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
@@ -517,6 +522,16 @@
     </url>
     <url>
          <loc>https://practical.li/journal/archive/2020/page/2/</loc>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/journal/archive/2018/page/2/</loc>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/journal/category/100daysofcode/page/2/</loc>
          <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
