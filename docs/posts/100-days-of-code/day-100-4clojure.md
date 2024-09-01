@@ -1,13 +1,18 @@
 ---
 title: "Day 100: 4Clojure"
 date: 2018-12-23
+authors:
+  - practicalli
 categories:
   - 100daysofcode
+tags:
+  - clojure
+  - 4clojure
 ---
 
 **Thoughts for today**
-   
-100 days of code challenge completed.  Was it worth it?  Well yes, it got me coding almost every day, and overall I certainly achieved more than 100 hours of coding, more like several 100 hours of coding.  
+
+100 days of code challenge completed.  Was it worth it?  Well yes, it got me coding almost every day, and overall I certainly achieved more than 100 hours of coding, more like several 100 hours of coding.
 
 I didnt do was work on a specific project every day, but that would have felt more like work and I enjoyed having a break from that routine.
 
@@ -38,5 +43,10 @@ Today was a write up and elaboration on the exercises I covered in yesterdays Cl
 ---
 Thank you.
 
-[:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny){target=_blank .md-button}
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
+[:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
+
+[:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
+[:fontawesome-brands-twitter: @practical_li](https://twitter.com/practcial_li){target=_blank .md-button}
