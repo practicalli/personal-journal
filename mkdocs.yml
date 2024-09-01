@@ -3,7 +3,7 @@ site_url: https://practical.li/journal
 site_description: Daily journal of thoughts and experiences
 site_author: Practicalli
 site_org: https://practical.li
-copyright: Copyright &copy 2023 Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+copyright: Copyright &copy 2024 Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 repo_url: https://github.com/practicalli/journal/
 edit_uri: https://github.com/practicalli/journal/edit/main/docs/
 
@@ -83,7 +83,29 @@ markdown_extensions:
 plugins:
   - blog:
       blog_dir: .
+      post_url_format: "{slug}"
+      draft: false
+      draft_on_serve: true
+      draft_if_future_date: true
+  - rss:
+      image: https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true
+      enabled: true
+      # How many articles to include (Default 20)
+      length: 50
+      # enabled: !ENV [CI, false]
+      match_path: journal/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
   - search
+  - callouts
+  - glightbox # Image aligning
+  - git-revision-date-localized: # Update and Creation date of each page
+      # enable_creation_date: true
+      fallback_to_build_date: true
+
   # Generate Social Cards via CI only
   # in assets/images/social
   - social:
