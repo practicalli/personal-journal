@@ -93,7 +93,7 @@ plugins:
       # How many articles to include (Default 20)
       length: 50
       # enabled: !ENV [CI, false]
-      match_path: journal/posts/.*
+      match_path: posts/.*
       date_from_meta:
         as_creation: date
       categories:
@@ -135,3 +135,4 @@ extra:
 nav:
   - index.md
   - practicalli-team.md
+  - RSS feed: feed_rss_created.xml
