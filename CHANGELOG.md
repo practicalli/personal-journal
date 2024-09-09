@@ -12,6 +12,7 @@
 - post: 22st November 2023 - onboarding to a new role
 - post: add clojurists together journals
 - mkdocs: practicalli style overrides for light theme
+- dev: megalinter-upgrade task in Makefile
 
 ## Changed
 - post: updated naming scheme and corrected date
