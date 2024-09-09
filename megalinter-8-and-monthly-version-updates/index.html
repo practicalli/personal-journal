@@ -827,6 +827,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#practicalli-project-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practicalli Project Templates
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -905,7 +914,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              6 min read
                             
                           </span>
                         </div>
@@ -983,6 +992,113 @@
 </code></pre></div>
 <p>Links to the Megalinter documentation are also updated.</p>
 <p>The script updates <code>.gitignore</code> to exclude the <code>megalinter-reports/</code> directory.  This change is not necessary for Practicalli projects as everything is ignored by default.  Patterns in the <code>.gitignore</code> are added with the <code>!</code> prefix, allowing them to be included by Git.</p>
+<h2 id="practicalli-project-templates">Practicalli Project Templates<a class="headerlink" href="#practicalli-project-templates" title="Permanent link">λ︎</a></h2>
+<p>Each template configuration in Project Templates has their own megalinter workflow and configuration, so running the megalinter-runner upgrade tool is a good test.</p>
+<p>From the output of the script, all templates were updated successfully.</p>
+<details class="example">
+<summary>Megalinter runner upgrade script output</summary>
+<p>```shell
+❯ make megalinter-upgrade
+--------- MegaLinter Upgrade Config ---------
+npx mega-linter-runner@latest --upgrade</p>
+<div class="highlight"><pre><span></span><code>.:oool&#39;                                  ,looo;
+.xNXNXl                                 .dXNNXo.
+ lXXXX0c.                              &#39;oKXXN0;
+ .oKNXNX0kxdddddddoc,.    .;lodddddddxk0XXXX0c
+  .:kKXXXXXXXXXXXXNXX0dllx0XXXXXXXXXXXXXXXKd,
+    .,cdkOOOOOOOO0KXXXXXXXXXXK0OOOOOOOkxo:&#39;
+                  &#39;ckKXNNNXkc&#39;
+          &#39;:::::;.  .c0XX0l.  .;::::;.
+          &#39;xXXXXXx&#39;   :kx:   ;OXXXXKd.
+           .dKNNXXO;   ..   :0XXXXKl.
+            .lKXXXX0:     .lKXXXX0:
+              :0XXXXKl.  .dXXXXXk,
+               ;kXXXXKd:cxXXXXXx&#39;
+                &#39;xXNXXXXXXXXXKo.
+                 .oKXXXXNXXX0l.
+                  .lKNNXNNXO:
+                    ,looool&#39;
+</code></pre></div>
+<p>==========================================================
+=============   MegaLinter, by OX Security   =============
+=========  <a href="https://ox.security?ref=megalinter">https://ox.security?ref=megalinter</a>  ===========
+==========================================================</p>
+<p>✔ This assistant will automatically upgrade your local files so you use MegaLinter v8
+Please confirm to proceed :) … yes
+Processing file resources/practicalli/mysql-compose.yaml
+Processing file megalinter-reports/IDE-config/.hadolint.yaml
+Processing file megalinter-reports/IDE-config/.grype.yaml
+Processing file .github/workflows/scheduled-version-check.yaml
+Processing file .github/workflows/quality-checks.yaml
+Processing file .github/workflows/megalinter.yaml
+- Updating .github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.github.io/gm -&gt; <a href="https://oxsecurity.github.io/megalinter">https://oxsecurity.github.io/megalinter</a> ...
+- Updating .github/workflows/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating .github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+- Updating .github/workflows/megalinter.yaml with replacement /oxsecurity\/megalinter\/flavors\/([a-z]<em>)@v7/gm -&gt; oxsecurity/megalinter/flavors/$1@v8 ...
+UPDATED: .github/workflows/megalinter.yaml
+Processing file .github/workflows/lint-review.yaml
+Processing file .github/workflows/changelog-check.yaml
+Processing file .github/config/megalinter.yaml
+- Updating .github/config/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating .github/config/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+UPDATED: .github/config/megalinter.yaml
+Processing file resources/practicalli/service/root/swagger-compose.yaml
+Processing file resources/practicalli/application/root/swagger-compose.yaml
+Processing file resources/practicalli/application/root/compose.yaml
+Processing file resources/practicalli/service/root/.github/FUNDING.yaml
+Processing file resources/practicalli/landing_page/root/.github/FUNDING.yaml
+Processing file resources/practicalli/application/root/.github/FUNDING.yaml
+Processing file resources/practicalli/service/root/.github/workflows/scheduled-version-check.yaml
+Processing file resources/practicalli/service/root/.github/workflows/quality-checks.yaml
+Processing file resources/practicalli/service/root/.github/workflows/megalinter.yaml
+- Updating resources/practicalli/service/root/.github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.github.io/gm -&gt; <a href="https://oxsecurity.github.io/megalinter">https://oxsecurity.github.io/megalinter</a> ...
+- Updating resources/practicalli/service/root/.github/workflows/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating resources/practicalli/service/root/.github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+- Updating resources/practicalli/service/root/.github/workflows/megalinter.yaml with replacement /oxsecurity\/megalinter\/flavors\/([a-z]</em>)@v7/gm -&gt; oxsecurity/megalinter/flavors/$1@v8 ...
+UPDATED: resources/practicalli/service/root/.github/workflows/megalinter.yaml
+Processing file resources/practicalli/service/root/.github/workflows/lint-review.yaml
+Processing file resources/practicalli/service/root/.github/workflows/changelog-check.yaml
+Processing file resources/practicalli/service/root/.github/config/megalinter.yaml
+- Updating resources/practicalli/service/root/.github/config/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating resources/practicalli/service/root/.github/config/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+UPDATED: resources/practicalli/service/root/.github/config/megalinter.yaml
+Processing file resources/practicalli/minimal/root/.github/workflows/lint-review.yaml
+Processing file resources/practicalli/landing_page/root/.github/workflows/scheduled-version-check.yaml
+Processing file resources/practicalli/landing_page/root/.github/workflows/quality-checks.yaml
+Processing file resources/practicalli/landing_page/root/.github/workflows/megalinter.yaml
+- Updating resources/practicalli/landing_page/root/.github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.github.io/gm -&gt; <a href="https://oxsecurity.github.io/megalinter">https://oxsecurity.github.io/megalinter</a> ...
+- Updating resources/practicalli/landing_page/root/.github/workflows/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating resources/practicalli/landing_page/root/.github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+- Updating resources/practicalli/landing_page/root/.github/workflows/megalinter.yaml with replacement /oxsecurity\/megalinter\/flavors\/([a-z]<em>)@v7/gm -&gt; oxsecurity/megalinter/flavors/$1@v8 ...
+UPDATED: resources/practicalli/landing_page/root/.github/workflows/megalinter.yaml
+Processing file resources/practicalli/landing_page/root/.github/workflows/lint-review.yaml
+Processing file resources/practicalli/landing_page/root/.github/workflows/changelog-check.yaml
+Processing file resources/practicalli/landing_page/root/.github/config/megalinter.yaml
+- Updating resources/practicalli/landing_page/root/.github/config/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating resources/practicalli/landing_page/root/.github/config/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+UPDATED: resources/practicalli/landing_page/root/.github/config/megalinter.yaml
+Processing file resources/practicalli/application/root/.github/workflows/scheduled-version-check.yaml
+Processing file resources/practicalli/application/root/.github/workflows/quality-checks.yaml
+Processing file resources/practicalli/application/root/.github/workflows/megalinter.yaml
+- Updating resources/practicalli/application/root/.github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.github.io/gm -&gt; <a href="https://oxsecurity.github.io/megalinter">https://oxsecurity.github.io/megalinter</a> ...
+- Updating resources/practicalli/application/root/.github/workflows/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating resources/practicalli/application/root/.github/workflows/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+- Updating resources/practicalli/application/root/.github/workflows/megalinter.yaml with replacement /oxsecurity\/megalinter\/flavors\/([a-z]</em>)@v7/gm -&gt; oxsecurity/megalinter/flavors/$1@v8 ...
+UPDATED: resources/practicalli/application/root/.github/workflows/megalinter.yaml
+Processing file resources/practicalli/application/root/.github/workflows/lint-review.yaml
+Processing file resources/practicalli/application/root/.github/workflows/changelog-check.yaml
+Processing file resources/practicalli/application/root/.github/config/megalinter.yaml
+- Updating resources/practicalli/application/root/.github/config/megalinter.yaml with replacement /https:\/\/oxsecurity.github.io\/megalinter/gm -&gt; <a href="https://megalinter.io">https://megalinter.io</a> ...
+- Updating resources/practicalli/application/root/.github/config/megalinter.yaml with replacement /https:\/\/megalinter.io\/configuration/gm -&gt; <a href="https://megalinter.io/latest/config-file">https://megalinter.io/latest/config-file</a> ...
+UPDATED: resources/practicalli/application/root/.github/config/megalinter.yaml
+mega-linter-runner applied 24 replacements in 8 files.
+Updated .gitignore file to exclude megalinter-reports from commits</p>
+<p>You MegaLinter local configuration files has been updated !
+Now stage and commit updated files then push to see latest version of MegaLinter in action !</p>
+<p>✔ MegaLinter is now part of OX Security. -&gt; <a href="https://www.ox.security/?ref=megalinter">https://www.ox.security/?ref=megalinter</a></p>
+<p>Do you want to try OX Security to secure your software supply chain security ? … no</p>
+</details>
+<p>```</p>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
