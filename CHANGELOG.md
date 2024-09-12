@@ -16,3 +16,4 @@
 
 ## Changed
 - post: updated naming scheme and corrected date
+- dev: megalinter upgrade to version 8
