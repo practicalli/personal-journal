@@ -13,6 +13,7 @@
 - post: add clojurists together journals
 - mkdocs: practicalli style overrides for light theme
 - dev: megalinter-upgrade task in Makefile
+- dev: megalinter api reporter enabled & env vars
 
 ## Changed
 - post: updated naming scheme and corrected date
