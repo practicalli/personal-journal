@@ -133,6 +133,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#debian" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -807,6 +812,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -883,7 +905,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -912,6 +934,12 @@
       <span class="md-tag">clojure</span>
     
   
+    
+    
+    
+      <span class="md-tag">debian</span>
+    
+  
 </nav>
 
 
@@ -938,6 +966,18 @@
 <p>Thunderstorms abound which will be good for the vegetables growing in my garden (beetroot, courgettes, parsnips and onions)</p>
 <!-- more -->
 
+<h2 id="debian">Debian<a class="headerlink" href="#debian" title="Permanent link">λ︎</a></h2>
+<p>I use Regolith Desktop &amp; Debian for all the Lenovo laptops I own.  Regolith is keyboard driven and had numbered workspaces so I can easily organise multiple applications (terminal &amp; neovim, firefox browsing, OBS, Inkscape, Blender, etc)</p>
+<p>X11 version of Regolith is used, although there was one annoyance.  When sharing an external monitor and switching between laptops, the workspaces are moved to the laptop screen when the monitor is not showing the laptop output.  Switching the monitor back to show the laptop screen leaves all the workspaces on the laptop display.</p>
+<p>In earlier versions of Regolith Desktop, using <span class="keys"><kbd class="key-super">Super</kbd><span>+</span><kbd class="key-comma">,</kbd></span> would save the layout and <span class="keys"><kbd class="key-super">Super</kbd><span>+</span><kbd class="key-period">.</kbd></span> would restore the workspaces to the original displays.</p>
+<p>I have tried several approaches to make Regolith X11 work again, but with no success.</p>
+<p>Out of curiosity, I tried Regolith Wayland which uses the sway compositor.  I was presently surprised that sway automatically restores the workspaces to the external monitor display when reconnecting after switching back from another source.</p>
+<p>There are some other issues using Wayland though, as some apps I use do not work</p>
+<ul>
+<li>Simple Screen Recorder for creating screencasts</li>
+</ul>
+<p>Thankfully, OBS now supports Wayland and seems to work quite well.  Although I did get a little confused when asked to select the display to record as it now uses the mouse rather than selecting a display.  Using the mouse to click on the display to record was easy to do, once I realised that is how the selection worked.</p>
+<p>I'll continue to test Regolith Sway for the next month and if there are benefits I will eventually switch all laptops to Regolith Wayland.  It is possible to have both installed, so I can always switch between the two (logout required).</p>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
