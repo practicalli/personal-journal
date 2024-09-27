@@ -14,6 +14,7 @@
 - mkdocs: practicalli style overrides for light theme
 - dev: megalinter-upgrade task in Makefile
 - dev: megalinter api reporter enabled & env vars
+- dev: megalinter 8 - no documentation flavor
 
 ## Changed
 - post: updated naming scheme and corrected date
