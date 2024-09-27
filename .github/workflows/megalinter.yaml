@@ -21,6 +21,14 @@ jobs:
   megalinter:
     name: MegaLinter
     runs-on: ubuntu-latest
+
+    # Give the default GITHUB_TOKEN write permission to commit and push, comment
+    # issues, and post new Pull Requests; remove the ones you do not need
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
     steps:
       - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
       - run: echo "🐧 Job running on ${{ runner.os }} server"
