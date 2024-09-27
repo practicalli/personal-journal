@@ -44,6 +44,12 @@ jobs:
         # uses: oxsecurity/megalinter/flavors/documentation@v8
         uses: oxsecurity/megalinter@beta
         env:
+
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" # report individual linter status
+          # Validate all source when push on main, else just the git diff with live.
+          VALIDATE_ALL_CODEBASE: >-
+            ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
+
           # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
           MEGALINTER_CONFIG: .github/config/megalinter.yaml
 
@@ -57,13 +63,10 @@ jobs:
           API_REPORTER_METRICS_BASIC_AUTH_USERNAME: ${{ secrets.API_REPORTER_METRICS_BASIC_AUTH_USERNAME }}
           API_REPORTER_METRICS_BASIC_AUTH_PASSWORD: ${{ secrets.API_REPORTER_METRICS_BASIC_AUTH_PASSWORD }}
           API_REPORTER_METRICS_BEARER_TOKEN: ${{ secrets.API_REPORTER_METRICS_BEARER_PASSWORD }}
-          API_REPORTER_DEBUG: false
+          API_REPORTER_DEBUG: true
 
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" # report individual linter status
-          # Validate all source when push on main, else just the git diff with live.
-          VALIDATE_ALL_CODEBASE: >-
-            ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
-
+          # Logging
+          LOG_LEVEL: DEBUG
 
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
