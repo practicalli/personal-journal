@@ -39,7 +39,7 @@ GitHub sponsorship seems unaffected by changing the GitHub account name.
 
 The `practicalli-john` repository used to define an extended GitHub profile had to be renamed to match the change in account name, to [practicalli-johnny/practicalli-johnny](https://github.com/practicalli-johnny/practicalli-johnny)
 
-[Practicalli Johnny GitHub profile](https://github.com/practicalli-johnny){target=_blank .md-button} 
+[Practicalli Johnny GitHub profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 
 ## Neovim
@@ -68,17 +68,17 @@ Time to remove Java 11 and use Java 21 as the default (keeping 17 for a little l
 
     > `openjdk-11-source` package was not installed on my system
 
-!!! WARNING "OpenJDK 21 Debian package availablity"
-    Debian trixie (testing) includes [:globe_with_meridians: openjdk-21-* packages](https://packages.ubuntu.com/search?keywords=openjdk){target=_blank}
+!!! INFO "OpenJDK 21 Debian package availability"
+    Debian trixie (testing) includes openjdk-21-* packages
 
-    Ubuntu 23.04 (lunar) and 23.10 (manic) include [:globe_with_meridians: openjdk-21-* packages](https://packages.ubuntu.com/search?keywords=openjdk){target=_blank}
+    Ubuntu 23.04 (lunar) and 23.10 (manic) include openjdk-21-* packages
 
 
 ## Using Debian Testing
 
 Installing a laptop with Debian from scratch and using trixie (testing) version, which includes Java 21 and many updated packages.
 
-After the install, edit `/etc/apt/sources.list` and replace all the instances of `bookworm` with `trixie` 
+After the install, edit `/etc/apt/sources.list` and replace all the instances of `bookworm` with `trixie`
 
 Debian documentation recommends a full upgrade after making such a change
 
@@ -87,16 +87,16 @@ Debian documentation recommends a full upgrade after making such a change
     apt full-upgrade
     ```
 
-[Debian Linux - chainging to testing or unstable](https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.11){target=_blank .md-button} 
+[Debian Linux - changing to testing or unstable](https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.11){target=_blank .md-button}
 
 Continuing with Debian Linux install on Thinkpad with AMD chipset, using trixie (current testing) as the distribution verion.
 
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
