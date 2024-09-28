@@ -7,7 +7,7 @@ categories:
 ---
 
 **Thoughts for today**
-         
+
 Feeling the space I've made after rearranging the office space and uncluttering more belongings
 
 The cat has taken over my new BeYou chair, despite providing an even nicer space for her to sit.  My cats are a regular reminder that change cannot be forced.
@@ -26,7 +26,7 @@ Even though I have multiple monitors and laptops in the boxy room that is my hom
 
 The keyboard and trackball rest on a [Grandma Shark bamboo wood laptop desk](https://www.amazon.co.uk/gp/product/B087MCGY4M/) that sits on top of a corner shaped office desk to create a standing desk position.
 
-The [BeYou chair kneeling position](https://practical.li/journal/2023/11/28/health-and-new-chair/#beyou-chair) is ideal for the same the standing desk position the Grandma Shark desk provides.
+The [BeYou chair kneeling position](https://practical.li/journal/health-and-new-chair/#beyou-chair) is ideal for the same the standing desk position the Grandma Shark desk provides.
 
 > NOTE: when I was ill with Covid I used the Grandma Shark desk in bed to be able to do a little bit of work in-between sleeping and coughing.
 
@@ -48,7 +48,7 @@ I am not planning on using WeBuyBooks again and will stick with MusicMagpie (who
 
 Update AstroNvim to 3.39.0 from within AstroNvim, using `SPC p A`.
 
-`SPC p v` to show the AstroNvim version as a notification.  
+`SPC p v` to show the AstroNvim version as a notification.
 
 > Using the Practicalli Astronvim-config the notification level used for AstroNvim version is not shown and but can be seen in the notification history.
 
@@ -59,16 +59,16 @@ Update AstroNvim to 3.39.0 from within AstroNvim, using `SPC p A`.
         ● alpha-nvim 14.8ms 󰢱 alpha  astronvim.autocmds
             29074ee DirChanged keymaps (21 hours ago)
 
-        ○ astrocommunity 
+        ○ astrocommunity
             e984f31 docs(rust): add guide on how to format with clippy (#649) (2 days ago)
 
-        ○ friendly-snippets  LuaSnip 
+        ○ friendly-snippets  LuaSnip
             53d3df2 add-xml-tag-go-snippet (#377) (3 days ago)
             9e99f7d Updated edge framework snippets (#378) (3 days ago)
             068b165 changed c++ cout to a more efficient and polyvalent snippet (#381) (3 days ago)
             83c54cd fix: django rest view snippets (#383) (3 days ago)
 
-        ○ neogit  <leader>gs  <leader>gnt  <leader>gnc  <leader>gnd  <leader>gnk  User AstroGitFile 
+        ○ neogit  <leader>gs  <leader>gnt  <leader>gnc  <leader>gnd  <leader>gnk  User AstroGitFile
             bb538f1 Merge pull request #980 from gollth/merge-help-popups (6 hours ago)
             c87a51e Revert "CHANGE: Allow to open help popup from commit, log, reflog views" (7 hours ago)
             2d2a98f FIX: Add `fetch` popup keybind to reflow in visual mode (8 hours ago)
@@ -98,7 +98,7 @@ Update AstroNvim to 3.39.0 from within AstroNvim, using `SPC p A`.
             158d8b0 Annotations (12 days ago)
             14bae65 Parse log output as JSON (12 days ago)
 
-        ○ nvim-lspconfig  Neoconf  User AstroFile 
+        ○ nvim-lspconfig  Neoconf  User AstroFile
             39546f7 fix(typos_lsp): use configuration file for root detection #2918 (29 hours ago)
             daaf00a docs: update server_configurations.md skip-checks: true (3 days ago)
             c6a62c7 chore(emmet_language_server): remove languages with emmet bundled by their language server (#2914) (3 days ago)
@@ -127,26 +127,26 @@ Update AstroNvim to 3.39.0 from within AstroNvim, using `SPC p A`.
             71bdf97 feat(hocon): add fold query (#5710) (6 days ago)
             6d45b34 Update parsers: sql, wing (6 days ago)
 
-        ○ nvim-web-devicons 
+        ○ nvim-web-devicons
             5efb8bd ci: use vim-colortemplate tarball rather than git clone (#347) (3 days ago)
             e034579 feat: add .luaurc and luau colours (#346) (3 days ago)
             7b1c4a8 feat: update fnl icons (#345) (3 days ago)
             3fe528b ci: pre-commit uses make (#344) (3 days ago)
 
-        ○ rest.nvim  RestNvimPreview  RestNvimLast  RestNvim  <leader>rr  <leader>r  json  http 
-        ○ SchemaStore.nvim 
+        ○ rest.nvim  RestNvimPreview  RestNvimLast  RestNvim  <leader>rr  <leader>r  json  http
+        ○ SchemaStore.nvim
             54a4ea1 Update SchemaStore catalog (4 days ago)
             c2c6bd2 Update SchemaStore catalog (5 days ago)
 
-        ○ telescope.nvim  Telescope  nvim-neoclip.lua  telescope-file-browser.nvim 
+        ○ telescope.nvim  Telescope  nvim-neoclip.lua  telescope-file-browser.nvim
     ```
 
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
