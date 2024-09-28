@@ -47,18 +47,15 @@ jobs:
 
       # MegaLinter Configuration
       - name: MegaLinter Run
-        uses: oxsecurity/megalinter/flavors/documentation@v8
-        # uses: oxsecurity/megalinter@v8.0.0
+        uses: oxsecurity/megalinter@v8.0.0
         id: ml
-        ## latest release of major version
-        # uses: oxsecurity/megalinter/flavors/documentation@v8
-        uses: oxsecurity/megalinter@beta
         env:
 
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" # report individual linter status
-          # Validate all source when push on main, else just the git diff with live.
+          # Validate the git diff against default branch.
           VALIDATE_ALL_CODEBASE: >-
             ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
+
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" # report individual linter status
 
           # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
           MEGALINTER_CONFIG: .github/config/megalinter.yaml
