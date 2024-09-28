@@ -7,7 +7,7 @@ categories:
 
 ![Clojurists Together Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-clojurists-together-button.svg){align=right loading=lazy style="height:150px;width:150px"}
 
-Invested time to understand the changes coming to the Clojure CLI tools and understand the opportunities that [Clojure exec](https://insideclojure.org/2020/09/04/clj-exec/) (`:exec-fn` & `:exec-args`) brings to aliases. These changes provided a catalyst to start redesigning the aliases used in [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn/tree/qualified-alias-keywords-and-new-flags).
+Invested time to understand the changes coming to the Clojure CLI tools and understand the opportunities that [Clojure exec](https://insideclojure.org/2020/09/04/clj-exec/) (`:exec-fn` & `:exec-args`) brings to aliases. These changes provided a catalyst to start redesigning the aliases used in [practicalli/clojure-cli-config](https://practical.li/clojure/clojure-spec/data/defining-specifications/#naming-fully-qualified-keywords).
 
 <!-- more -->
 
