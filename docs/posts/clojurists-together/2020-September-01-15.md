@@ -21,18 +21,18 @@ Next steps will be to use Clojure spec for generative testing with the database,
 
 
 ## Practicalli WebApps
-Updated sections on [H2 Database](https://practicalli.github.io/clojure-webapps/relational-databases-and-sql/h2-database/) and Banking on Clojure
+Updated sections on [H2 Database](https://practical.li/clojure-webapps/relational-databases-and-sql/h2-database/) and Banking on Clojure
 
-- [Design and Create Database Tables](https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/database-tables.html)
-- [Defining Database Queries - different approaches](https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/database-queries.html)
-- [Create database records](https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/create-records.html)
-- [Read Database Records](https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/read-records.html)
-- [Update Records in the database](https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/update-records.html)
-- [Delete Records in the database](https://practicalli.github.io/clojure-webapps/projects/banking-on-clojure/delete-records.html)
+- [Design and Create Database Tables](https://practical.li/clojure-webapps/projects/banking-on-clojure/database-tables.html)
+- [Defining Database Queries - different approaches](https://practical.li/clojure-webapps/projects/banking-on-clojure/database-queries.html)
+- [Create database records](https://practical.li/clojure-webapps/projects/banking-on-clojure/create-records.html)
+- [Read Database Records](https://practical.li/clojure-webapps/projects/banking-on-clojure/read-records.html)
+- [Update Records in the database](https://practical.li/clojure-webapps/projects/banking-on-clojure/update-records.html)
+- [Delete Records in the database](https://practical.li/clojure-webapps/projects/banking-on-clojure/delete-records.html)
 
 
 ## Practicalli Clojure
-Added [core principles for writing effective unit tests](https://practicalli.github.io/clojure/testing/unit-testing/) in Clojure. Included project configuration examples of unit tests for Leiningen and Clojure CLI tools.  Also included example configuration for Emacs CIDER test runner and link to the test runner configurations in [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn/tree/qualified-alias-keywords-and-new-flags).
+Added [core principles for writing effective unit tests](https://practical.li/clojure/testing/unit-testing/) in Clojure. Included project configuration examples of unit tests for Leiningen and Clojure CLI tools.  Also included example configuration for Emacs CIDER test runner and link to the test runner configurations in [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn/tree/qualified-alias-keywords-and-new-flags).
 
 
 ## Clojure deps.edn
