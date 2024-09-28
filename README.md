@@ -39,19 +39,34 @@ Publish book workflow installs Material for MkDocs version 9
 
 ## Local development
 
-Install mkdocs version 9 using the Python pip package manager
+Install the Python3 Pip package manager using the Debian package manager:
 
 ```shell
-pip install mkdocs-material=="9.*"
+apt install python3-pip pipx
 ```
 
-Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
+Create and activate a python virtual environment
 
 ```shell
-pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
+python -m venv ~/venv/ && source ~/venv/bin/activate
+```
+
+Use pip3 to install mkdocs-material, along with the plugins used by the Practicalli site (plugins are also installed in the GitHub Action workflow)
+
+```shell
+pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects mkdocs-rss-plugin pillow cairosvg
 ```
 
 > pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
+
+
+MacOSX has not been tested, although it is assumed homebrew approach is the most likely to work.
+
+```shell
+brew install python@3.12
+```
+
+---
 
 Fork the GitHub repository and clone that fork to your computer,
 
@@ -74,4 +89,3 @@ make docs-changed
 ```
 
 > NOTE: navigation changes may not be correctly reflected without reloading the page in the web browser or carrying out a full `make docs` build
-
