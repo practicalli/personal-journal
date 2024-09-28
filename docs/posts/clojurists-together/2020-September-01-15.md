@@ -14,8 +14,8 @@ Invested time to understand the changes coming to the Clojure CLI tools and unde
 ## Practicalli Study Group
 Continuing the Banking on Clojure project, especially around database access.  The database schema was refined along with improved approaches to creating database schema, using transactional updates and ensuring connections are closed.  The next.jdbc friendly functions were explored and a CRUD approach implemented.
 
-- [082 - Banking On Clojure - Part3 - next.jdbc for SQL in Clojure](https://youtu.be/sBdmwDUp1Ho)
-- [083 - Banking On Clojure - Part4 - Updating data in the database](https://youtu.be/DmYlNTe7Gds)
+- [:fontawesome-brands-youtube: 082 - Banking On Clojure - Part3 - next.jdbc for SQL in Clojure](https://youtu.be/sBdmwDUp1Ho)
+- [:fontawesome-brands-youtube: 083 - Banking On Clojure - Part4 - Updating data in the database](https://youtu.be/DmYlNTe7Gds)
 
 Next steps will be to use Clojure spec for generative testing with the database, add connection pooling and using lifecycle management libraries.
 
