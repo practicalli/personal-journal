@@ -1,7 +1,6 @@
-A daily journal of thoughts and experiences from commercial work and community projects [powered by Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/){target=_blank}
+# Journal
 
-
-## Practicalli
+A journal of thoughts and experiences from commercial work and community projects [powered by Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/){target=_blank}
 
 [Practical.li](https://practical.li){target=_blank} provides free online books covering practical guides to Clojure programming and development workflows.  [Practicalli Engineering Playbook](https://practical.li/engineering-playbook){target=_blank} contains specific guides across the full spectrum of software development.
 
@@ -12,4 +11,3 @@ All sponsorship funds are used to support the continued development of [Practica
 Thanks to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](https://nubank.com.br/){target=_blank} and [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors){target=_blank} from the Clojure community for your continued support
 
 ---
-
