@@ -1016,12 +1016,12 @@
 <p>Reviewed the Introduction and Getting Started sections, improving the flow and providing a solid introduction to Clojure.</p>
 <p>New sections
 * <a href="http://practicalli.github.io/clojure/clojure-tools/using-clojure-tools.html">Using Clojure CLI tools - common tasks</a> - with accompanying broadcast
-* <a href="https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html">Community Tools</a> providing a detailed guide to tools built on Clojure CLI.
-* <a href="https://practicalli.github.io/clojure/clojure-tools/install/code-analysis.html">Code Analysis</a> - install and configuring clj-kondo
-* <a href="https://practicalli.github.io/clojure/clojure-editors/editor-install-guides/neovim-conjure.html">Neovim and Conjure install guide</a>
-* <a href="https://practicalli.github.io/clojure/clojure-editors/editor-user-guides/neovim-conjure.html">Neovim and Conjure user guide</a></p>
+* <a href="https://practical.li/clojure/clojure-tools/install/community-tools.html">Community Tools</a> providing a detailed guide to tools built on Clojure CLI.
+* <a href="https://practical.li/clojure/clojure-tools/install/code-analysis.html">Code Analysis</a> - install and configuring clj-kondo
+* <a href="https://practical.li/clojure/clojure-editors/editor-install-guides/neovim-conjure.html">Neovim and Conjure install guide</a>
+* <a href="https://practical.li/clojure/clojure-editors/editor-user-guides/neovim-conjure.html">Neovim and Conjure user guide</a></p>
 <p>Updated <a href="http://practicalli.github.io/clojure/testing/integration-testing/circle-ci/">Clojure CLI tools version used with CircleCI</a> and updating scripts to use -M flag with aliases.</p>
-<p>Evaluated <a href="https://spacevim.org/">Spacevim</a> to see if it should be added to the <a href="https://practicalli.github.io/clojure/clojure-editors/">recommended Clojure aware editors</a>.  An issue was found running the Clojure CLI tools REPL on Linux, along with a quick fix.  Although the configuration of vim packages is excellent and a very impressive overall experience. the Clojure environment is very basic and would welcome modernizing.  Ideally adding <a href="https://github.com/Olical/conjure">Conjure</a> to SpaceVim would produce an excellent development experience.</p>
+<p>Evaluated <a href="https://spacevim.org/">Spacevim</a> to see if it should be added to the <a href="https://practical.li/clojure/clojure-editors/">recommended Clojure aware editors</a>.  An issue was found running the Clojure CLI tools REPL on Linux, along with a quick fix.  Although the configuration of vim packages is excellent and a very impressive overall experience. the Clojure environment is very basic and would welcome modernizing.  Ideally adding <a href="https://github.com/Olical/conjure">Conjure</a> to SpaceVim would produce an excellent development experience.</p>
 <h2 id="practicalli-clojure-deps-edn">Practicalli clojure-deps-edn<a class="headerlink" href="#practicalli-clojure-deps-edn" title="Permanent link">λ︎</a></h2>
 <p>Updates and fixes to the user level configuration for Clojure CLI projects</p>
 <ul>
@@ -1034,17 +1034,17 @@
 </ul>
 <h2 id="practicalli-spacemacs">Practicalli Spacemacs<a class="headerlink" href="#practicalli-spacemacs" title="Permanent link">λ︎</a></h2>
 <p>New content:
-* <a href="https://practicalli.github.io/spacemacs/testing/unit-testing/running-tests.html#using-test-selectors-to-run-specific-tests">Running specific test groups with test selectors</a></p>
+* <a href="https://practical.li/spacemacs/testing/unit-testing/running-tests.html#using-test-selectors-to-run-specific-tests">Running specific test groups with test selectors</a></p>
 <p>Updated content:
-* <a href="https://practicalli.github.io/spacemacs/install-spacemacs/line-numbers.html">Line numbers - visual, relative and absolute styles</a>
-* <a href="https://practicalli.github.io/spacemacs/spacemacs-basics/working-with-projects/searching-projects.html">Repeating searches and scrolling through search pattern history</a></p>
+* <a href="https://practical.li/spacemacs/install-spacemacs/line-numbers.html">Line numbers - visual, relative and absolute styles</a>
+* <a href="https://practical.li/spacemacs/spacemacs-basics/working-with-projects/searching-projects.html">Repeating searches and scrolling through search pattern history</a></p>
 <h3 id="cider-issue">Cider issue<a class="headerlink" href="#cider-issue" title="Permanent link">λ︎</a></h3>
 <p>Investigated bug with Emacs Cider and the new Clojure CLI tools <code>-M</code> alias flag.  Cider modeled Clojure CLI tools support on the approach for Leinigen and this resulted in the -A alias flag occurring out of position.  The clojure command does work this way, only since the <code>-M</code> flag has been introduced that the issue became visible.  The fix organises the arguments in the correct position
 * <a href="https://github.com/clojure-emacs/cider/issues/2916">Issue: Clojure CLI command parameters order incorrect</a>
 * <a href="https://github.com/clojure-emacs/cider/issues/2917">PR: jack-in: move Clojure-cli parameter global-opts after -Sdeps</a></p>
 <p><a href="https://youtu.be/XuquYgOSOnc">Hacking on CIDER live broadcast</a> to evolve the way cider-jack-in manages aliases. Covers basic elisp print line style debugging and how to hack on the live Cider code running in Emacs.</p>
 <h2 id="clojure-cli-support-for-other-tools">Clojure CLI support for other tools<a class="headerlink" href="#clojure-cli-support-for-other-tools" title="Permanent link">λ︎</a></h2>
-<p>Reviewed Clojure CLI support for other <a href="https://practicalli.github.io/clojure/clojure-editors/">Clojure aware editors</a> recommended and raised issues and fixes.</p>
+<p>Reviewed Clojure CLI support for other <a href="https://practical.li/clojure/clojure-editors/">Clojure aware editors</a> recommended and raised issues and fixes.</p>
 <h3 id="calva-issue">Calva issue<a class="headerlink" href="#calva-issue" title="Permanent link">λ︎</a></h3>
 <p>Calva only seems to allow the use of <code>-A</code> flag when using its jack-in feature, so <a href="https://github.com/BetterThanTomorrow/calva/issues/826">issue #826 raised</a> for awareness of the change in Clojure CLI tools.</p>
 <h3 id="spacevim-issue">Spacevim issue<a class="headerlink" href="#spacevim-issue" title="Permanent link">λ︎</a></h3>
@@ -1069,7 +1069,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2024</span>
   </span>
 
     
