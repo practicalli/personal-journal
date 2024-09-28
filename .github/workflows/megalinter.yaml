@@ -70,10 +70,10 @@ jobs:
           API_REPORTER_METRICS_BASIC_AUTH_USERNAME: ${{ secrets.API_REPORTER_METRICS_BASIC_AUTH_USERNAME }}
           API_REPORTER_METRICS_BASIC_AUTH_PASSWORD: ${{ secrets.API_REPORTER_METRICS_BASIC_AUTH_PASSWORD }}
           API_REPORTER_METRICS_BEARER_TOKEN: ${{ secrets.API_REPORTER_METRICS_BEARER_PASSWORD }}
-          API_REPORTER_DEBUG: true
+          API_REPORTER_DEBUG: false
 
           # Logging
-          LOG_LEVEL: DEBUG
+          # LOG_LEVEL: DEBUG
 
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
