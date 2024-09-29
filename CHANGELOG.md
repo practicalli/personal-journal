@@ -20,3 +20,4 @@
 - post: updated naming scheme and corrected date
 - dev: megalinter upgrade to version 8
 - dev: megalinter markdown bare url set to false
+- dev: update mkdocs targets to use python virtual environment
