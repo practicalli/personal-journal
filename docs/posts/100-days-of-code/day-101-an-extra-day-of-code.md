@@ -10,9 +10,6 @@ tags:
   - games
 ---
 
-
-**Thoughts for today**
-
 Added more 4Clojure solutions
 
 `def` supports a doc-string (I missed that ability previously).

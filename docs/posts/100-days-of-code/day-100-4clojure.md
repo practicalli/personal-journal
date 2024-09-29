@@ -10,8 +10,6 @@ tags:
   - 4clojure
 ---
 
-**Thoughts for today**
-
 100 days of code challenge completed.  Was it worth it?  Well yes, it got me coding almost every day, and overall I certainly achieved more than 100 hours of coding, more like several 100 hours of coding.
 
 I didnt do was work on a specific project every day, but that would have felt more like work and I enjoyed having a break from that routine.
