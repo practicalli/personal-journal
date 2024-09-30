@@ -65,7 +65,7 @@ The most sureal environment I gave a Clojure talk at was CeBit, a huge conferenc
 
 <p style="text-align:center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/mEfqULqChZs" title="Clojure presentation at CeBit Germany" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p> 
+</p>
 
 
 ## London Clojurians
@@ -76,7 +76,7 @@ ClojureX conference
 
 reClojure conferece
 
-[Article: London Clojurians - a relatively brief history](https://practical.li/blog/posts/london-clojurians-community-a-brief-history/){target=_blank .md-button} 
+[Article: London Clojurians - a relatively brief history](https://practical.li/blog/london-clojurians-community---a-relatively-brief-history/){target=_blank .md-button}
 
 
 ## Hack The Tower
@@ -106,9 +106,9 @@ Once I discovered Spacemacs and added many of the Clojure specific key bindings,
 
 Early versions of the Practicalli books evolved from the lessons learned during these workshops.
 
-[Hack The Tower (Hack Together London)](https://hacktogetherldn.github.io/){target=_blank .md-button} 
+[Hack The Tower (Hack Together London)](https://hacktogetherldn.github.io/){target=_blank .md-button}
 
-[Article: Hack The Tower 2013](https://jr0cket.co.uk/2013/02/hack-tower-february-2013.html){target=_blank .md-button} 
+[Article: Hack The Tower 2013](https://jr0cket.co.uk/2013/02/hack-tower-february-2013.html){target=_blank .md-button}
 
 
 ## ClojureBridge London
@@ -121,13 +121,13 @@ One of the most appreciated aspects of the event was the one-to-one ratio of stu
 
 The event would not have been successful without the great number of volunteers that provided their own time for free.  All the volunteers learned a great deal too, helping them understand areas they were less clear about and aspects of the language they could spend more time learning more deeply.
 
-[ClojureBridge London Website](https://clojurebridgelondon.github.io){target=_blank .md-button} 
+[ClojureBridge London Website](https://clojurebridgelondon.github.io){target=_blank .md-button}
 
 ## More workshops
 
 Dev Winter and Dev Summer conferences in Cambridge
 
-Devoxx London 
+Devoxx London
 
 Clojure and ClojureScript workshops
 
@@ -138,22 +138,22 @@ After working at Citi managing 6 teams building and deploying Clojure projects b
 
 I was inspired by the 100 days of code idea to spend the next 100 days working on Clojure challenges and projects.  Each day I wrote a journal entry to consolidate the lessons learned that day, helping me ingrain the concepts and functions I was learning.
 
-As part of this learning effort I soon started a weekly live broadcast, sharing how to get set up in Clojure and solving Clojure challenges (e.g. 4EverClojure and Exercism) 
+As part of this learning effort I soon started a weekly live broadcast, sharing how to get set up in Clojure and solving Clojure challenges (e.g. 4EverClojure and Exercism)
 
 After 2 years of live broadcasts I had created over 100 hours of live coding in Clojure.
 
-[YouTube: Learning Clojure with Practicalli](https://www.youtube.com/playlist?list=PLpr9V-R8ZxiDjyU7cQYWOEFBDR1t7t0wv){target=_blank .md-button} 
+[YouTube: Learning Clojure with Practicalli](https://www.youtube.com/playlist?list=PLpr9V-R8ZxiDjyU7cQYWOEFBDR1t7t0wv){target=_blank .md-button}
 
-[Journal: 100 Days Of Clojure Code](https://practical.li/journal/category/100daysofcode/){target=_blank .md-button} 
+[Journal: 100 Days Of Clojure Code](https://practical.li/journal/category/100daysofcode/){target=_blank .md-button}
 
-[Clojurians Slack channel: 100DaysOfCode](https://practical.li/journal/category/100daysofcode/){target=_blank .md-button} 
+[Clojurians Slack channel: 100DaysOfCode](https://practical.li/journal/category/100daysofcode/){target=_blank .md-button}
 
 
 ## Practicalli
 
 Initially using GitBook to self-publish books via GitHub pages, providing a few features to support code syntax highlighting, callouts and other features to help the reader consume the content effectively.
 
-At the end of 2022 all books were migrated to Material for MkDocs which provided a very professional look to the books and even more content presentation features (much better code syntax highlighting, collapseable admonitions, code block line highlighting and annotations) 
+At the end of 2022 all books were migrated to Material for MkDocs which provided a very professional look to the books and even more content presentation features (much better code syntax highlighting, collapseable admonitions, code block line highlighting and annotations)
 
 ## The Future
 
