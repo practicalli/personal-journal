@@ -825,7 +825,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Hyprland on Debian">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -920,7 +929,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -990,9 +999,30 @@
   <h1>Linux Wayland Compositor & Hyprland</h1>
 
 <p>A friend recommended <a href="https://hyprland.org/">Hyprland window manager</a> which is similar to i3 window manager I currently used, but more optomised for the Wayland compositor.</p>
+<p>Practicalli currently uses Regolith Desktop, an easy to use set of tools and configs using i3 window manager.  Sway compositor is an implementation of wayland for i3 window manager.  I assume sway has not had quite as much development effort as wayland, so using hyprland could highlight advantages of using Wayland directly over using Sway.</p>
 <!-- more -->
 
 <h2 id="hyprland-on-debian">Hyprland on Debian<a class="headerlink" href="#hyprland-on-debian" title="Permanent link">λ︎</a></h2>
+<p>Throughout the history of Linux (and Unix), X.org has been used as the power driving all desktops.  More recently the Wayland compositor was developed to provide an alternative that catered for the way many desktops are used today.</p>
+<p>There has been a lot of work put into Wayland and although it still has some maturing to do, is generally considered stable for every day use.</p>
+<p>Hyprland is a wayland based tiling manager that has a focus on an engaging user experience (and looking very pretty too).</p>
+<div class="admonition note">
+<p class="admonition-title">Review wayland app recommendations</p>
+<p>Some well established apps and tools may not work quite so well with wayland yet.  e.g. simplescreenrecorder.</p>
+<p><a href="https://wiki.hyprland.org/Useful-Utilities/">Hyperland utilities page</a> recommends apps that work well with wayland (and hyprland)</p>
+</div>
+<p>Practicalli tools that work well with wayland</p>
+<ul>
+<li>OBS - recent versions support wayland</li>
+<li>Inkscape - TODO</li>
+<li>Neovim - works in a terminal so doesnt really care</li>
+<li>Neovide - TODO</li>
+<li>Emacs - TODO</li>
+<li>The Gimp - TODO</li>
+<li>Firefox - seems okay</li>
+<li>Chrome - a delay when opening tabs or scrolling windows (regoligh &amp; sway)</li>
+</ul>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">λ︎</a></h2>
 <p>Install the hyprland packages using <code>*</code> to glob match all the relevant packages.</p>
 <div class="admonition info">
 <p class="admonition-title">Install all hyprland Debian packages</p>
@@ -1000,6 +1030,7 @@
 </code></pre></div>
 </div>
 <p>Once installed, either logout of the desktop session or restart Debian Linux.</p>
+<p>Hyprland should be an option on the login screen. Once an account has been selected, click the cog icon to select hyprland (TODO: check if this is available after installing the package - or if some config is required)</p>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">λ︎</a></h3>
 <p>Hyprland is described as easy to configure, but what actually is involved.  Is it as simple as adding hyprland packages or do I need to edit a configuration file?</p>
 <p>Lets investigate...</p>
