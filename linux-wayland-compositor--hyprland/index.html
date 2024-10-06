@@ -134,7 +134,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#neovim-searching" class="md-skip">
+        <a href="#neovim-clojure-navigation" class="md-skip">
           Skip to content
         </a>
       
@@ -819,6 +819,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#neovim-clojure-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neovim Clojure navigation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#neovim-searching" class="md-nav__link">
     <span class="md-ellipsis">
       Neovim Searching
@@ -865,6 +874,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#apps-to-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apps to install
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-waybar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure waybar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#wayland-apps-and-tools-support" class="md-nav__link">
     <span class="md-ellipsis">
       Wayland apps and tools support
@@ -892,6 +919,42 @@
   <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotchas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-for-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material for MkDocs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack-for-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slack for Debian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hyprland" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyprland
     </span>
   </a>
   
@@ -980,7 +1043,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              7 min read
                             
                           </span>
                         </div>
@@ -1050,10 +1113,18 @@
   <h1>Linux Wayland Compositor & Hyprland</h1>
 
 <p>A friend recommended <a href="https://hyprland.org/">Hyprland window manager</a> which is similar to i3 window manager I currently used, but more optomised for the Wayland compositor.</p>
-<p>Practicalli currently uses Regolith Desktop, an easy to use set of tools and configs using i3 window manager.  Sway compositor is an implementation of wayland for i3 window manager.  I assume sway has not had quite as much development effort as wayland, so using hyprland could highlight advantages of using Wayland directly over using Sway.</p>
+<p>Practicalli currently uses Regolith Desktop, a complete Linux desktop that leverages Gnome and i3 tiling window manager. Regolith Desktop provides quite a rich experience using the <code>regolith-desktop</code> Debian package.  I have not had much success with Regolith when running with Wayland (specifically Sway).  Sway compositor is an implementation of wayland for i3 window manager.  Some of my applications do not see to play nice with Sway (e.g. chromium browser scrolling, simplescreenrecorder cannot run on wayland).</p>
+<p>OBS did seem to work okay on wayland, given a sufficiently recent version.</p>
+<p>A friend recommended Hyprland, a tiling compositor that provides the latest Wayland features and lots of eye candy.  Its pretty easy to setup on Debian, although there is much additional setup before it would be comparable to Regolith Desktop.</p>
 <p>Neovim Grug plugin is being considered as an alternative to the Spectre tool for search and replacing across a project.</p>
 <!-- more -->
 
+<h2 id="neovim-clojure-navigation">Neovim Clojure navigation<a class="headerlink" href="#neovim-clojure-navigation" title="Permanent link">λ︎</a></h2>
+<p>Once I learned vim style commands and motions I quickly dropped much of the paredit style command, even before I tried parinfer.
+Parinfer is really simple and easily covers a lot of the sexp-tooling when writing Clojure code.</p>
+<p>Personally I find vim-style editing a bit simpler and easier to remember as I am using it for everything and not only one language.  There are typically as many key combinations to press with a sexp library as there are with vim.</p>
+<p>There are a few manipulations I may still like the idea of, e.g. raise/promote a form or expression to refactor a nested expression to be the whole expression.</p>
+<p>I have <a href="https://github.com/PaterJason/nvim-treesitter-sexp">https://github.com/PaterJason/nvim-treesitter-sexp</a> plugin installed, but havent used it much.  I use <a href="https://github.com/gpanders/nvim-parinfer">https://github.com/gpanders/nvim-parinfer</a> plugin for parinfer enabled, in alignment mode, for all Clojure language buffers.</p>
 <h2 id="neovim-searching">Neovim Searching<a class="headerlink" href="#neovim-searching" title="Permanent link">λ︎</a></h2>
 <p>For project wide search and replace, I currently use Spectre plugin via the Astrocommunity plugin.  It works okay and has a usable UI.</p>
 <p>Grug looks interesting though, so time to try that at the weekend.</p>
@@ -1072,6 +1143,8 @@
 <p><a href="https://wiki.hyprland.org/Useful-Utilities/">Hyperland utilities page</a> recommends apps that work well with wayland (and hyprland)</p>
 </div>
 <h3 id="install-hyprland">Install hyprland<a class="headerlink" href="#install-hyprland" title="Permanent link">λ︎</a></h3>
+<p>I am using Debian Linux trixie (the next unrelease version of Debian).  The hyprland packages are from the v0.41.2 release in June 25 and the latest hyperland version is v0.44.0 (released as I was writing this paragraph)</p>
+<p>Using the Debian packages will be simpler and quicker than compiling hyprland from source.  As I am only evaluating Hyprland and havent committed to it, I will stick with the Debian packages.</p>
 <div class="admonition note">
 <p class="admonition-title">Install all hyprland Debian packages</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>install<span class="w"> </span>hyprland*
@@ -1079,6 +1152,16 @@
 </div>
 <p>This install the packages:</p>
 <p>Logout of the desktop or restart Debian Linux.</p>
+<details class="hint">
+<summary>Use Debian Linux testing version</summary>
+<p>Hyprland recommends using Debian Sid version for the latest versions.  However, after <a href="https://packages.debian.org/search?keywords=hyprland&amp;searchon=names&amp;suite=all&amp;section=all">searching through the Debian Packages website for hyprland</a>, the versions of matching packages are the same in trixie(testing) as sid(unstable).</p>
+<p>There may be differences in versions of packages that the hyprland packages have as dependencies,</p>
+</details>
+<details class="hint">
+<summary>Building Hyprland for Debian Linux</summary>
+<p><a href="https://github.com/drewgrif/debian-hyprland">drewfrif/debian-hyprland</a> has several bash scripts for semi-automating the build and install of hyprland on Debian Linux.</p>
+<p>There are some personal preferences in those scripts that could be changed, but it seems a good basis for automating your own build and install for all the hyprland components.</p>
+</details>
 <h3 id="first-use">First use<a class="headerlink" href="#first-use" title="Permanent link">λ︎</a></h3>
 <p>On the login screen, select the login account, then select hyprland using the cog in the right hand corner</p>
 <p>Enter the correct password to login with the hyprland desktop.</p>
@@ -1102,6 +1185,39 @@
 <blockquote>
 <p>There is a rofi-dev package, although assuming that is not needed if unless I build rofi extensions</p>
 </blockquote>
+<p>Update the hyprland config to launch rofi for the menu and use <span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> key binding (rather than <span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd>R</kbd></span>)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># bind = $mainMod, R, exec, $menu
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>bind = $mainMod, space, exec, $menu
+</code></pre></div>
+<p>The rofi guide suggests creating a configuration file</p>
+<p>Create a rofi directory in .config</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.config/rofi
+</code></pre></div>
+The dump all the config options into a file.  Most options are commented out.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rofi<span class="w"> </span>-dump-config<span class="w"> </span>&gt;<span class="w"> </span>~/.config/rofi/config.rasi
+</code></pre></div>
+<h3 id="apps-to-install">Apps to install<a class="headerlink" href="#apps-to-install" title="Permanent link">λ︎</a></h3>
+<ul>
+<li>waybar - the desktop status bar (TODO: tweak its config or use someone elses config)</li>
+</ul>
+<h3 id="configure-waybar">Configure waybar<a class="headerlink" href="#configure-waybar" title="Permanent link">λ︎</a></h3>
+<p>Create an appealing and rich desktop menu and status bar.</p>
+<p>Handcrafting a config</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>❯<span class="w"> </span>cp<span class="w"> </span>-vr<span class="w"> </span>/etc/xdg/waybar<span class="w"> </span>~/projects/practicalli/dotfiles/
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="s1">&#39;/etc/xdg/waybar&#39;</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="s1">&#39;/home/practicalli/projects/practicalli/dotfiles/waybar&#39;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="s1">&#39;/etc/xdg/waybar/config.jsonc&#39;</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="s1">&#39;/home/practicalli/projects/practicalli/dotfiles/waybar/config.jsonc&#39;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="s1">&#39;/etc/xdg/waybar/style.css&#39;</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="s1">&#39;/home/practicalli/projects/practicalli/dotfiles/waybar/style.css&#39;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>❯<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>~/projects/practicalli/dotfiles/waybar<span class="w"> </span>~/.config/waybar
+</code></pre></div>
+<p>waybar uses font-awesome fonts for the icons</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># apt search font-awesome</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>fonts-font-awesome/testing,now<span class="w"> </span><span class="m">5</span>.0.10+really4.7.0~dfsg-4.1<span class="w"> </span>all<span class="w"> </span><span class="o">[</span>installed,automatic<span class="o">]</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>iconic<span class="w"> </span>font<span class="w"> </span>designed<span class="w"> </span><span class="k">for</span><span class="w"> </span>use<span class="w"> </span>with<span class="w"> </span>Twitter<span class="w"> </span>Bootstrap
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># apt install fonts-font-awesome</span>
+</code></pre></div>
+<p>To use the workspaces module, replace all the occurrences of <code>sway/workspaces</code> with <code>hyprland/workspaces</code>. Additionally replace all occurrences of <code>sway/mode</code> with <code>hyprland/submap</code></p>
 <h3 id="wayland-apps-and-tools-support">Wayland apps and tools support<a class="headerlink" href="#wayland-apps-and-tools-support" title="Permanent link">λ︎</a></h3>
 <p>Practicalli tools that work well with wayland</p>
 <ul>
@@ -1118,7 +1234,7 @@
 <p>Install the hyprland packages using <code>*</code> to glob match all the relevant packages.</p>
 <div class="admonition info">
 <p class="admonition-title">Install all hyprland Debian packages</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt<span class="w"> </span>install<span class="w"> </span>hyprland*
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>apt<span class="w"> </span>install<span class="w"> </span>hyprland*
 </code></pre></div>
 </div>
 <p>Once installed, either logout of the desktop session or restart Debian Linux.</p>
@@ -1126,6 +1242,71 @@
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">λ︎</a></h3>
 <p>Hyprland is described as easy to configure, but what actually is involved.  Is it as simple as adding hyprland packages or do I need to edit a configuration file?</p>
 <p>Lets investigate...</p>
+<h3 id="gotchas">Gotchas<a class="headerlink" href="#gotchas" title="Permanent link">λ︎</a></h3>
+<p><span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd>c</kbd></span> will close the app in the active window.  As I use this key binding a lot in MacOSX for copy paste, then I should rebind this close action to something else, e.g. <span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd class="key-shift">Shift</kbd></span> <span class="keys"><kbd>q</kbd></span> is the keybinding from regolith and less likely to be pressed in error.</p>
+<p>Root shell history</p>
+<h3 id="material-for-mkdocs">Material for MkDocs<a class="headerlink" href="#material-for-mkdocs" title="Permanent link">λ︎</a></h3>
+<p>apt install python3-pipx
+apt install python3-venv
+apt install python3
+pip3 install mkdocs-material=="9.<em>"
+pipx install mkdocs-material=="9.</em>"
+apt install python3-pipx
+apt install pipx
+pipx install mkdocs-material=="9.<em>"
+pipx install mkdocs-material
+pip install mkdocs-material=="9.</em>"
+apt search material-mkdocs
+apt install mkdocs-material mkdocs-material-extensions
+pip
+apt remove --purge mkdocs-material mkdocs-material-extensions
+apt autoremove
+apt install pipx
+apt remove --purge pipx
+apt autoremove
+apt autoclean
+apt install python3-venv
+exit</p>
+<h3 id="slack-for-debian">Slack for Debian<a class="headerlink" href="#slack-for-debian" title="Permanent link">λ︎</a></h3>
+<p>Download the debian package from the slack webstite (there is a small link in the right corner to a .deb file)</p>
+<p>As the root user:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>/home/practicalli/Downloads/
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>apt<span class="w"> </span>install<span class="w"> </span>./slack-desktop-4.39.95-amd64.deb
+</code></pre></div>
+<p>Not that the deb file install complains about being installed by root account, but works anyway.</p>
+<h3 id="hyprland">Hyprland<a class="headerlink" href="#hyprland" title="Permanent link">λ︎</a></h3>
+<p>apt search hyprland
+apt install hyprland*</p>
+<p>cd /etc/apt/
+cd preferences.d/</p>
+<p>hyprpm list
+apt search hypr
+apt show xdg-desktop-portal-hyprland
+apt search wofi
+apt show wofi-pass
+apt show rofi
+apt install rofi</p>
+<p>apt show dolfin
+apt show dolphin
+apt install dolphin
+apt install waybar
+apt install hyprpaper
+apt install wofi
+apt show wayland-utils
+apt install sway
+apt show foot
+apt install pavucontrol pamixer
+apt install wdisplays
+apt search hyprland
+apt install xdg-desktop-portal-hyprland
+apt install hyprland-backgrounds
+hyprctrl hyprpaper listloaded
+apt search font-awesome
+apt install fonts-font-awesome
+apt search eww
+apt install pipewire wireplumber
+apt search nwg
+18 lines yanked</p>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
@@ -1153,7 +1334,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 5, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
   </span>
 
     
