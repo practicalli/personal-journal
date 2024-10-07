@@ -962,6 +962,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#material-for-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material for MkDocs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slack-for-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slack for Debian
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1040,7 +1058,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              8 min read
+                              10 min read
                             
                           </span>
                         </div>
@@ -1354,6 +1372,89 @@ The dump all the config options into a file.  Most options are commented out.</p
 <a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a>apt<span class="w"> </span>install<span class="w"> </span>pipewire<span class="w"> </span>wireplumber
 <a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>apt<span class="w"> </span>search<span class="w"> </span>nwg
 </code></pre></div>
+<h2 id="material-for-mkdocs">Material for MkDocs<a class="headerlink" href="#material-for-mkdocs" title="Permanent link">λ︎</a></h2>
+<p>Refining the experiments with <a href="http://localhost:7777/journal/here-comes-the-rain/#material-for-mkdocs">installing Material for MkDocs on Debian Linux</a> this week.</p>
+<p>Recap:</p>
+<ul>
+<li>Installing Material for MkDocs using Debian packages did work to a point, although there is no package for the RSS plugin (its relatively recent split from the main material-mkdocs package)</li>
+<li>Installing Material for MkDocs using python packages does cover all the plugins used by Practicalli books and websites.</li>
+<li>Debian issued warnings when using pip3 or pipx to install python packages outside of the Debian package system.</li>
+<li>Using a Python virtual environment is the recommended way to run Material for MkDocs (or any python libraries) on Debian Linux.</li>
+</ul>
+<p>A python virtual environment was created and then Material for MkDocs python packages were installed using Pip.</p>
+<p><code>python3-venv</code> package creates a Python virtual environment given a directory</p>
+<div class="admonition note">
+<p class="admonition-title">Create Python Virtual Environment</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/.local/venv/
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Install Material for MkDocs using Python Packages</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-callouts<span class="w"> </span>mkdocs-glightbox<span class="w"> </span>mkdocs-git-revision-date-localized-plugin<span class="w"> </span>mkdocs-redirects<span class="w"> </span>mkdocs-rss-plugin<span class="w"> </span>pillow<span class="w"> </span>cairosvg
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Run local server for Material for MkDocs</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdocs<span class="w"> </span>build
+</code></pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Makefile task to run server</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># ------- Makefile Variables --------- #</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>MKDOCS_SERVER<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w"> </span>--dev-addr<span class="w"> </span>localhost:7777
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># ------------------------------------ #</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1"># --- Documentation Generation  ------ #</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>python-venv:<span class="w">  </span><span class="c1">## Enable Python Virtual Environment for MkDocs</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>docs:<span class="w"> </span><span class="c1">## Build and run mkdocs in local server (python venv)</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">$(</span>MKDOCS_SERVER<span class="k">)</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>docs-changed:<span class="w">  </span><span class="c1">## Build only changed files and run mkdocs in local server (python venv)</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">$(</span>MKDOCS_SERVER<span class="k">)</span><span class="w"> </span>--dirtyreload
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>docs-build:<span class="w">  </span><span class="c1">## Build mkdocs (python venv)</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdocs<span class="w"> </span>build
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="c1"># ------------------------------------ #</span>
+</code></pre></div>
+</div>
+<details class="info">
+<summary>Root shell history</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>apt<span class="w"> </span>install<span class="w"> </span>python3-pipx
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>apt<span class="w"> </span>install<span class="w"> </span>python3-venv
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>apt<span class="w"> </span>install<span class="w"> </span>python3
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>pip3<span class="w"> </span>install<span class="w"> </span>mkdocs-material<span class="o">==</span><span class="s2">&quot;9.*&quot;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>pipx<span class="w"> </span>install<span class="w"> </span>mkdocs-material<span class="o">==</span><span class="s2">&quot;9.*&quot;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>apt<span class="w"> </span>install<span class="w"> </span>python3-pipx
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>apt<span class="w"> </span>install<span class="w"> </span>pipx
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>pipx<span class="w"> </span>install<span class="w"> </span>mkdocs-material<span class="o">==</span><span class="s2">&quot;9.*&quot;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>pipx<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material<span class="o">==</span><span class="s2">&quot;9.*&quot;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>apt<span class="w"> </span>search<span class="w"> </span>material-mkdocs
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>apt<span class="w"> </span>install<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-material-extensions
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>pip
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>apt<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-material-extensions
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>apt<span class="w"> </span>autoremove
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>apt<span class="w"> </span>install<span class="w"> </span>pipx
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>apt<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>pipx
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>apt<span class="w"> </span>autoremove
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>apt<span class="w"> </span>autoclean
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>apt<span class="w"> </span>install<span class="w"> </span>python3-venv
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="nb">exit</span>
+</code></pre></div>
+</details>
+<h2 id="slack-for-debian">Slack for Debian<a class="headerlink" href="#slack-for-debian" title="Permanent link">λ︎</a></h2>
+<p>Download the debian package from the slack webstite (there is a small link in the right corner to a .deb file)</p>
+<p>As the root user:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">cd</span><span class="w"> </span>/home/practicalli/Downloads/
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>apt<span class="w"> </span>install<span class="w"> </span>./slack-desktop-4.39.95-amd64.deb
+</code></pre></div>
+<p>Not that the deb file install complains about being installed by root account, but works anyway.</p>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
