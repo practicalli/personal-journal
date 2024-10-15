@@ -836,6 +836,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hyprland" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyprland
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hyprland">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Arch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Arch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -914,7 +947,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -973,6 +1006,7 @@
 
 <p>I am enjoying my 2 week at home vacation (stay-cation) and have already completely rewired my desk, laptops, Monitors and NAS storage devices on the electronic standing desk.  It feels a lot more organised and easier to find everything as everything has its place.</p>
 <p>Now I can focus on getting lots of <a href="#practicalli">Practicalli content done</a> (as well as catch up with shows on Paramount+ and maybe a little Polybus on the Playstation4 VR headset)</p>
+<p>I am interested in switching to the Hyprland, although its changing fast so I dug out an older laptop and installed Arch Linux with Hyprland using the <code>archinstall</code> tool.  Unfortunately the laptop I used doesnt seem to support Hyprland or something is missing from the install.</p>
 <p>I am taking a stay-cation as I am still recovering from Covid and the weather is also quite grim.  I am getting out for walks and will cycle if any days are dry enough...</p>
 <!-- more -->
 
@@ -997,6 +1031,56 @@
 <ul>
 <li>6837a5d Feature: Two new user commands, <code>:NeogitLog</code> and <code>:NeogitCommit</code> can now be used to show all log entries for a specified file, or range within a file, and NeogitCommit can be used to show a detailed commit view for a specified SHA/commitish value (2 days ago)</li>
 </ul>
+<h2 id="hyprland">Hyprland<a class="headerlink" href="#hyprland" title="Permanent link">λ︎</a></h2>
+<p>Hyprland is a very appealing wayland compositor with dynamic tiling window manager. As Hpryland is a rapidly moving project, so using Arch Linux will be useful to follow along with the rapid updates.</p>
+<p>There is a useful <a href="https://www.youtube.com/watch?v=otwnzco0HmM">video that simplifies the install</a> and saves time reading of Arch Wiki that would otherwise be required.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hyprland failed to run after install</p>
+<p>I assume the laptop I installed Arch and Hyprland doesnt have the right hardware (video card) to run as its over 16 years old now.</p>
+<p>The laptop does run Gnome with wayland though.</p>
+</div>
+<h3 id="installing-arch">Installing Arch<a class="headerlink" href="#installing-arch" title="Permanent link">λ︎</a></h3>
+<p><a href="https://archlinux.org/download/">Arch Linux downloads</a> page provides a magnetic link (opens in torrent client) or a <code>.torrent</code> file download.</p>
+<p>Either approach should see the 1.17GB Arch ISO download in a few minutes.</p>
+<p>Get a USB stick with 2GB or more memory and plug into the laptop that has the ISO image (make sure there is nothing important on the USB stick as it will be erased).</p>
+<div class="admonition info">
+<p class="admonition-title">Copy Arch ISO to USB Stick</p>
+<p>Show the name of the USB stick
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls<span class="w"> </span>-l<span class="w"> </span>/dev/disk/by-id/usb-*
+</code></pre></div>
+Copy the ISO image to the USB stick
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dd<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="k">if</span><span class="o">=</span>/home/practicalli/Downloads/archlinux-2024.10.01-x86_64.iso<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/dev/disk/by-id/usb-Generic_Flash_Disk_22F1D320-0:0<span class="w"> </span><span class="nv">conv</span><span class="o">=</span>fsync<span class="w"> </span><span class="nv">oflag</span><span class="o">=</span>direct<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
+</code></pre></div></p>
+</div>
+<details class="info">
+<summary>Output of dd command</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="m">1166016512</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span><span class="m">1</span>.2<span class="w"> </span>GB,<span class="w"> </span><span class="m">1</span>.1<span class="w"> </span>GiB<span class="o">)</span><span class="w"> </span>copied,<span class="w"> </span><span class="m">96</span><span class="w"> </span>s,<span class="w"> </span><span class="m">12</span>.1<span class="w"> </span>MB/s
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="m">279</span>+1<span class="w"> </span>records<span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="m">279</span>+1<span class="w"> </span>records<span class="w"> </span>out
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="m">1173389312</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span><span class="m">1</span>.2<span class="w"> </span>GB,<span class="w"> </span><span class="m">1</span>.1<span class="w"> </span>GiB<span class="o">)</span><span class="w"> </span>copied,<span class="w"> </span><span class="m">96</span>.724<span class="w"> </span>s,<span class="w"> </span><span class="m">12</span>.1<span class="w"> </span>MB/s
+</code></pre></div>
+</details>
+<p>Insert the USB stick in the computer to install Arch Linux upon and switch that computer on.</p>
+<p>The Arch Linux splash screen shows, <span class="keys"><kbd class="key-enter">Enter</kbd></span> to start installing.  Once finished, a minimal Linux OS is ready to use.</p>
+<h3 id="configure-arch">Configure Arch<a class="headerlink" href="#configure-arch" title="Permanent link">λ︎</a></h3>
+<p>There is a long and quite dull installation guide for Arch which would be of interest if you do not already know Linux.</p>
+<p>The quicker approach is to use the Arch install command</p>
+<div class="admonition info">
+<p class="admonition-title">Install Arch packages and Hyperland</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>archinstall
+</code></pre></div>
+</div>
+<ul>
+<li>Archinstall language: English (default)</li>
+<li>Mirrors: United Kingdom</li>
+<li>Locales: uk, en_GB, UTF-8</li>
+<li>Disk configuration &gt; Partition: use best-effort &gt; Select computer drive &gt; Select filesystem kind: ext4 &gt; separate home partition: no</li>
+<li>Root password: set</li>
+<li>User account: added practicalli</li>
+<li>Profile: Desktop &gt; Hyprland</li>
+</ul>
+<p>Select install and sit back for a few minutes</p>
+<p>Arch install prompts about chroot into the newly installed system, e.g. to install additional packages or configure stuff.</p>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
