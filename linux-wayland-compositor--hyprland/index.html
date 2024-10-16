@@ -1165,6 +1165,17 @@ Parinfer is really simple and easily covers a lot of the sexp-tooling when writi
 <p>Some well established apps and tools may not work quite so well with wayland yet.  e.g. simplescreenrecorder.</p>
 <p><a href="https://wiki.hyprland.org/Useful-Utilities/">Hyperland utilities page</a> recommends apps that work well with wayland (and hyprland)</p>
 </div>
+<p>Debian packages required for a desktop environment based on Hyprland (this is a growing list)</p>
+<ul>
+<li><a href="https://packages.debian.org/trixie/hyprland">hyprland</a> - dynamic tiling Wayland compositor</li>
+<li><a href="https://packages.debian.org/trixie/hyprland-backgrounds">hyprland-backgrounds</a></li>
+<li>hyprland-dbgsym - optional debug symbols for hyprland</li>
+<li>hyprland-dev - optional development files for Hyprland</li>
+<li><a href="https://packages.debian.org/trixie/hyprland-protocols">hyprland-protocols</a> - wayland protocol extensions for Hyprland</li>
+<li><a href="https://packages.debian.org/trixie/xdg-desktop-portal-hyprland">xdg-desktop-portal-hyprland</a> - hyprland communicates with apps via D-Bus (XDG Portal backend)</li>
+<li>xdg-desktop-portal-hyprland-dbgsym - sid - debug symbols for xdg-desktop-portal-hyprland</li>
+<li>hyprpaper</li>
+</ul>
 <h3 id="install-hyprland">Install hyprland<a class="headerlink" href="#install-hyprland" title="Permanent link">λ︎</a></h3>
 <p>I am using Debian Linux trixie (the next unrelease version of Debian).  The hyprland packages are from the v0.41.2 release in June 25 and the latest hyperland version is v0.44.0 (released as I was writing this paragraph)</p>
 <p>Using the Debian packages will be simpler and quicker than compiling hyprland from source.  As I am only evaluating Hyprland and havent committed to it, I will stick with the Debian packages.</p>
