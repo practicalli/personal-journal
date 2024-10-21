@@ -839,9 +839,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practicalli-clojure-deps-edn" class="md-nav__link">
+  <a href="#practicalli-clojure-cli-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Practicalli clojure-deps-edn
+      Practicalli clojure-cli-config
     </span>
   </a>
   
@@ -1003,31 +1003,31 @@
 * <a href="http://practical.li/clojure/clojure-editors/editor-install-guides/spacevim-fireplace.html">SpaceVim and vim-fireplace install guide</a> - including clj-kondo
 * <a href="http://practical.li/clojure/clojure-editors/editor-user-guides/spacevim-fireplace.html">SpaceVim and vim-fireplace user guide</a> - a quick guide to get started.</p>
 <p><strong>Updated</strong>
-* <a href="http://practical.li/clojure/clojure-tools/data-browsers/portal.html#starting-portal-on-repl-startup">Portal - auto-start portal on REPL startup</a>
+* <a href="https://practical.li/clojure/data-inspector/portal/#open-portal-on-repl-startup">Portal - auto-start portal on REPL startup</a>
 * <a href="http://practical.li/clojure/continuous-integration/circle-ci/">Clojure CLI tools version used with CircleCI</a> and updating scripts to use latest Clojure CLI tools release and -M flag with aliases.
-* <a href="https://practical.li/clojure/clojure-tools/data-browsers/reveal.html">nrepl and cider aliase</a> for the Reveal data visualization tool</p>
-<h2 id="practicalli-clojure-deps-edn">Practicalli clojure-deps-edn<a class="headerlink" href="#practicalli-clojure-deps-edn" title="Permanent link">λ︎</a></h2>
+* nrepl and cider aliases for the Reveal data visualization tool (Reveal deprecated)</p>
+<h2 id="practicalli-clojure-cli-config">Practicalli clojure-cli-config<a class="headerlink" href="#practicalli-clojure-cli-config" title="Permanent link">λ︎</a></h2>
 <p>Updates and fixes to the user level configuration for Clojure CLI projects.  Added clj-kondo as a GitHub action to lint all pull requests and commits, ensuring aliases are in a good state.</p>
 <ul>
-<li><a href="https://github.com/practicalli/clojure-deps-edn#alternative-repls">Alternative REPLs</a>: socket server and prepl aliases</li>
+<li><a href="https://github.com/practicalli/clojure-cli-config#alternative-repls">Alternative REPLs</a>: socket server and prepl aliases</li>
 <li><code>:inspect/reveal-nrepl</code> to run an nREPL server with Reveal data visualization</li>
 <li><code>:inspect/reveal-light-nrepl</code> a light theme version with a 32 point Ubuntu Mono font useful for demos and HiDPI screens</li>
 <li><code>:inspect/reveal-nrepl-cider</code> CIDER specific libraries and middleware configuration with <code>:inspect/reveal-light-nrepl-cider</code> as a light version</li>
 <li><code>:test/cognitect-precompile</code> alias to compile tests before running Cognitect Labs test runner</li>
-<li><a href="https://github.com/practicalli/clojure-deps-edn/blob/live/CHANGELOG.org#2020-11-08">Monthly update of library versions</a> for all aliases using <code>:project/outdated</code> alias</li>
-<li><code>community/zulip-event</code> to <a href="https://github.com/practicalli/clojure-deps-edn#community-activities">add community event to zulip chat</a></li>
+<li><a href="https://github.com/practicalli/clojure-cli-config/blob/live/CHANGELOG.org#2020-11-08">Monthly update of library versions</a> for all aliases using <code>:project/outdated</code> alias</li>
+<li><code>community/zulip-event</code> to <a href="https://github.com/practicalli/clojure-cli-config#community-activities">add community event to zulip chat</a></li>
 <li><code>test/cloverage</code> add clojure exec options for cloverage (#8)</li>
 <li><code>:inspect/reveal-nrepl</code> and <code>:inspect/reveal-light-nrepl</code> Cider specific aliases for Reveal data browser</li>
 </ul>
 <h2 id="practicalli-data-science">Practicalli Data Science<a class="headerlink" href="#practicalli-data-science" title="Permanent link">λ︎</a></h2>
 <p>Created a new (alpha state) book to provide practical guides to using Clojure tools and libraries to build applications in a data science context.  Working with the <a href="https://scicloj.github.io/">SciCloj community</a> to raise awareness of what is possible in this space and as I grow my understanding it will be captured in the Practicalli Data Science book.</p>
 <ul>
-<li><a href="https://practical.li/data-science/notebooks/notespace/">Notespace section</a> - created <a href="https://github.com/practicalli/scicloj-notespace-simple-demo">a simple demo of the Notespace data science journal tool</a> for Clojure, combined with Portal to help browse large data sets.</li>
+<li><a href="https://practical.li/clojure-data-science/notebooks/notespace/">Notespace section</a> - created <a href="https://github.com/practicalli/scicloj-notespace-simple-demo">a simple demo of the Notespace data science journal tool</a> for Clojure, combined with Portal to help browse large data sets.</li>
 </ul>
 <h2 id="practicalli-clojurescript">Practicalli ClojureScript<a class="headerlink" href="#practicalli-clojurescript" title="Permanent link">λ︎</a></h2>
 <p>Updated to new Practicalli theme and put all project content first, moving overview and design content to the reference section.  The book will focus on figwheel-main, reagent and ClojureScript for the next quarter.</p>
 <h2 id="practicalli-spacemacs">Practicalli Spacemacs<a class="headerlink" href="#practicalli-spacemacs" title="Permanent link">λ︎</a></h2>
-<p>Update <a href="https://practical.li/spacemacs/documentation/cider-doc.html">Clojure documentation section</a> to show Clojure and <a href="https://practical.li/spacemacs/documentation/javadoc.html">Java documentation</a> functions, including how to navigate to source code and specifications from help.</p>
+<p>Update <a href="https://practical.li/spacemacs/documentation/cider-doc/">Clojure documentation section</a> to show Clojure and <a href="https://practical.li/spacemacs/documentation/javadoc.html">Java documentation</a> functions, including how to navigate to source code and specifications from help.</p>
 <h3 id="hacking-cider">Hacking CIDER<a class="headerlink" href="#hacking-cider" title="Permanent link">λ︎</a></h3>
 <ul>
 <li><a href="https://github.com/clojure-emacs/cider/pull/2926">PR #2926</a> - Tip to evaluate namespace before documentation lookup - added to Practicalli Spacemacs instead.</li>
