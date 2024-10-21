@@ -34,10 +34,14 @@ Updated sections on [H2 Database](https://practical.li/clojure-web-services/rela
 
 
 ## Practicalli Clojure
-Added [core principles for writing effective unit tests](https://practical.li/clojure/testing/unit-testing/) in Clojure. Included project configuration examples of unit tests for Leiningen and Clojure CLI tools.  Also included example configuration for Emacs CIDER test runner and link to the test runner configurations in [practicalli/clojure-cli-config](https://github.com/practicalli/clojure-cli-config/tree/qualified-alias-keywords-and-new-flags).
+
+Added [core principles for writing effective unit tests](https://practical.li/clojure/testing/unit-testing/) in Clojure. Included project configuration examples of unit tests for Leiningen and Clojure CLI tools.
+
+Included example configuration for Emacs CIDER test runner and link to the test runner configurations in [practicalli/clojure-cli-config](https://github.com/practicalli/clojure-cli-config/?tab=readme-ov-file#unit-testing-frameworks).
 
 
-## Clojure deps.edn
+## Clojure CLI Config
+
 Created a draft guide to changes in the next release of the Clojue CLI tools, to understand the significance of the changes it introduces.  The `-X` flag for executing a function with EDN arguments (hash-map arguments) has already been introduced and the new release depreciates the generic `-A` alias in favor of `-M`.  In the long term using the `-X` flag with functions that take a structured argument looks to be an excellent approach.
 
 Started a redesign of practicalli/clojure-cli-config using qualified keywords for alias names.  The Library repositories keyword, `:mvn/repos`, is already qualified, so this redesign brings the aliases in line with that style.  The alias keywords are prepended with names to communicate the category of purpose for each alias, e.g. repl, project, env, lib, inspect, build, deploy.
@@ -49,4 +53,16 @@ Add project/check to give detailed report on compilation issues for a project
 UPDATE: all aliases in [Practicalli CLI Config](https://github.com/practicalli/clojure-cli-config) use fully qualified names.
 
 ## Practicalli Spacemacs
+
 Resolved simple bug fixes raised by the community.
+
+---
+Thank you.
+
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
+
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
+[:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
+
+[:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
+[:fontawesome-brands-twitter: @practical_li](https://twitter.com/practcial_li){target=_blank .md-button}
