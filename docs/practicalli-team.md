@@ -108,7 +108,7 @@ Early versions of the Practicalli books evolved from the lessons learned during 
 
 [Hack The Tower (Hack Together London)](https://hacktogetherldn.github.io/){target=_blank .md-button}
 
-[Article: Hack The Tower 2013](https://jr0cket.co.uk/2013/02/hack-tower-february-2013.html){target=_blank .md-button}
+[Article: Hack The Tower 2013](https://jr0cket.co.uk/2013/02/hack-tower-february-2013/){target=_blank .md-button}
 
 
 ## ClojureBridge London

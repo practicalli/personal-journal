@@ -25,12 +25,12 @@ Next steps will be to use Clojure spec for generative testing with the database,
 ## Practicalli WebApps
 Updated sections on [H2 Database](https://practical.li/clojure-web-services/relational-databases-and-sql/h2-database/) and Banking on Clojure
 
-- [Design and Create Database Tables](https://practical.li/clojure-web-services/projects/banking-on-clojure/database-tables.html)
-- [Defining Database Queries - different approaches](https://practical.li/clojure-web-services/projects/banking-on-clojure/database-queries.html)
-- [Create database records](https://practical.li/clojure-web-services/projects/banking-on-clojure/create-records.html)
-- [Read Database Records](https://practical.li/clojure-web-services/projects/banking-on-clojure/read-records.html)
-- [Update Records in the database](https://practical.li/clojure-web-services/projects/banking-on-clojure/update-records.html)
-- [Delete Records in the database](https://practical.li/clojure-web-services/projects/banking-on-clojure/delete-records.html)
+- [Design and Create Database Tables](https://practical.li/clojure-web-services/projects/banking-on-clojure/database-tables/)
+- [Defining Database Queries - different approaches](https://practical.li/clojure-web-services/projects/banking-on-clojure/database-queries/)
+- [Create database records](https://practical.li/clojure-web-services/projects/banking-on-clojure/create-records/)
+- [Read Database Records](https://practical.li/clojure-web-services/projects/banking-on-clojure/read-records/)
+- [Update Records in the database](https://practical.li/clojure-web-services/projects/banking-on-clojure/update-records/)
+- [Delete Records in the database](https://practical.li/clojure-web-services/projects/banking-on-clojure/delete-records/)
 
 
 ## Practicalli Clojure
