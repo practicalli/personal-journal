@@ -1,5 +1,4 @@
-
-# ---------------------------------------- 
+# ----------------------------------------
 # Base URL or website root directory to check relative URLs.
 base = "https://practical.li/clojure/"
 
@@ -8,7 +7,7 @@ base = "https://practical.li/clojure/"
 # At the moment, we support http, https, file, and mailto.
 scheme = ["https"]
 
-# ---------------------------------------- 
+# ----------------------------------------
 # Exclusions
 
 # Exclude URLs and mail addresses from checking (supports regex).
@@ -26,4 +25,4 @@ exclude_all_private = true
 
 # Check mail addresses
 include_mail = false
-# ---------------------------------------- 
+# ----------------------------------------
