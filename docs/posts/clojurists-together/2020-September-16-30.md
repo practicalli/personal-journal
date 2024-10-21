@@ -33,7 +33,7 @@ Started creating project templates for use with clj-new, to create deps.edn proj
 
 Continuing to create scripts for video screencasts for a series on the Clojure CLI tools, covering the usage from the latest release (1.10.1.697). The series will convey the developer experience and common practices.
 
-Continue testing Clojure CLI pre-release and enhancing the aliases in practicalli/clojure-deps-edn, no issues found so far.
+Continue testing Clojure CLI pre-release and enhancing the aliases in practicalli/clojure-cli-config, no issues found so far.
 
 
 ## Clojure WebApps
