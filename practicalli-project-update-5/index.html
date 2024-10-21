@@ -1034,11 +1034,11 @@
 <h2 id="practicalli-clojure">Practicalli Clojure<a class="headerlink" href="#practicalli-clojure" title="Permanent link">λ︎</a></h2>
 <p>Reviewed the Introduction and Getting Started sections, improving the flow and providing a solid introduction to Clojure.</p>
 <p>New sections
-* <a href="http://practical.li/clojure/clojure-tools/using-clojure-tools.html">Using Clojure CLI tools - common tasks</a> - with accompanying broadcast
-* <a href="https://practical.li/clojure/clojure-tools/install/community-tools.html">Community Tools</a> providing a detailed guide to tools built on Clojure CLI.
-* <a href="https://practical.li/clojure/clojure-tools/install/code-analysis.html">Code Analysis</a> - install and configuring clj-kondo
-* <a href="https://practical.li/clojure/clojure-editors/editor-install-guides/neovim-conjure.html">Neovim and Conjure install guide</a>
-* <a href="https://practical.li/clojure/clojure-editors/editor-user-guides/neovim-conjure.html">Neovim and Conjure user guide</a></p>
+* <a href="http://practical.li/clojure/clojure-tools/using-clojure-tools/">Using Clojure CLI tools - common tasks</a> - with accompanying broadcast
+* <a href="https://practical.li/clojure/clojure-tools/install/community-tools/">Community Tools</a> providing a detailed guide to tools built on Clojure CLI.
+* <a href="https://practical.li/clojure/clojure-tools/install/code-analysis/">Code Analysis</a> - install and configuring clj-kondo
+* <a href="https://practical.li/clojure/clojure-editors/editor-install-guides/neovim-conjure/">Neovim and Conjure install guide</a>
+* <a href="https://practical.li/clojure/clojure-editors/editor-user-guides/neovim-conjure/">Neovim and Conjure user guide</a></p>
 <p>Updated <a href="http://practical.li/clojure/testing/integration-testing/circle-ci/">Clojure CLI tools version used with CircleCI</a> and updating scripts to use -M flag with aliases.</p>
 <p>Evaluated <a href="https://spacevim.org/">Spacevim</a> to see if it should be added to the <a href="https://practical.li/clojure/clojure-editors/">recommended Clojure aware editors</a>.  An issue was found running the Clojure CLI tools REPL on Linux, along with a quick fix.  Although the configuration of vim packages is excellent and a very impressive overall experience. the Clojure environment is very basic and would welcome modernizing.  Ideally adding <a href="https://github.com/Olical/conjure">Conjure</a> to SpaceVim would produce an excellent development experience.</p>
 <h2 id="practicalli-clojure-cli-config">Practicalli clojure-cli-config<a class="headerlink" href="#practicalli-clojure-cli-config" title="Permanent link">λ︎</a></h2>
@@ -1055,8 +1055,8 @@
 <p>New content:
 * <a href="https://practical.li/spacemacs/testing/unit-testing/running-tests/#using-test-selectors-to-run-specific-tests">Running specific test groups with test selectors</a></p>
 <p>Updated content:
-* <a href="https://practical.li/spacemacs/install-spacemacs/line-numbers.html">Line numbers - visual, relative and absolute styles</a>
-* <a href="https://practical.li/spacemacs/spacemacs-basics/working-with-projects/searching-projects.html">Repeating searches and scrolling through search pattern history</a></p>
+* <a href="https://practical.li/spacemacs/install-spacemacs/line-numbers/">Line numbers - visual, relative and absolute styles</a>
+* <a href="https://practical.li/spacemacs/spacemacs-basics/working-with-projects/searching-projects/">Repeating searches and scrolling through search pattern history</a></p>
 <h3 id="cider-issue">Cider issue<a class="headerlink" href="#cider-issue" title="Permanent link">λ︎</a></h3>
 <p>Investigated bug with Emacs Cider and the new Clojure CLI tools <code>-M</code> alias flag.  Cider modeled Clojure CLI tools support on the approach for Leinigen and this resulted in the -A alias flag occurring out of position.  The clojure command does work this way, only since the <code>-M</code> flag has been introduced that the issue became visible.  The fix organises the arguments in the correct position
 * <a href="https://github.com/clojure-emacs/cider/issues/2916">Issue: Clojure CLI command parameters order incorrect</a>
