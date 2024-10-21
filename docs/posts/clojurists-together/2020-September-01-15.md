@@ -1,6 +1,8 @@
 ---
 title: Practicalli Project Update 2
 date: 2020-09-15
+authors:
+  - practicalli
 categories:
   - clojurists-together
 ---

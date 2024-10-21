@@ -1,11 +1,12 @@
 ---
 title: End of line... for 2023
 date: 2023-12-31
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
 
-**Thoughts for the week**
 
 My personal plans for 2024 are not set in stone, but I would like to relocate to the countryside by the summer.
 
@@ -25,7 +26,7 @@ Now I am working again I've started contributing financially to the Wikipedia pr
 I use Wikipedia extensively for work so its only right that I give some financial support when I am able.
 
 
-## Git 
+## Git
 
 Included files will use relative path from the current config file being read, if the full path is not used
 
@@ -81,9 +82,9 @@ The title of this post is an homage to the original Tron movie.
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

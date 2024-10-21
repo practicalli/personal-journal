@@ -1,6 +1,8 @@
 ---
 title: Practicalli Project Update 3
 date: 2020-09-30
+authors:
+  - practicalli
 categories:
   - clojurists-together
 ---
@@ -19,11 +21,11 @@ New sections and Pages:
 * [Coding Challenges section](http://practical.li/clojure/coding-challenges/)
 * [Unit testing fixtures](http://practical.li/clojure/testing/unit-testing/fixtures/)
 
-Added Code Challenges section, covering the Clojure challenges available in 4Clojure.com, Exercism.io, CodwWars.com, ClojureScript Koans and Advent of Code.  
+Added Code Challenges section, covering the Clojure challenges available in 4Clojure.com, Exercism.io, CodwWars.com, ClojureScript Koans and Advent of Code.
 
-A quick guide to using each of the Code challenge websites was provided and tips to using them effectively.  
+A quick guide to using each of the Code challenge websites was provided and tips to using them effectively.
 
-GitHub code repositories for the Practicalli [4Clojure guides](https://github.com/practicalli/four-clojure/), [codewars-guides](https://github.com/practicalli/codewars-guides) and [exercism-guides](https://github.com/practicalli/exercism-clojure-guides) were included, along with the [4Clojure guides video playlist](https://www.youtube.com/playlist?list=PLpr9V-R8ZxiDB_KGrbliCsCUrmcBvdW16) which walks through the solution to over 60 challenges and different approaches to solving them. 
+GitHub code repositories for the Practicalli [4Clojure guides](https://github.com/practicalli/four-clojure/), [codewars-guides](https://github.com/practicalli/codewars-guides) and [exercism-guides](https://github.com/practicalli/exercism-clojure-guides) were included, along with the [4Clojure guides video playlist](https://www.youtube.com/playlist?list=PLpr9V-R8ZxiDB_KGrbliCsCUrmcBvdW16) which walks through the solution to over 60 challenges and different approaches to solving them.
 
 Several 4Clojure and Exercism challenges have been added as solution walk-through, showing the design thinking behind the solution in the website.  More of these will be converted from the solution code repositories as time allows, along with a video showing the REPL driven development experience.
 
@@ -52,4 +54,3 @@ Using kaocha profiles to configure different behavior in the development environ
 Now Emacs 27 is the default, trying out Ligature support in Emacs.  Added the unicode layer with variables to include ligatures.  Initially switching to the Fira code font which contains a wide range of ligatures in the font already.
 
 Will try the [Ligaturizer project](https://github.com/ToxicFrog/Ligaturizer) to add Fira Code ligatures to the Ubuntu Mono font, the preferred font used by Practicalli.
-

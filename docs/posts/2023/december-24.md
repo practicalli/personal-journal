@@ -1,11 +1,12 @@
 ---
 title: Practicalli work over the winter break
 date: 2023-12-24
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
 
-**Thoughts for the week**
 
 The company I work for takes a break over the winter, so I have some time to spend on Practicalli content.
 
@@ -17,7 +18,7 @@ The company I work for takes a break over the winter, so I have some time to spe
 
 Work for Practicalli that is at the top of my very long TODO list :)
 
-- DONE: Advising on and researching for Arqivist project 
+- DONE: Advising on and researching for Arqivist project
 - DOING: [Git Signing article - Engineering Playbook](https://practical.li/engineering-playbook/source-control/git-configuration/)
 - Add ssh key to RangerOne and GKar laptops
 - Git config enhancements - practicalli/dotfiles
@@ -38,14 +39,14 @@ The main development laptop used had an RSA type SSH key.  ED25519 is now genera
     ssh-keygen -t ed25519 -C "engineering@practical.li"
     ```
 
-Example output of the command, 
+Example output of the command,
 
 ```shell title="ssh-keygen command output"
 ❯ ssh-keygen -t ed25519 -C "engineering@practical.li"
 Generating public/private ed25519 key pair.
-Enter file in which to save the key (/home/practicalli/.ssh/id_ed25519): 
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter file in which to save the key (/home/practicalli/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in /home/practicalli/.ssh/id_ed25519
 Your public key has been saved in /home/practicalli/.ssh/id_ed25519.pub
 The key fingerprint is:
@@ -67,7 +68,7 @@ Example output of the command
 
 ```shell
 ❯ ssh-add ~/.ssh/id_ed25519
-Enter passphrase for id_ed25519: 
+Enter passphrase for id_ed25519:
 Identity added: id_ed25519 (engineering@practical.li)
 ```
 
@@ -83,7 +84,7 @@ Identity added: id_ed25519 (engineering@practical.li)
 
     This configuration does not seem neccessary (or correct) for Linux
 
-Run git commands to configure Git to use SSH signing for commits and tags.  Or edit the Git client configuration, `~/.config/git/config` 
+Run git commands to configure Git to use SSH signing for commits and tags.  Or edit the Git client configuration, `~/.config/git/config`
 
 !!! NOTE ""
     ```shell
@@ -153,7 +154,7 @@ A reasonably warm [84km club ride](https://www.strava.com/activities/10428270444
 
 This was the first time I had tried the close riding with a group, swapping the front rider every few minutes.  I found it unnatural and constraining for most of the ride.  I enjoyed it when I was either at the front where I wouldnt need to slow down when decending.  Or I would drop back a little from the group so I didnt have to ride the breaks down hill, as my bicycle seems to freewheel faster than the other bikes in the group (it is supposed to be an Aero bike, so it seems like that aero works).
 
-I was tired once I got home after the ride, although had enough engergy to make brown rice with beetroot powder and walnut pieces.  I didnt need to have a big sleep 
+I was tired once I got home after the ride, although had enough engergy to make brown rice with beetroot powder and walnut pieces.  I didnt need to have a big sleep
 
 A walk on Sunday for an hour helped streatch my legs.  Walking is a good way to recover from the ride.
 
@@ -163,9 +164,9 @@ I joined the local 5 km park run event on December 25h and manage a time of 34 m
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}
