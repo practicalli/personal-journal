@@ -17,7 +17,7 @@ Continuing the Live broadcasts covering the developmment of the Banking on Cloju
 
 New sections and Pages:
 * [Coding Challenges section](http://practical.li/clojure/coding-challenges/)
-* [Unit testing fixtures](http://practical.li/clojure/testing/unit-testing/fixtures.html)
+* [Unit testing fixtures](http://practical.li/clojure/testing/unit-testing/fixtures/)
 
 Added Code Challenges section, covering the Clojure challenges available in 4Clojure.com, Exercism.io, CodwWars.com, ClojureScript Koans and Advent of Code.  
 
@@ -27,7 +27,7 @@ GitHub code repositories for the Practicalli [4Clojure guides](https://github.co
 
 Several 4Clojure and Exercism challenges have been added as solution walk-through, showing the design thinking behind the solution in the website.  More of these will be converted from the solution code repositories as time allows, along with a video showing the REPL driven development experience.
 
-Added [Unit testing fixtures](http://practical.li/clojure/testing/unit-testing/fixtures.html) page with examples from Banking on Clojure project.  Also mentioned test selectors as a way to organize slower fixtures.
+Added [Unit testing fixtures](http://practical.li/clojure/testing/unit-testing/fixtures/) page with examples from Banking on Clojure project.  Also mentioned test selectors as a way to organize slower fixtures.
 
 Started creating project templates for use with clj-new, to create deps.edn projects useful for beginners and experienced developers alike.  A section on writing your own custom templates will be added to the Practicalli Clojure book in October.
 
