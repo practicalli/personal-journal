@@ -7,7 +7,6 @@ categories:
   - practicalli
 ---
 
-
 The company I work for takes a break over the winter, so I have some time to spend on Practicalli content.
 
 

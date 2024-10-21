@@ -1,11 +1,11 @@
 ---
 title: Running walking coughing
 date: 2023-12-02
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thoughts for today**
 
 Run Johnny Run... then have a sleepy day.
 
@@ -36,9 +36,9 @@ A nice dark powerline10k terminal prompt theme was defined and added to the [:fo
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

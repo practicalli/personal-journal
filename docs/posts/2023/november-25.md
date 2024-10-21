@@ -1,11 +1,11 @@
 ---
 title: Cycling in the cold
 date: 2023-11-25
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thoughts for today**
 
 Even in the cold the countryside is beautiful.
 
@@ -33,9 +33,9 @@ Lots of notes that need organising when I'm not really sleepy from cycling.
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

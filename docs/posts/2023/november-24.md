@@ -1,13 +1,13 @@
 ---
 title: "Neovim search replace & Debian DRM"
 date: 2023-11-24
+authors:
+  - practicalli
 categories:
   - practicalli
   - debian
   - neovim
 ---
-
-**Thought of the day**
 
 What are the options for search and replace text in Neovim?
 
@@ -20,14 +20,14 @@ Sometimes error messages are missleading...
 
 Known options
 
-- `g m A` will match text under curor allowing in-place editing with visual-multi plugin 
+- `g m A` will match text under curor allowing in-place editing with visual-multi plugin
 - `:%substitue` vim-style search and replace (I find this fiddley and not reliable, although could be user errror)
 - Clojure LSP for symbols, etc.
 
 
 Use a visual select to search and replace, with confirmation
 
-Note: `'<,'>` is automatically included when in visual mode and `:` is pressed to start a command 
+Note: `'<,'>` is automatically included when in visual mode and `:` is pressed to start a command
 
 ```vim
 :'<,'>s/search-text/replace-text/gc
@@ -60,7 +60,7 @@ Including the `c` option to confirm each replacement (using a noice popup when u
 Firefox ESR has DRM disabled by default, so streaming video sites like Amazon Prime and Netflix will show errors
 
 !!! INFO "Enable DRM for streaming video sites"
-    Open **Settings** > **General** 
+    Open **Settings** > **General**
 
     Scroll down to **Play DRM Content** option and ensure it is checked.
 
@@ -70,9 +70,9 @@ Amazon Prime shows an error describing how to enable the Widevine Content Decryp
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

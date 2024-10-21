@@ -7,15 +7,12 @@ categories:
   - practicalli
 ---
 
-
 My personal plans for 2024 are not set in stone, but I would like to relocate to the countryside by the summer.
 
+Predictions for 2024:
 
-**Predictions for 2024**
-
-The year of the AI lawsuits as more companies and individuals realise they content has been used to train AI models without permission or recompence.
-
-Anthropocene is declared a new geographic era in the history of the earth, marking the significant change humanity has made to the planet (not for the good).
+- the year of the AI lawsuits as more companies and individuals realise they content has been used to train AI models without permission or recompense.
+- Anthropocene is declared a new geographic era in the history of the earth, marking the significant change humanity has made to the planet (not for the good).
 
 <!-- more -->
 
@@ -30,7 +27,7 @@ I use Wikipedia extensively for work so its only right that I give some financia
 
 Included files will use relative path from the current config file being read, if the full path is not used
 
-implicity `**/` in front of `gitdir` file path if it does not start with `~`, `/` or `./`
+`**/` in front of `gitdir` file path if it does not start with `~`, `/` or `./`
 
 ignore, commit templates, and allowed-signatures files seem to need the full path on MacOSX or can be defined relative to the home directory using tilde `~` expansion, e.g. `~/.config/git/ignore`
 

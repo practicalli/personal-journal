@@ -1,11 +1,11 @@
 ---
 title: Visiting the new office
 date: 2023-12-06
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thoughts for today**
 
 Party on dudes...
 
@@ -22,9 +22,9 @@ I joined in time to take part in the company dinner so this week is a great chan
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

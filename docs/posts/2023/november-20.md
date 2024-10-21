@@ -1,12 +1,12 @@
 ---
 title: Debian Linux migration
 date: 2023-11-20
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
 
-**Thoughts for today**
-         
 Enjoying Debian Linux and freedom from Snaps
 
 
@@ -55,9 +55,9 @@ Carry out adminsitrative tasks as required and type `exit` to leave the root aco
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

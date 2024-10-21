@@ -1,11 +1,11 @@
 ---
 title: Weekly journal & Neovide
 date: 2023-12-09
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thoughts for today**
 
 The Practicalli journal will move to a weekly cadence now I have a full time job with Griffin Bank.
 
@@ -19,7 +19,7 @@ I do write a daily journal for my activities in Griffin and will share informati
 
 I've completed my first week as engineering manager and there has been a lot to learn (and still a huge amount more to learn).
 
-I joined when we are reviewing working practices, which has given me an opportuntiy to contribute early on.  
+I joined when we are reviewing working practices, which has given me an opportuntiy to contribute early on.
 
 As I am learning the business and development workflows, I am adding the occasional tweek to the already excellent docs, especially for onboarding engineers.  I have sneaked in a few links to the Practicalli content too :)
 
@@ -83,7 +83,7 @@ Neovide specific configuration can be added using a conditional block, checking 
 !!! INFO "Neovide specific configuration"
     ```lua
     if vim.g.neovide then
-        -- add configuration only for Neovide 
+        -- add configuration only for Neovide
     end
     ```
 
@@ -98,9 +98,9 @@ A shell alias called `neovide` that sets AstroNvim as the configuration and runs
     ```
 
 ### Remote server code
-    
-Neovide seems useful when working with code on a remote server, especially if the server has limited graphical support. 
-    
+
+Neovide seems useful when working with code on a remote server, especially if the server has limited graphical support.
+
 Neovim can be run in headless server mode using Unix sockets or TCP (ideally over an SSH connection for added security).
 
 Neovide can [:globe_with_meridians: connect to Neovim](https://neovide.dev/features.html#connecting-to-an-existing-neovim-instance){target=_blank} and display richer information, e.g. syntax warnings, ligatures, etc.
@@ -112,7 +112,7 @@ Neovide can [:globe_with_meridians: connect to Neovim](https://neovide.dev/featu
     # Start Neovim as a headless service for connection by GUI tools, e.g. Neovide
 
     # Set AstroNvim Configuration for Neovim
-    export NVIM_APPNAME=astronvim 
+    export NVIM_APPNAME=astronvim
 
     # Start Neovim listening over Unix socket
     $HOME/.local/bin/nvim --headless --listen /tmp/.nvim-instance.sock
@@ -150,9 +150,9 @@ I came 37th in my age group with an age-graded score of 42.42% (double the meani
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

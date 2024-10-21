@@ -1,11 +1,11 @@
 ---
 title: "Onboarding to a new role, hacking Clojure & Neovim"
 date: 2023-11-22
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thought of the day**
 
 Nervous excitement about starting a new role and hopeful I dont mess it up.
 
@@ -28,7 +28,7 @@ Discussing the Arqivist project, a question arose about hiding sensitive data in
 
 Mulog has [custom transformations](https://cljdoc.org/d/com.brunobonacci/mulog/0.9.0/doc/custom-transformations) which can be used to pre-process each event before the publisher dispatches the event.
 
-The mulog maintainer created the [where project](https://github.com/BrunoBonacci/where) to define Human readable conditions to filter data. 
+The mulog maintainer created the [where project](https://github.com/BrunoBonacci/where) to define Human readable conditions to filter data.
 
 !!! EXAMPLE "where is a DSL for powerful predicate functions"
     ```clojure
@@ -41,9 +41,9 @@ The mulog maintainer created the [where project](https://github.com/BrunoBonacci
 In a donut-party/system config, a production config would include the `:transform` and the dev config would not include the `:transform`
 
 
-## Neovim 
+## Neovim
 
-How to navigate Clojure code using AstorNvim was asked in the Clojurians Slack channel. 
+How to navigate Clojure code using AstorNvim was asked in the Clojurians Slack channel.
 
 - `g d` jumps to definitions, including let bindings and function args
 - `SPC l s` shows symbols in telescope popup
@@ -59,7 +59,7 @@ Neovim commands to investigate further
 - `:help Explore` and related commands
 - `:help usr_22` has a good introduction
 
-[Clojurians Slack - navigating code in neovim discussion](https://clojurians.slack.com/archives/C0DF8R51A/p1700651248926689){target=_blank .md-button} 
+[Clojurians Slack - navigating code in neovim discussion](https://clojurians.slack.com/archives/C0DF8R51A/p1700651248926689){target=_blank .md-button}
 
 !!! TODO "Neovim plugin: nvim-treesitter-sexp"
     Evalaute the [nvim-treesitter-sexp](https://github.com/PaterJason/nvim-treesitter-sexp) plugin with the Practialli AstorNvim User configuration and see if it is a valuable way to navigate Clojure expressions.
@@ -101,17 +101,17 @@ Part of the onboarding is to select a laptop to use.  As the company is in a reg
 
 My previous experience with MacBook was mared by the elusive `#` character, so I opted for the [International English Keyboard layout](https://keyshorts.com/blogs/blog/37615873-how-to-identify-macbook-keyboard-localization#us-international)
 
-[MacBook Keyboard layouts visualised](https://keyshorts.com/blogs/blog/37615873-how-to-identify-macbook-keyboard-localization){target=_blank .md-button} 
+[MacBook Keyboard layouts visualised](https://keyshorts.com/blogs/blog/37615873-how-to-identify-macbook-keyboard-localization){target=_blank .md-button}
 
-[MacBook Keyboard guide](https://keyshorts.com/blogs/blog/41999105-the-ultimate-guide-to-macbook-keyboard){target=_blank .md-button} 
+[MacBook Keyboard guide](https://keyshorts.com/blogs/blog/41999105-the-ultimate-guide-to-macbook-keyboard){target=_blank .md-button}
 
 
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

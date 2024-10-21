@@ -1,11 +1,11 @@
 ---
 title: Neovim updates and Neovide
 date: 2023-12-17
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thought of the week**
 
 Enjoying the new role as there is so much to do that I can get involved with.
 
@@ -42,7 +42,7 @@ Practicalli Neovim
 
 ??? INFO "Conjure recent commit history"
     ```shell
-    ○ conjure  clojure 
+    ○ conjure  clojure
         4880144 Correct janet stdio module form name (9 days ago)
         ec71272 Set __name__ to __repl__ when setting up #540 (13 days ago)
         84a1ba6 Merge branch 'sogaiu-janet-stdio' into develop (13 days ago)
@@ -76,7 +76,7 @@ Practicalli Neovim
 
 ??? INFO "Neogit commit updates"
     ```shell
-    ○ neogit  User AstroGitFile  <leader>gnk  <leader>gs  <leader>gnt  <leader>gnc  <leader>gnd 
+    ○ neogit  User AstroGitFile  <leader>gnk  <leader>gs  <leader>gnt  <leader>gnc  <leader>gnd
         49755ff Merge pull request #1043 from NeogitOrg/fix/popup-mappings (17 minutes ago)
         c6cb986 Use nil check instead of metatable. (19 minutes ago)
         69fb64c Merge pull request #1039 from ttytm/fix/abort (3 hours ago)
@@ -277,9 +277,9 @@ Practicalli Neovim
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

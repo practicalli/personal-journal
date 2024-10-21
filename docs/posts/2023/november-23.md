@@ -1,11 +1,11 @@
 ---
 title: "Practicalli Email"
 date: 2023-11-23
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thought of the day**
 
 Making a note of why things are set up are useful so you dont delete anything important!
 
@@ -34,14 +34,14 @@ Luckily I found many articles on using Gmail SMTP server for applications and th
 
     Google account will confirm it was the correct user creating the app password, via an email and notification on the users android phone.
 
-    [Sign in with app password - Google Account Help](https://support.google.com/accounts/answer/185833){target=_blank .md-button} 
+    [Sign in with app password - Google Account Help](https://support.google.com/accounts/answer/185833){target=_blank .md-button}
 
 
 The Google account App Password is used to send @practical.li emails via Google `smtp.gmail.com` server.
 
 > The Google account name and password cannot be used as that approach also requires a 2-factor token
 
-!!! NOTE "Add another email account in Gmail"  
+!!! NOTE "Add another email account in Gmail"
     Open **Gmail** > **Settings** > **Accounts and Import**
 
     Enter Name and Email address for the new email
@@ -56,13 +56,13 @@ The Google account App Password is used to send @practical.li emails via Google 
 
     **Username:** Google account user name something@gmail.com
 
-    **Password:** App password (not the gmail login password) 
+    **Password:** App password (not the gmail login password)
 
     Assuming the credentials are correct, Gmail will send a confirmation email to verify the new email address
 
     To add your email address, click on the link in the confirmation email in Gmail Inbox.
 
-    [Send Emails from different address or alias - Gmail help](https://support.google.com/mail/answer/22370){target=_blank .md-button} 
+    [Send Emails from different address or alias - Gmail help](https://support.google.com/mail/answer/22370){target=_blank .md-button}
 
 > If the email is not recieved, visit the **Gmail** > **Settings** > **Accounts and Import** and select **veryify** on the new email address
 
@@ -76,9 +76,9 @@ Backup [Asus Eze PC 900](https://en.wikipedia.org/wiki/Asus_Eee_PC) and installe
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

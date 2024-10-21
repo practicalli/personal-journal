@@ -1,11 +1,11 @@
 ---
 title: Discussing new role expectations
 date: 2023-11-27
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thoughts for today**
 
 Learning a little more about the responsibilities and expectations of the new role, which seems very much as expected.
 
@@ -24,7 +24,7 @@ I'll add general MacOSX tips for engineers to the [Practicalli Engineering Playb
 > TODO: would be great to find a tiling window manager for MacOSX
 
 
-## Neovim 
+## Neovim
 
 Alex is a linter for text that help write in a neutral way and avoid potentially offensive words.  An `alexrc.yaml` can specify words to ignore.  Wrapping a word in 'single quotes' also seems to instruct Alex to ignore it.
 
@@ -41,7 +41,7 @@ I ordered a BeYou chair many years ago as part of a kick-starter and part of it 
 
 I sold two packages worth of book and DVD's on WeBuyBooks about a month ago and they were collected pretty quickly by Evri.  The following week Evri delivered one of the packages back to me instead of their intended destination.  Now I have a pending order with WeBuyBooks which cannot complete until they get the other package.  I contacted WeBuyBooks and they said I should contact Evri.  I contacted Evri help and support via a live chat and as the delay is over 5 days then I should contact WeBuyBooks.  I contacted WeBuyBooks again and they have now arranged for another collection.
 
-I have more luck with MusicMagpie and Ziffit, although prices for each book, CD, DVD and game can vary quite a lot over each of the three services.  
+I have more luck with MusicMagpie and Ziffit, although prices for each book, CD, DVD and game can vary quite a lot over each of the three services.
 
 I get a laptop for use at the new company, so am also waiting for that to be delivered.
 
@@ -52,9 +52,9 @@ I have plenty of parcel tape for my tape 'gun' and plenty of empty cardboard box
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

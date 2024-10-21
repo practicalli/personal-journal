@@ -1,6 +1,8 @@
 ---
 title: How much root cause analysis to do?
 date: 2023-12-03
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
@@ -21,7 +23,7 @@ I havent been running the MkDocs server locally for the journal as the content i
 If there are important things missing from the frontmatter of the post then MkDocs will fail to build.
 
 !!! WARNING "MkDocs error - title missing in post"
-    The `post_slugify` function in MkDocs takes a `post.title` and will generate an error if the title is empty. 
+    The `post_slugify` function in MkDocs takes a `post.title` and will generate an error if the title is empty.
     ```python
     in _slugify_post
         return self.config.post_slugify(post.title, separator)
@@ -34,7 +36,7 @@ If there are important things missing from the frontmatter of the post then MkDo
 
 I have a Makefile task called `docs` that will run the MkDocs server locally and serve up the built web site.  This runs very quickly, so there is little excuse not to run it.
 
-For convienience of opening the MkDocs site in the browser the MkDocs server runs on the same port for all of the practicalli books and journal website, (localhost:7777).  
+For convienience of opening the MkDocs site in the browser the MkDocs server runs on the same port for all of the practicalli books and journal website, (localhost:7777).
 
 It is important to ensuring only one instance of the MkDocs servier is running.
 
@@ -53,13 +55,13 @@ Kitty terminal app has been configured to open a new terminal window in the same
     [:fontawesome-brands-github: Practicalli Dotfiles - Kitty configuration](https://github.com/practicalli/dotfiles/tree/main/kitty)
 
 
-## Neovim 
+## Neovim
 
 Lazy package manager continues to impress in terms of user experience.
 
 `SPC p a` in AstroNvim was used to update plugins with Lazy and format tools with Mason.
 
-There was an issue with LuaSnip update as Git detected local changes that were different to the commit history of LuaSnip it was cloning.  Lazy package manager displayed a message on how to resolve it, by using `x` to remove the LuaSnip plugin and `I` to reinstall. 
+There was an issue with LuaSnip update as Git detected local changes that were different to the commit history of LuaSnip it was cloning.  Lazy package manager displayed a message on how to resolve it, by using `x` to remove the LuaSnip plugin and `I` to reinstall.
 
 This kind of Git issue rarely occurs, so having an inline help message if very helpful.
 
@@ -68,9 +70,9 @@ Its assumed the root cause is some change to the LuaSnip commit history after th
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

@@ -1,12 +1,12 @@
 ---
 title: Planing Practicalli 2024
 date: 2023-11-19
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
 
-**Thoughts for today**
-         
 How could the community help people find relevant and quality libraries to use for their own development projects?
 
 
@@ -30,17 +30,17 @@ The Practicalli "Which Clojure Library" project would provide a consistent way t
 - common stacks and describe their benefits and constraints (in a consistent way)
   - link to the major libraries that compose the stack
 
-The first phase of the project would provide a website that included the most commonly used libraries, each with a comprehensive description of their purpose and related libraries / stacks. 
+The first phase of the project would provide a website that included the most commonly used libraries, each with a comprehensive description of their purpose and related libraries / stacks.
 
 
-[mkdocks-:fontawesome-brands-github: Which Libraries Project - GitHub issue](https://github.com/practicalli/which-clojure-library/issues/1){target=_blank .md-button} 
+[mkdocks-:fontawesome-brands-github: Which Libraries Project - GitHub issue](https://github.com/practicalli/which-clojure-library/issues/1){target=_blank .md-button}
 
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

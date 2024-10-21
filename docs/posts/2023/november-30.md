@@ -1,11 +1,11 @@
 ---
 title: Updating my identity
 date: 2023-11-30
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
-
-**Thoughts for today**
 
 Security is very important but can be a challenge to usability.
 

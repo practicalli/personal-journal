@@ -1,13 +1,13 @@
 ---
 title: "Continuing the move to Debian Linux"
 date: 2023-11-21
+authors:
+  - practicalli
 categories:
   - practicalli
 ---
 
-**Though of the day**
-
-Uncluttering my laptop collection is a facinating journey down a long history of laptops, many of which  I had forgotten about.  Most of the laptops still work and run new versions of Linux pretty well.
+Organising my laptop collection is a fascinating journey down a long history of laptops, many of which I had forgotten about.  Most of the laptops still work and run new versions of Linux pretty well.
 
 I really enjoyed using the EzePc laptops as they were so easy to carry around to all the community events I used to go to.  Although they would have benefited from a nice [Atreus keyboard from Keyboard.io](https://shop.keyboard.io/products/keyboardio-atreus).
 
@@ -19,7 +19,7 @@ Debian is very useful for older i686 to i386 cpu based hardware.  Firefox-esr is
 
 Use Material for MkDocs blog feature to create a rich experience for journal entries written in markdown.
 
-[Practicalli Journal](https://practical.li/journal){target=_blank .md-button} 
+[Practicalli Journal](https://practical.li/journal){target=_blank .md-button}
 
 The journal will match the appearance of other Practicalli content and therefore have a light and dark theme built in.
 
@@ -41,7 +41,7 @@ All repositories within the Practicalli Org on GitHub will use these defaults un
 
 Updated the [Practicalli Org profile](https://github.com/practicalli) defined in the `.github` repository, updating the Clojure REPL workflow images and practicalli logo.
 
-[Using the .github repository - FreeCodeCamp](https://www.freecodecamp.org/news/how-to-use-the-dot-github-repository/){target=_blank .md-button} 
+[Using the .github repository - FreeCodeCamp](https://www.freecodecamp.org/news/how-to-use-the-dot-github-repository/){target=_blank .md-button}
 
 
 ## GitHub stats
@@ -50,11 +50,11 @@ Reached 366 consecutive days of commits on the `practicalli-john` GitHub account
 
 Added a `.gitattributes` configuration to some repositories reporting a different or irrelevant repository language.  GitHub uses
 
-[Linguist troubleshooting: Repo language incorrectly detected](https://github.com/github-linguist/linguist/blob/master/docs/troubleshooting.md#my-repository-is-detected-as-the-wrong-language){target=_blank .md-button} 
+[Linguist troubleshooting: Repo language incorrectly detected](https://github.com/github-linguist/linguist/blob/master/docs/troubleshooting.md#my-repository-is-detected-as-the-wrong-language){target=_blank .md-button}
 
-[GitHub Linguist Overrides](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md){target=_blank .md-button} 
+[GitHub Linguist Overrides](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md){target=_blank .md-button}
 
-[GitHub Linguist languages supported](https://github.com/github-linguist/linguist/blob/master/lib/linguist/languages.yml){target=_blank .md-button} 
+[GitHub Linguist languages supported](https://github.com/github-linguist/linguist/blob/master/lib/linguist/languages.yml){target=_blank .md-button}
 
 
 ## Debian
@@ -63,7 +63,7 @@ Spending the rest of 2023 moving over to Debian to compare the experience to Ubu
 
 One main driver for the switch is the every growing use of Snaps for major parts of Ubuntu, rather than the more efficient debian packages.
 
-Snaps can make it easier for maintainers of applications and libraries.  
+Snaps can make it easier for maintainers of applications and libraries.
 
 However, there is always at least 2 versions of a snap installed and as a snap is self-contained its install is typically larger.  Snaps such as firefox have also had a noticable impact on performance, especially when starting the application.  I am also concerned that a snap would be using more RAM memory as it is loading its own version of all its libraries into memory.
 
@@ -94,9 +94,9 @@ The debian approach does require remembering two passwords, one for the daily us
 ---
 Thank you.
 
-[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button} 
+[:globe_with_meridians: Practical.li Website](https://practical.li){target=_blank .md-button}
 
-[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button} 
+[:fontawesome-brands-github: Practical.li GitHub Org](https://github.com/practicalli){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli-johnny profile](https://github.com/practicalli-johnny){target=_blank .md-button}
 
 [:fontawesome-brands-mastodon: @practicalli@clj.social](https://clj.social/@practicalli){target=_blank .md-button}

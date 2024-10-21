@@ -1,12 +1,12 @@
 ---
 title: Lightening my life
 date: 2023-11-29
+authors:
+  - practicalli
 categories:
   - practicalli
   - neovim
 ---
-
-**Thoughts for today**
 
 Feeling the space I've made after rearranging the office space and uncluttering more belongings
 
