@@ -14,6 +14,7 @@ scheme = ["https"]
 exclude = ['^https://www\.linkedin\.com',
            '^https://www\.parkrun\.org\.uk',
            '^https://github\.com\/search*',
+           '^https://packages\.debian\.org',
            '^https://127.0.0.0']
 
 # Exclude these filesystem paths from getting checked.
