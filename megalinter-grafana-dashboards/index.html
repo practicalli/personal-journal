@@ -1049,6 +1049,9 @@
 <h2 id="github-profile">GitHub Profile<a class="headerlink" href="#github-profile" title="Permanent link">λ︎</a></h2>
 <p><a href="https://simpleicons.org/">Simple Icons CDN</a> is used to include the icons for discussion and social media services such as GitHub Discussions, YouTube, Zulip, Slack and LinkedIn.</p>
 <p>I recently replaced the Twitter link &amp; icon with that for my clj.social account on Mastodon.</p>
+<div class="admonition example">
+<p class="admonition-title">Simple Icons in GitHub profile</p>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://youtube.com/practicalli&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;blank&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;64&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;64&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.simpleicons.org/youtube/crimson&quot;</span> <span class="p">/&gt;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -1090,12 +1093,18 @@
 </blockquote>
 <h2 id="regolith">Regolith<a class="headerlink" href="#regolith" title="Permanent link">λ︎</a></h2>
 <p>Unless a monitor has a KVM switch (or using KVM hardware) then Regolith will automatically change workspace arrangements when an external monitor is disconnected.</p>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>apt<span class="w"> </span>install<span class="w"> </span>regolith-i3-session
 </code></pre></div>
+</div>
 <p>The swap focus i3 package seems to override the <span class="keys"><kbd class="key-super">Super</kbd><span>+</span><kbd class="key-period">.</kbd></span> key binding that should otherwise be used to restore a window manager session.</p>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>apt<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>regolith-wm-swap-focus
 </code></pre></div>
+</div>
 <p>Output - i3-swap-focus package should also be removed</p>
+<div class="admonition example">
+<p class="admonition-title">Output from apt remove command</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>The<span class="w"> </span>following<span class="w"> </span>package<span class="w"> </span>was<span class="w"> </span>automatically<span class="w"> </span>installed<span class="w"> </span>and<span class="w"> </span>is<span class="w"> </span>no<span class="w"> </span>longer<span class="w"> </span>required:
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>i3-swap-focus
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Use<span class="w"> </span><span class="s1">&#39;apt autoremove&#39;</span><span class="w"> </span>to<span class="w"> </span>remove<span class="w"> </span>it.
@@ -1122,26 +1131,36 @@
 <a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="o">(</span>Reading<span class="w"> </span>database<span class="w"> </span>...<span class="w"> </span><span class="m">198908</span><span class="w"> </span>files<span class="w"> </span>and<span class="w"> </span>directories<span class="w"> </span>currently<span class="w"> </span>installed.<span class="o">)</span>
 <a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>Removing<span class="w"> </span>i3-swap-focus<span class="w"> </span><span class="o">(</span><span class="m">0</span>.4.3-1regolith-testing<span class="o">)</span><span class="w"> </span>...
 </code></pre></div>
+</div>
 <h2 id="grafana-dashboard-for-megalinter">Grafana dashboard for megalinter<a class="headerlink" href="#grafana-dashboard-for-megalinter" title="Permanent link">λ︎</a></h2>
 <p>Megalinter can sent logs from linter runs to Grafana to visualise the result of runs.</p>
 <p><a href="https://grafana.com/auth/sign-up/create-user?pg=hp&amp;plcmt=cloud-promo&amp;cta=create-free-account">Grafana Cloud Free Tier</a> provides 14 days of logs &amp; metrics retention for 3 users. No credit card is required to sign up and the service is free forever.</p>
 <p>I signed up using my GitHub account and created the <a href="https://practicalli.grafana.net/">practicalli.grafana.net</a> stack URL, using the <code>EU Germany</code> deployment region as its the closest to my geographical location.</p>
 <p>Now to add configuration to each of the Practicalli Projects</p>
 <p>Get the Loki logs service connection URL and user name</p>
+<div class="admonition example">
+<p class="admonition-title">Megalinter API Reporter - Loki log service</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">API_REPORTER_URL</span><span class="o">=</span>https://logs-prod-012.grafana.net/loki/api/v1/push
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nv">API_REPORTER_BASIC_AUTH_USERNAME</span><span class="o">=</span>xxxxxx
 </code></pre></div>
+</div>
 <p>Get the Prometheus metrics service connection URL and user name</p>
+<div class="admonition example">
+<p class="admonition-title">Megalinter API Reporter - Loki log service</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">API_REPORTER_METRICS_URL</span><span class="o">=</span>https://influx-prod-24-prod-eu-west-2.grafana.net/api/v1/push/influx/write
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nv">API_REPORTER_METRICS_BASIC_AUTH_USERNAME</span><span class="o">=</span>xxxxxxx
 </code></pre></div>
+</div>
 <h3 id="create-service-account">Create Service account<a class="headerlink" href="#create-service-account" title="Permanent link">λ︎</a></h3>
 <p>Administration -&gt; Users and Access -&gt; Cloud Access Policies, then click on Create Access Policy</p>
 <p>Add token to the newly created policy and use the generated token value as the password value for the Loki logs and Prometheus metrics services password</p>
 <p>Passwords</p>
+<div class="admonition example">
+<p class="admonition-title">Megalinter API Reporter - Grafana service passwords</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">API_REPORTER_BASIC_AUTH_PASSWORD</span><span class="o">=</span><span class="nv">glc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class="o">=</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">API_REPORTER_METRICS_BASIC_AUTH_PASSWORD</span><span class="o">=</span><span class="nv">glc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class="o">=</span>
 </code></pre></div>
+</div>
 <p>Add all environment variables to the GitHub repository that will publish megalinter statistics.</p>
 <blockquote>
 <p>Thought: can these be added as an Org secrets rather than Repository secrets (I dont see why not, its worth a try). It will save adding these environment variables to the 22 Practicalli projects that use MegaLinter</p>
@@ -1209,7 +1228,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2024</span>
   </span>
 
     

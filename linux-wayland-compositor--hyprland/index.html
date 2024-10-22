@@ -1136,7 +1136,9 @@
   <h1>Linux Wayland Compositor & Hyprland</h1>
 
 <p>A friend recommended <a href="https://hyprland.org/">Hyprland window manager</a> which is similar to i3 window manager I currently used, but more optomised for the Wayland compositor.</p>
-<p>Practicalli currently uses Regolith Desktop, a complete Linux desktop that leverages Gnome and i3 tiling window manager. Regolith Desktop provides quite a rich experience using the <code>regolith-desktop</code> Debian package.  I have not had much success with Regolith when running with Wayland (specifically Sway).  Sway compositor is an implementation of wayland for i3 window manager.  Some of my applications do not see to play nice with Sway (e.g. chromium browser scrolling, simplescreenrecorder cannot run on wayland).</p>
+<p>Practicalli currently uses Regolith Desktop, a complete Linux desktop that leverages Gnome and i3 tiling window manager.</p>
+<p>Regolith Desktop provides quite a rich experience using the <code>regolith-desktop</code> Debian package.  I have not had much success with Regolith when running with Wayland (specifically Sway).</p>
+<p>Sway compositor is an implementation of wayland for i3 window manager.  Some of my applications do not see to play nice with Sway (e.g. chromium browser scrolling, simplescreenrecorder cannot run on wayland).</p>
 <p>OBS did seem to work okay on wayland, given a sufficiently recent version.</p>
 <p>A friend recommended Hyprland, a tiling compositor that provides the latest Wayland features and lots of eye candy.  Its pretty easy to setup on Debian, although there is much additional setup before it would be comparable to Regolith Desktop.</p>
 <p>Neovim Grug plugin is being considered as an alternative to the Spectre tool for search and replacing across a project.</p>
@@ -1219,8 +1221,10 @@ Parinfer is really simple and easily covers a lot of the sexp-tooling when writi
 - install the rofi debian package
 - install one of the <a href="https://wiki.hyprland.org/Useful-Utilities/App-Launchers/">suggested app launcher on the hyprland wiki</a></p>
 <p>I tried <code>rofi</code> first as its familiar from Regolith desktop.</p>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt install rofi
 </code></pre></div>
+</div>
 <blockquote>
 <p>There is a rofi-dev package, although assuming that is not needed if unless I build rofi extensions</p>
 </blockquote>
@@ -1229,44 +1233,50 @@ Parinfer is really simple and easily covers a lot of the sexp-tooling when writi
 <p>Either use wofi or the rofi-wayland project (Debian did not have a rofi-wayland package at time of writing)</p>
 </div>
 <p>Update the hyprland config to launch rofi for the menu and use <span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> key binding (rather than <span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd>R</kbd></span>)</p>
+<div class="admonition example">
+<p class="admonition-title">Override key binding in Hyprland config</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># bind = $mainMod, R, exec, $menu
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>bind = $mainMod, space, exec, $menu
 </code></pre></div>
+</div>
 <p>The rofi guide suggests creating a configuration file</p>
 <p>Create a rofi directory in .config</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.config/rofi
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.config/rofi
 </code></pre></div>
-The dump all the config options into a file.  Most options are commented out.</p>
+</div>
+<p>The dump all the config options into a file.  Most options are commented out.</p>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>rofi<span class="w"> </span>-dump-config<span class="w"> </span>&gt;<span class="w"> </span>~/.config/rofi/config.rasi
 </code></pre></div>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Switched to wofi menu</p>
 <p>wofi seemed to work much better (automatically floating window unlike rofi)</p>
 </div>
 <h3 id="apps-to-install">Apps to install<a class="headerlink" href="#apps-to-install" title="Permanent link">λ︎</a></h3>
-<ul>
-<li>waybar - the desktop status bar (TODO: tweak its config and learn from shared configs)</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-</div>
+<p>waybar - the desktop status bar (TODO: tweak its config and learn from shared configs)</p>
 <h3 id="configure-waybar">Configure waybar<a class="headerlink" href="#configure-waybar" title="Permanent link">λ︎</a></h3>
 <p>Create an appealing and rich desktop menu and status bar.</p>
 <p>Handcrafting a config</p>
+<div class="admonition example">
+<p class="admonition-title">Configure Waybar for Hyprland</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>❯<span class="w"> </span>cp<span class="w"> </span>-vr<span class="w"> </span>/etc/xdg/waybar<span class="w"> </span>~/projects/practicalli/dotfiles/
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="s1">&#39;/etc/xdg/waybar&#39;</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="s1">&#39;/home/practicalli/projects/practicalli/dotfiles/waybar&#39;</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="s1">&#39;/etc/xdg/waybar/config.jsonc&#39;</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="s1">&#39;/home/practicalli/projects/practicalli/dotfiles/waybar/config.jsonc&#39;</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="s1">&#39;/etc/xdg/waybar/style.css&#39;</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="s1">&#39;/home/practicalli/projects/practicalli/dotfiles/waybar/style.css&#39;</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>❯<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>~/projects/practicalli/dotfiles/waybar<span class="w"> </span>~/.config/waybar
 </code></pre></div>
+</div>
 <p>waybar uses font-awesome fonts for the icons</p>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># apt search font-awesome</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>fonts-font-awesome/testing,now<span class="w"> </span><span class="m">5</span>.0.10+really4.7.0~dfsg-4.1<span class="w"> </span>all<span class="w"> </span><span class="o">[</span>installed,automatic<span class="o">]</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>iconic<span class="w"> </span>font<span class="w"> </span>designed<span class="w"> </span><span class="k">for</span><span class="w"> </span>use<span class="w"> </span>with<span class="w"> </span>Twitter<span class="w"> </span>Bootstrap
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># apt install fonts-font-awesome</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># apt install fonts-font-awesome</span>
 </code></pre></div>
+</div>
 <p>To use the workspaces module, replace all the occurrences of <code>sway/workspaces</code> with <code>hyprland/workspaces</code>. Additionally replace all occurrences of <code>sway/mode</code> with <code>hyprland/submap</code></p>
 <h2 id="nwg-shell">nwg-shell<a class="headerlink" href="#nwg-shell" title="Permanent link">λ︎</a></h2>
 <p><a href="https://github.com/nwg-piotr/nwg-look/">nwg-look</a> is a GTK3 settings editor, I assume similar to the Appearance in control center with some Gnome Tweaks thrown in.</p>
@@ -1371,7 +1381,8 @@ The dump all the config options into a file.  Most options are commented out.</p
 <h3 id="gotchas">Gotchas<a class="headerlink" href="#gotchas" title="Permanent link">λ︎</a></h3>
 <p><span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd>c</kbd></span> will close the app in the active window.  As I use this key binding a lot in MacOSX for copy paste, then I should rebind this close action to something else, e.g. <span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd class="key-shift">Shift</kbd></span> <span class="keys"><kbd>q</kbd></span> is the keybinding from regolith and less likely to be pressed in error.  Trying <span class="keys"><kbd class="key-super">Super</kbd></span> <span class="keys"><kbd class="key-shift">Shift</kbd></span> <span class="keys"><kbd>x</kbd></span> for now as there needs to be a key binding to quit Hyprland (logout and reboot do not work currently - shutdown does though)</p>
 <h3 id="hyprland">Hyprland<a class="headerlink" href="#hyprland" title="Permanent link">λ︎</a></h3>
-<p>Root shell history</p>
+<div class="admonition example">
+<p class="admonition-title">Root shell history</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>apt<span class="w"> </span>search<span class="w"> </span>hyprland
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>apt<span class="w"> </span>install<span class="w"> </span>hyprland*
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
@@ -1407,6 +1418,7 @@ The dump all the config options into a file.  Most options are commented out.</p
 <a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a>apt<span class="w"> </span>install<span class="w"> </span>pipewire<span class="w"> </span>wireplumber
 <a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>apt<span class="w"> </span>search<span class="w"> </span>nwg
 </code></pre></div>
+</div>
 <h2 id="material-for-mkdocs">Material for MkDocs<a class="headerlink" href="#material-for-mkdocs" title="Permanent link">λ︎</a></h2>
 <p>Refining the experiments with <a href="http://localhost:7777/journal/here-comes-the-rain/#material-for-mkdocs">installing Material for MkDocs on Debian Linux</a> this week.</p>
 <p>Recap:</p>
@@ -1435,27 +1447,27 @@ The dump all the config options into a file.  Most options are commented out.</p
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Makefile task to run server</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># ------- Makefile Variables --------- #</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>MKDOCS_SERVER<span class="w"> </span>:<span class="o">=</span><span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w"> </span>--dev-addr<span class="w"> </span>localhost:7777
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># ------------------------------------ #</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c"># ------- Makefile Variables --------- #</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nv">MKDOCS_SERVER</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w"> </span>--dev-addr<span class="w"> </span>localhost:7777
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c"># ------------------------------------ #</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1"># --- Documentation Generation  ------ #</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>python-venv:<span class="w">  </span><span class="c1">## Enable Python Virtual Environment for MkDocs</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c"># --- Documentation Generation  ------ #</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="nf">python-venv</span><span class="o">:</span><span class="w">  </span><span class="c">## Enable Python Virtual Environment for MkDocs</span>
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
 <a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate
 <a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>docs:<span class="w"> </span><span class="c1">## Build and run mkdocs in local server (python venv)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="nf">docs</span><span class="o">:</span><span class="w"> </span><span class="c">## Build and run mkdocs in local server (python venv)</span>
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
 <a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">$(</span>MKDOCS_SERVER<span class="k">)</span>
 <a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
-<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>docs-changed:<span class="w">  </span><span class="c1">## Build only changed files and run mkdocs in local server (python venv)</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="nf">docs-changed</span><span class="o">:</span><span class="w">  </span><span class="c">## Build only changed files and run mkdocs in local server (python venv)</span>
 <a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
 <a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">$(</span>MKDOCS_SERVER<span class="k">)</span><span class="w"> </span>--dirtyreload
 <a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>
-<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>docs-build:<span class="w">  </span><span class="c1">## Build mkdocs (python venv)</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="nf">docs-build</span><span class="o">:</span><span class="w">  </span><span class="c">## Build mkdocs (python venv)</span>
 <a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>Mkdocs<span class="w"> </span>Local<span class="w"> </span>Server<span class="w"> </span>---------<span class="k">)</span>
 <a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.local/venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdocs<span class="w"> </span>build
-<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="c1"># ------------------------------------ #</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="c"># ------------------------------------ #</span>
 </code></pre></div>
 </div>
 <details class="info">
@@ -1486,9 +1498,11 @@ The dump all the config options into a file.  Most options are commented out.</p
 <h2 id="slack-for-debian">Slack for Debian<a class="headerlink" href="#slack-for-debian" title="Permanent link">λ︎</a></h2>
 <p>Download the debian package from the slack webstite (there is a small link in the right corner to a .deb file)</p>
 <p>As the root user:</p>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">cd</span><span class="w"> </span>/home/practicalli/Downloads/
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>apt<span class="w"> </span>install<span class="w"> </span>./slack-desktop-4.39.95-amd64.deb
 </code></pre></div>
+</div>
 <p>Not that the deb file install complains about being installed by root account, but works anyway.</p>
 <hr />
 <p>Thank you.</p>
@@ -1517,7 +1531,7 @@ The dump all the config options into a file.  Most options are commented out.</p
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2024</span>
   </span>
 
     

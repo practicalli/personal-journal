@@ -1529,7 +1529,7 @@
 </code></pre></div>
 </div>
 <h3 id="hammock-time">Hammock time<a class="headerlink" href="#hammock-time" title="Permanent link">λ︎</a></h3>
-<p>After some hammock time the donut REPL workflow code had a further refactor.</p>
+<p>After some hammock time the Donut REPL workflow code had a further refactor.</p>
 <p>To keep the configuration as simple as possible, the <code>main</code> configuration is used for all environments (production, staging, test, dev).</p>
 <p>Donut-party/system can create a named-system and provide overrides on top of another system, changing only the specific values needed for the new system.</p>
 <p>Pass an existing config or named system to the <code>donut/system</code> function, along with any values to override.  A new system configuraiton is returned.</p>
@@ -1542,9 +1542,9 @@
 </div>
 <p>Creating a <code>:dev</code> named-system to support the development workflow would change the production configuration:</p>
 <ul>
-<li>chaninging the mulog publisher to output a pretty printed Clojure hash-map in dev (encoded into JSON for production)</li>
+<li>changing the mulog publisher to output a pretty printed Clojure hash-map in dev (encoded into JSON for production)</li>
 <li>setting the application environment to dev (for parts of the system that may work differently in dev)</li>
-<li>overriding the http server options, i.e. <code>:join? false</code> to detatch the REPL prompt from the server process after startup</li>
+<li>overriding the http server options, i.e. <code>:join? false</code> to detach the REPL prompt from the server process after startup</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Refactor of service-repl namespace</p>
@@ -1607,8 +1607,10 @@
 <li>REPL workflow</li>
 <li>helper functions to start, stop &amp; restart the system components. A system function to show the current value of the system should issues arise.</li>
 </ul>
-<p>juxt/aero
-- consider using environment variables instead, especially if there is minimal difference between environments (prod, stage, test, dev)</p>
+<p>juxt/aero</p>
+<ul>
+<li>consider using environment variables instead, especially if there is minimal difference between environments (prod, stage, test, dev)</li>
+</ul>
 <h2 id="clojure-essentials">Clojure essentials<a class="headerlink" href="#clojure-essentials" title="Permanent link">λ︎</a></h2>
 <p>What are the essentials that any Clojure developer should know?  Some initial thoughts:</p>
 <p>Syntax:</p>
@@ -1637,32 +1639,28 @@
 <p>Topics that can wait until there is a specific use case</p>
 <ul>
 <li>writing macros (unless designing an extension to the language)</li>
-<li>polymorphism (unles dispatching by custom types)</li>
+<li>polymorphism (unless dispatching by custom types)</li>
 <li>Java interop (largely skipped as there are many wrapper libraries)</li>
 </ul>
 <h2 id="ubuntu-file-tracker">Ubuntu file tracker<a class="headerlink" href="#ubuntu-file-tracker" title="Permanent link">λ︎</a></h2>
 <p>There is a file indexing package called <code>tracker-minder-fs</code> that can have a significant impact on the performance of even a high end computer.</p>
 <p>From the <code>apt show tracker-miner-fs -a</code> description:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Description:<span class="w"> </span>metadata<span class="w"> </span>database,<span class="w"> </span>indexer<span class="w"> </span>and<span class="w"> </span>search<span class="w"> </span>tool<span class="w"> </span>-<span class="w"> </span>filesystem<span class="w"> </span>indexer
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w"> </span>This<span class="w"> </span>package<span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>tracker<span class="w"> </span>indexer<span class="w"> </span><span class="k">for</span><span class="w"> </span>indexing<span class="w"> </span>your<span class="w"> </span>files<span class="w"> </span>and
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w"> </span>folders.
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w"> </span>Tracker<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>advanced<span class="w"> </span>framework<span class="w"> </span><span class="k">for</span><span class="w"> </span>first<span class="w"> </span>class<span class="w"> </span>objects<span class="w"> </span>with<span class="w"> </span>associated
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w"> </span>metadata<span class="w"> </span>and<span class="w"> </span>tags.<span class="w"> </span>It<span class="w"> </span>provides<span class="w"> </span>a<span class="w"> </span>one<span class="w"> </span>stop<span class="w"> </span>solution<span class="w"> </span><span class="k">for</span><span class="w"> </span>all<span class="w"> </span>metadata,<span class="w"> </span>tags,
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w"> </span>shared<span class="w"> </span>object<span class="w"> </span>databases,<span class="w"> </span>search<span class="w"> </span>tools<span class="w"> </span>and<span class="w"> </span>indexing.
-</code></pre></div>
+<blockquote>
+<p>Description: metadata database, indexer and search tool - filesystem indexer. This package contains the tracker indexer for indexing your files and folders.</p>
+<p>Tracker is an advanced framework for first class objects with associated metadata and tags. It provides a one stop solution for all metadata, tags, shared object databases, search tools and indexing.</p>
+</blockquote>
 <p>Normally I would remove the package, however, it has dependencies from Ubuntu and Regolith desktop packages.  These are meta packages, so it should be okay to remove them, so long as they do not remove all the other desktop related pacakges.</p>
 <div class="admonition note">
 <p class="admonition-title">Remove tracker minder package</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>tracker-miner-fs<span class="w"> </span>tracker-extract
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>--purge<span class="w"> </span>tracker-miner-fs<span class="w"> </span>tracker-extract
 </code></pre></div>
 </div>
 <p>I was concerned about removing <code>gnome-flashback</code> package, as I believe that provides the graphical login when starting Ubuntu with Regolight.</p>
 <div class="admonition example">
 <p class="admonition-title">Packages to be removed</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>The<span class="w"> </span>following<span class="w"> </span>packages<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>REMOVED
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>gnome-flashback*<span class="w"> </span>gnome-shell-extension-desktop-icons-ng*<span class="w"> </span>nautilus*<span class="w"> </span>nautilus-share*<span class="w"> </span>regolith-desktop*
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>regolith-session-flashback*<span class="w"> </span>tracker-extract*<span class="w"> </span>tracker-miner-fs*<span class="w"> </span>ubuntu-desktop*<span class="w"> </span>ubuntu-desktop-minimal*
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>The<span class="w"> </span>following<span class="w"> </span>packages<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>REMOVED
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>gnome-flashback*<span class="w"> </span>gnome-shell-extension-desktop-icons-ng*<span class="w"> </span>nautilus*<span class="w"> </span>nautilus-share*<span class="w"> </span>regolith-desktop*
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span>regolith-session-flashback*<span class="w"> </span>tracker-extract*<span class="w"> </span>tracker-miner-fs*<span class="w"> </span>ubuntu-desktop*<span class="w"> </span>ubuntu-desktop-minimal*
 </code></pre></div>
 </div>
 <p>Hopefully in a newer version of Regolith desktop or using Debian Linux as the base of Regolith Linux will not include this overactive file indexer.</p>
@@ -1693,7 +1691,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2024</span>
   </span>
 
     

@@ -974,14 +974,21 @@
 
 <h2 id="megalinter">Megalinter<a class="headerlink" href="#megalinter" title="Permanent link">λ︎</a></h2>
 <p>Megalinter runner now includes a tool to update a megalinter configuration file to use the latest version of Megalinter.</p>
+<div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx<span class="w"> </span>mega-linter-runner@latest<span class="w"> </span>--upgrade
 </code></pre></div>
+</div>
 <p>To simplify using the command a <code>megalinter-update</code> task was added to the <code>Makefile</code> for the project.</p>
+<div class="admonition example">
+<p class="admonition-title">Megalinter update make task</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">megalinter-update</span><span class="o">:</span><span class="w">  </span><span class="c">## Update MegaLinter config to latest version</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>MegaLinter<span class="w"> </span>Upgrade<span class="w"> </span>Config<span class="w"> </span>---------<span class="k">)</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>npx<span class="w"> </span>mega-linter-runner@latest<span class="w"> </span>--upgrade
 </code></pre></div>
+</div>
 <p>The script updates the Megalinter GitHub workflow to use the latest version of the Megalinter action.  The change respects if a specific flavour (e.g. java) of Megalinter was defined.</p>
+<div class="admonition example">
+<p class="admonition-title">Megalinter action in GitHub workflow</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span>      - name: MegaLinter Run
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w"> </span>        id: ml
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span>        ## latest release of major version
@@ -991,6 +998,7 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w"> </span>          # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w"> </span>          MEGALINTER_CONFIG: .github/config/megalinter.yaml
 </code></pre></div>
+</div>
 <p>Links to the Megalinter documentation are also updated.</p>
 <p>The script updates <code>.gitignore</code> to exclude the <code>megalinter-reports/</code> directory.  This change is not necessary for Practicalli projects as everything is ignored by default.  Patterns in the <code>.gitignore</code> are added with the <code>!</code> prefix, allowing them to be included by Git.</p>
 <h2 id="practicalli-project-templates">Practicalli Project Templates<a class="headerlink" href="#practicalli-project-templates" title="Permanent link">λ︎</a></h2>
@@ -1131,7 +1139,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2024</span>
   </span>
 
     
