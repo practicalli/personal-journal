@@ -15,7 +15,9 @@ The BeYou chair is being delivered today, will it live up to my expectations?
 
 ![Injinji trail crew midweight running toe socks](https://feetus.co.uk/wp-content/uploads/2020/11/213170_gra_5-min.png){align=right loading=lazy style="height:150px;width:150px"}
 
-My feet were the coldest part of myself when cycling at the weekend, so a visit to the [Feetus website](https://feetus.co.uk/) resulted in new socks on the way. Injinji [liner socks](https://feetus.co.uk/shop/injinji-liner-lightweight-coolmax-mini-crew-toe-socks-gray/) will go underneth new [long socks](https://feetus.co.uk/shop/injinji-trail-crew-midweight-running-toe-socks-granite/), both toe-socks to reduce blisters and they can be warn with my Vibram "five-fingers" shoes on long winter walks.
+My feet were the coldest part of myself when cycling at the weekend, so a visit to the [Feetus website](https://feetus.co.uk/) resulted in new socks on the way.
+
+Injinji [liner socks](https://feetus.co.uk/shop/injinji-liner-lightweight-coolmax-mini-crew-toe-socks-gray/) will go underneth new [long socks](https://feetus.co.uk/shop/injinji-trail-crew-midweight-running-toe-socks-granite/), both toe-socks to reduce blisters and they can be warn with my Vibram "five-fingers" shoes on long winter walks.
 
 As an extra treat, [Injinji Ultra Compression toe socks](https://feetus.co.uk/shop/injinji-ultra-compression-otc-toe-socks-black/) to help with recovery after cycling.
 
@@ -54,7 +56,9 @@ Will the BeYou chair be worth the cost?  Only time will tell, but so far its a v
 
 ## Freecycle
 
-Donating my existing office chair on Freecycle tomorrow, hopefully it will find a new home.  I must have had the chair about 15 years and it was still very comfortable.  The gas cylinder to raise the chair stopped working a few years ago (one reason to by a new chair).  A spacer was fitted to the chair to keep it in a maximum hight to extend its life.  Replacing or refilling the gas cylinder can be expensive and not always guaranteed to work.
+Donating my existing office chair on Freecycle tomorrow, hopefully it will find a new home.  I must have had the chair about 15 years and it was still very comfortable.
+
+The gas cylinder to raise the chair stopped working a few years ago (one reason to by a new chair).  A spacer was fitted to the chair to keep it in a maximum hight to extend its life.  Replacing or refilling the gas cylinder can be expensive and not always guaranteed to work.
 
 I'll hunt through the house tomorrow to see if there are other items to donate.
 

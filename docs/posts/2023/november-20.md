@@ -34,21 +34,18 @@ A root user account is created during initial Debian Linux installation, prompti
 
 `su -` is used to change from the normal user login to the root account, allowing for package updates and other Adminsitrative commands to be run.
 
-```shell
-su -
-```
+!!! NOTE ""
+    ```shell
+    su -
+    ```
 
 Enter the root password when prompted.
 
-Carry out adminsitrative tasks as required and type `exit` to leave the root acount and return to the user account.
+Carry out administrative tasks as required and type `exit` to leave the root account and return to the user account.
 
 
 !!! HINT "Dedicated terminal console"
-    When undertaking a lot of adminsitrative tasks, consider changing to the root account in a dedicated terminal console window.
-
-    Having a separate terminal console window open reduces the need to change between user and root accounts.
-
-    Terminal applications (e.g. [Kitty](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank}) can open multiple tabs, so one of the tabs can be used to `su` to the root account.
+    Use a dedicated terminal session when undertaking many administrative tasks by login in as root once.  Terminal appls like [Kitty](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank}) can open multiple tabs, so one of the tabs can be used to `su -` to the root account.
 
     [:fontawesome-solid-book-open: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank .md-button}
 

@@ -38,23 +38,23 @@ The main development laptop used had an RSA type SSH key.  ED25519 is now genera
     ssh-keygen -t ed25519 -C "engineering@practical.li"
     ```
 
-Example output of the command,
+!!! EXAMPLE "ssh-keygen command output"
 
-```shell title="ssh-keygen command output"
-❯ ssh-keygen -t ed25519 -C "engineering@practical.li"
-Generating public/private ed25519 key pair.
-Enter file in which to save the key (/home/practicalli/.ssh/id_ed25519):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/practicalli/.ssh/id_ed25519
-Your public key has been saved in /home/practicalli/.ssh/id_ed25519.pub
-The key fingerprint is:
-SHA256:***********************/******************* engineering@practical.li
-The key's randomart image is:
-+--[ED25519 256]--+
-...
-+----[SHA256]-----+
-```
+    ```shell title="ssh-keygen command output"
+    ❯ ssh-keygen -t ed25519 -C "engineering@practical.li"
+    Generating public/private ed25519 key pair.
+    Enter file in which to save the key (/home/practicalli/.ssh/id_ed25519):
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+    Your identification has been saved in /home/practicalli/.ssh/id_ed25519
+    Your public key has been saved in /home/practicalli/.ssh/id_ed25519.pub
+    The key fingerprint is:
+    SHA256:***********************/******************* engineering@practical.li
+    The key's randomart image is:
+    +--[ED25519 256]--+
+    ...
+    +----[SHA256]-----+
+    ```
 
 The passphrase of the SSH key was added to the Debian key ring using the `ssh-add` command, which prompts for the passphrase used when creating the key.
 
@@ -63,13 +63,13 @@ The passphrase of the SSH key was added to the Debian key ring using the `ssh-ad
     ssh-add ~/.ssh/id_ed25519
     ```
 
-Example output of the command
+!!! EXAMPLE "ssh-add command output"
 
-```shell
-❯ ssh-add ~/.ssh/id_ed25519
-Enter passphrase for id_ed25519:
-Identity added: id_ed25519 (engineering@practical.li)
-```
+    ```shell
+    ❯ ssh-add ~/.ssh/id_ed25519
+    Enter passphrase for id_ed25519:
+    Identity added: id_ed25519 (engineering@practical.li)
+    ```
 
 !!! INFO "SSH Config for MacOSX"
     Edit the SSH configuration, `~/.ssh/config`, and configure SSH to use the operating system keychain for the passphrase.
@@ -118,9 +118,10 @@ Audacity is an excellent tool for sound editing and effects, e.g. editing podcas
 
 Install audacity and supporting libraries using Debian packages
 
-```shell
-apt install audacity ffmpeg lame pavucontrol
-```
+!!! NOTE "Install Audacity via Debian Package Manager"
+    ```shell
+    apt install audacity ffmpeg lame pavucontrol
+    ```
 
 When recording sound from the desktop, Pulse Audio should be set to the monitor for the default sound device, e.g. speakers and headphones.
 
@@ -132,20 +133,20 @@ Start recording in Audacity and play the desktop audio. Waveforms should be disp
 
 > Ensure a sufficient amount of hard drive space is available when recording the desktop sound as the recorded uncompressed by default.
 
-Press the stop button. Use audacity tooks to edit the sound and export it to a file or save the whole sound sample as an audacity project.
+Press the stop button. Use audacity tools to edit the sound and export it to a file or save the whole sound sample as an audacity project.
 
-Codecs such as Opus can be used to compress the sound file to a few percent of their original size without noticable quality loss.
+Codecs such as Opus can be used to compress the sound file to a few percent of their original size without noticeable quality loss.
 
 > Create a shell script wrapper around these codec tools to use a consistent codec configuration, e.g. convert-to-opus
 
 !!! EXAMPLE "Zsh script to convert Wav files to Opus"
-```shell
-#!/usr/bin/zsh
+    ```shell
+    #!/usr/bin/zsh
 
-for x in *.wav ; do
-  ffmpeg -i "$x" -b:a 96k -c:a libopus "${x:r}".opus
-done
-```
+    for x in *.wav ; do
+      ffmpeg -i "$x" -b:a 96k -c:a libopus "${x:r}".opus
+    done
+    ```
 
 ## Health
 

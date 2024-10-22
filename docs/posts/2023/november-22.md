@@ -19,7 +19,7 @@ I've been contributing to The Arqivist open source project, used to back up Slac
 
 Another person was interested in collaborating but had a few issues getting started.  The README was updated and an additional `:dev/env` alias added to `deps.edn` configuration if a contributor is not using the [Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/practicalli-config/)
 
-[PR93 - dev: update hack locally details for starting a REPL ](https://github.com/jcpsantiago/thearqivist/pull/93){target=_blank .md-button}
+[PR93 dev: update hack locally details for starting a REPL](https://github.com/jcpsantiago/thearqivist/pull/93){target=_blank .md-button}
 
 
 ## Mulog Custom transformations
