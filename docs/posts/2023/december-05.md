@@ -7,8 +7,6 @@ categories:
   - practicalli
 ---
 
-**Thoughts for today**
-
 Balancing enthusiasm to be productive with learning enough first so as not to be dangerous
 
 <!-- more -->

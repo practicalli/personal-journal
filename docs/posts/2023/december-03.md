@@ -7,8 +7,6 @@ categories:
   - practicalli
 ---
 
-**Thoughts for today**
-
 Winter starts on Friday 22nd December, although its already much colder this year.
 
 Early to bed tonight as I start commercial work on Monday morning.

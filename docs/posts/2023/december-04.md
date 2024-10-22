@@ -7,8 +7,6 @@ categories:
   - practicalli
 ---
 
-**Thoughts for today**
-
 How does it feel to be employed... wonderful.
 
 <!-- more -->
