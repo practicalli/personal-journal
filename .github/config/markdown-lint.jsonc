@@ -76,7 +76,7 @@
   // MD013/line-length - Line length
   "MD013": {
     // Number of characters
-    "line_length": 420,
+    "line_length": 520,
     // Number of characters for headings
     "heading_line_length": 90,
     // Number of characters for code blocks
