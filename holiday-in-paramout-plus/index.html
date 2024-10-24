@@ -979,6 +979,7 @@
 <p>Issues</p>
 <ul>
 <li><strong>DOING</strong> <a href="https://github.com/practicalli/clojure-cli-config/issues/87">security: add clj-watson to clojure cli config</a></li>
+<li><strong>DOING</strong> zsh environment varaibles not loading into jvm</li>
 </ul>
 <!-- more -->
 
@@ -1019,15 +1020,21 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>clojure<span class="w"> </span>-M:security/nvd-scan
 </code></pre></div>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Zsh configuration broken - not loading env vars correctly</p>
+<p>On one laptop the zsh configuration has a fault and environment variables are not being loaded when running <code>clojure</code>.  The suggestion from the Clojure community was to ensure autoexport is set.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>setopt<span class="w"> </span>allexport<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.zshenv
+</code></pre></div></p>
+</div>
 <p>Defining the NIST API Key as part of the command successfully downloaded the database and scanned the library dependencies.</p>
 <div class="admonition note">
 <p class="admonition-title">Successfully finds key</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">CLJ_WATSON_NVD_API_KEY</span><span class="o">=</span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx<span class="w"> </span>clojure<span class="w"> </span>-M:security/nvd-scan
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">CLJ_WATSON_NVD_API_KEY</span><span class="o">=</span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx<span class="w"> </span>clojure<span class="w"> </span>-M:security/nvd-scan
 </code></pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">20 minutes to download the database</p>
-<p>On first run of the clj-watson tool, the NIST NVD database took 20 minutes and 32 seconds to download (on a very good Internet connection).</p>
+<p>On first run of the clj-watson tool, the NIST NVD database took 20 minutes and 32 seconds to download (on a very good Internet connection).  Successive runs take about 10 seconds, although may be longer if there are substantial updates to the database.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Added CLJ_WATSON_NVD_API_KEY to GitHub Secrets</p>
