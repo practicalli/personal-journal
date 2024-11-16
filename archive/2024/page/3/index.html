@@ -849,6 +849,69 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-06-10 00:00:00">June 10, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../../../category/practicalli/" class="md-meta__link">practicalli</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="neovim-on-termux-enhancements"><a class="toclink" href="../../../../neovim-on-termux-enhancements/">Neovim on Termux enhancements</a></h2>
+<p>More Neovim updates and getting closer to a release of Practicalli Astro-config</p>
+<p>I have been using Neovim (and Emacs) on Termux, so I can code on my Android tablet or Android smart phone.  I typically use an external keyboard (e.g. Keyboard.io Atreus or Model100), especially when considerable typing is involved.</p>
+<p>As the hardware and compilation tooling is different for Android Linux (compared to amd64 linux) the Clojure and Lua LSP language servers would not install via the Mason manager.  As these two languages are in the top 3 languages I use, then it is a great boost to get these servers working locally and configuring Neovim to use them instead.</p>
+<p>I use the <code>date</code> command when I had a need to tweak the time on my Linux computer, saves launching the <strong>Settings</strong> app and using the mouse.</p>
+<div class="admonition info">
+<p class="admonition-title">Timezones made easy</p>
+<p><a href="https://time.is/">time.is</a> makes figuring out timezones really simple.  See the current time in any timezone across the world.</p>
+<p>time.is very useful for events where people attend from different timezones.  Set the local time and share a link for others who will see the event time in their own timezone.</p>
+</div>
+<h3 id="neovim"><a class="toclink" href="../../../../neovim-on-termux-enhancements/#neovim">Neovim</a></h3>
+<p>I'm making some changes to the Practicalli AstroNvim configuration (AstroNvim4) over the next few days.</p>
+<p>All my personal Neovim &amp; plugin options (and associated workflow biases) will only be in <code>lua/plugins/practicalli.lua</code>.  With these options only in one file, anyone else using the configuration can easily disable them.</p>
+<p>I will encourage other users to create there own <code>lua/plugins/personal.lua</code> customisation so any changes from upstream will be easier to merge.</p>
+<p>The GitHub repository will be renamed to <code>practicalli/astro-config</code> which its much easier to write and say during screencasts. GitHub should redirect when pulling updates</p>
+<p>This week I will update Practicalli Neovim book install guide with new repo and further info on how to use the config effectively (especially with your own customisations)</p>
+<p>Then the first official release of the config will be created via GitHub releases.</p>
+<p>If I have time, there are lots of things to add to Practicalli Neovim book too (including a few more plugins I'm using in the config)</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../../../neovim-on-termux-enhancements/">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true" alt="Practicalli Johnny">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-06-03 00:00:00">June 3, 2024</time></li>
         
           <li class="md-meta__item">
@@ -1288,55 +1351,6 @@
     
       <nav class="md-post__action">
         <a href="../../../../git-multiple-ssh-keys--neovim/">
-          Continue reading
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true" alt="Practicalli Johnny">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-03-11 00:00:00">March 11, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/practicalli/" class="md-meta__link">practicalli</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              22 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="having-a-donut-party-with-system-components"><a class="toclink" href="../../../../having-a-donut-party-with-system-components/">Having a Donut Party with system components</a></h2>
-<p>Not quite back to full health yet, so took it easy at the weekend.</p>
-<p>More work on restoring spare bicycles so I can sell them or otherwise find a good home.</p>
-<p>Continued the refactor of the Practicalli Service template, specifically refining the design of the system config and helper functions to support a development REPL workflow.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../../../having-a-donut-party-with-system-components/">
           Continue reading
         </a>
       </nav>
