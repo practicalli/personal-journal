@@ -45,9 +45,9 @@ Carry out administrative tasks as required and type `exit` to leave the root acc
 
 
 !!! HINT "Dedicated terminal console"
-    Use a dedicated terminal session when undertaking many administrative tasks by login in as root once.  Terminal appls like [Kitty](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank}) can open multiple tabs, so one of the tabs can be used to `su -` to the root account.
+    Use a dedicated terminal session when undertaking many administrative tasks by login in as root once.  Terminal appls like [Kitty](https://practical.li/engineering-playbook/os/command-line/kitty-terminal/){target=_blank}) can open multiple tabs, so one of the tabs can be used to `su -` to the root account.
 
-    [:fontawesome-solid-book-open: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank .md-button}
+    [:fontawesome-solid-book-open: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/os/command-line/kitty-terminal/){target=_blank .md-button}
 
 ---
 Thank you.
