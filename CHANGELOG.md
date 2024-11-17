@@ -15,6 +15,7 @@
 - dev: megalinter-upgrade task in Makefile
 - dev: megalinter api reporter enabled & env vars
 - dev: megalinter 8 - no documentation flavor
+- dev: exclude practicalli.grafana.net from lychee URL check (requires authentication)
 
 ## Changed
 - post: updated naming scheme and corrected date
