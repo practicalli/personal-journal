@@ -861,6 +861,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#practicalli-blog-publishing-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practicalli Blog publishing issue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optimise-github-org-log-retention" class="md-nav__link">
     <span class="md-ellipsis">
       Optimise GitHub Org Log retention
@@ -947,7 +956,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min read
+                              7 min read
                             
                           </span>
                         </div>
@@ -1088,6 +1097,11 @@
 <p><a href="https://my.ultrarm.com/en/pages/ma20p-overview"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> UltraArm</a> also provide heavy duty monitor arms at a more modest price, although I havent carried out a comparison between the two products.</p>
 <p><a class="md-button" href="https://secretlab.co.uk/products/magnus-heavy-duty-monitor-arm" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Secret Labs Magnus Heavy Duty Monitor Arm</a></p>
 <p><a href="https://secretlab.co.uk/products/magnus-pro"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Secret Labs Magnus Pro desk</a></p>
+<h2 id="practicalli-blog-publishing-issue">Practicalli Blog publishing issue<a class="headerlink" href="#practicalli-blog-publishing-issue" title="Permanent link">λ︎</a></h2>
+<p><a href="https://github.com/squidfunk/mkdocs-material/issues/7725">Material-MkDocs Issue 7725</a></p>
+<p>The GitHub action workflow use to publish the Practicalli blog websites started failing two days ago when <a href="https://github.com/squidfunk/mkdocs-material/releases/tag/9.5.45"><code>mkdocs-material</code> version 9.5.45 was release</a>.</p>
+<p>Posts with only a date value started to fail the MkDocs build due to an issue with the <code>date:</code> format.  Practically blog posts use the <code>yyyy-mm-dd</code> format without a time or timezone.  When Material for MkDocs is comparing the date of the post with the current time an error occurs.</p>
+<p>I <a href="https://github.com/squidfunk/mkdocs-material/issues/7725#issuecomment-2493120248">temporarily resolved the issue</a> by explicitly configuring Python PIP to install <code>mkdocs-material</code> version 9.5.44 package in the GitHub Action workflow file.</p>
 <h2 id="optimise-github-org-log-retention">Optimise GitHub Org Log retention<a class="headerlink" href="#optimise-github-org-log-retention" title="Permanent link">λ︎</a></h2>
 <p>The Practicalli Org settings default to a 90 day retention time for logs from actions.  This is more time than required for Practicalli books and blogs contained in the Org.  Its probably far too long for the Clojure projects too.</p>
 <p>The logs from the scheduled version action may be checked several days later, otherwise I typically on look at action logs on the same day they were run.</p>
@@ -1124,7 +1138,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 21, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2024</span>
   </span>
 
     
