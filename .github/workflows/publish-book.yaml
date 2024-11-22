@@ -50,7 +50,7 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
 
-      - run: pip install mkdocs-material=="9.5.44 mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects mkdocs-rss-plugin pillow cairosvg
+      - run: pip install mkdocs-material=="9.5.44" mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects mkdocs-rss-plugin pillow cairosvg
       - run: mkdocs gh-deploy --force
       - run: echo "🐙 ."
 
