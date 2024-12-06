@@ -133,6 +133,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#converting-audio-with" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -832,6 +837,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#converting-audio-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      converting audio with
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#book-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Book List
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -908,7 +939,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -937,6 +968,18 @@
       <span class="md-tag">neovim</span>
     
   
+    
+    
+    
+      <span class="md-tag">codec</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">opus</span>
+    
+  
 </nav>
 
 
@@ -959,6 +1002,7 @@
 
   <h1>Long Cold Winter</h1>
 
+<p>Converted some audio files to Opus codec, which provides a really optimum compression and allows for relatively low bit rates and results in much smaller files with the same quality.</p>
 <p>Neovim upcoming changes</p>
 <ul>
 <li>neovim 0.11</li>
@@ -967,6 +1011,51 @@
 </ul>
 <!-- more -->
 
+<h2 id="converting-audio-with">converting audio with<a class="headerlink" href="#converting-audio-with" title="Permanent link">λ︎</a></h2>
+<p>The Opus codec has excellent compression ability and music and spoken word can be encoded in a relatively low bit rate.</p>
+<p>128k variable bit rate encoding provides near transparent encoding. libopus uses <a href="https://ffmpeg.org/ffmpeg-codecs.html#libopus-1">variable bit rate by default</a>.</p>
+<p>Opus recommended bit rates are:</p>
+<ul>
+<li>Music: 96 to 128k (I use 96k)</li>
+<li>Audiobooks: 32k</li>
+</ul>
+<p>I had some books that were already encoded at 96k bit rate.  Converting them to 32k bit rate reduced the file size by a third without any noticeable drop in quality.</p>
+<p>Using zsh pattern matching allows for a very simple script to convert multiple files in the current directory, saving them in a separate <code>32k</code> directory (otherwise the script may have converted all the new opus files it created).</p>
+<div class="admonition example">
+<p class="admonition-title">Convert Opus encoded files to 32k bit rate</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/usr/bin/zsh</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Convert Opus audio files to 32k bitrate</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># zsh specific parsing of current directory</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># converted files saved in `32k` directory</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">for</span><span class="w"> </span>x<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.opus<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$x</span><span class="s2">&quot;</span><span class="w"> </span>-b:a<span class="w"> </span>32k<span class="w"> </span>-c:a<span class="w"> </span>libopus<span class="w"> </span><span class="s2">&quot;32k/</span><span class="si">${</span><span class="nv">x</span><span class="p">:</span><span class="nv">r</span><span class="si">}</span><span class="s2">&quot;</span>.opus
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">done</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Convert raw WAV files to Opus 96k bit rate</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/usr/bin/zsh</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Convert wav files to 96k bit rate Opus encoded files</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># zsh specific parsing of current directory</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">for</span><span class="w"> </span>x<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.wav<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$x</span><span class="s2">&quot;</span><span class="w"> </span>-b:a<span class="w"> </span>96k<span class="w"> </span>-c:a<span class="w"> </span>libopus<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">x</span><span class="p">:</span><span class="nv">r</span><span class="si">}</span><span class="s2">&quot;</span>.opus
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">done</span>
+</code></pre></div>
+</div>
+<h2 id="book-list">Book List<a class="headerlink" href="#book-list" title="Permanent link">λ︎</a></h2>
+<p>I have time to read and reread some of the physical books before I dispatch them to one of the book buying companies for a second chance at life.</p>
+<ul>
+<li>The Goal - Goldratt</li>
+<li>Critical Path - Goldratt</li>
+<li>Its Not Luck - Goldratt</li>
+<li>The Mythical Man Month (20th anniversary edition) - Fred Brooks</li>
+<li>Death March - Yourdon</li>
+<li>Agile Retrospectives (there is a 2nd edition to read)</li>
+</ul>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
@@ -994,7 +1083,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 5, 2024</span>
   </span>
 
     
