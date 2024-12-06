@@ -134,7 +134,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#book-list" class="md-skip">
+        <a href="#nas" class="md-skip">
           Skip to content
         </a>
       
@@ -819,6 +819,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#nas" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#book-list" class="md-nav__link">
     <span class="md-ellipsis">
       Book List
@@ -914,7 +923,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -966,8 +975,39 @@
   <h1>Making use of Black Friday</h1>
 
 <p>Black Friday as a concept is confusing as it no longer has anything to do with a specific Friday and currently seems to cover at least 2 weeks of promotions.  I did get some good prices even before Black Friday actually started.</p>
+<p><a href="#nas">Adventures with SSD and NAS Versions</a> kept me busy over the weekend, resurrecting an older NAS unit with Solid State Drives for a very quiet media storage device.</p>
 <!-- more -->
 
+<h2 id="nas">NAS<a class="headerlink" href="#nas" title="Permanent link">λ︎</a></h2>
+<p>Resurected a Thecus N3200 Pro Network Attached Storage (NAS) unit and learned some new Linux commands and more about NFS along the way.</p>
+<p>The Thecus N3200 was previously used as storage for an Linux entertainment system powered by ..., connected to a normal TV.  The Thecus had 3 x 3.5" hard drives which gave up to 4TB if used in a RAID 5 configuration.   The NAS was bought many many years ago so not the fastest by a long way, but it was fast enough to stream music and video from.</p>
+<p>There was some noise from the 3 hard drives it supported, although it was only heard when not playing something. The fan in the Thecus NAS was fairly quite, so the theory was that with SSD drives then the NAS should be very quite indeed.</p>
+<p>I bought 3 SSD drives to create a RAID 5 array in the Thecus NAS.  I found the <a href="https://www.amazon.co.uk/stores/page/FE43E2DD-6E3C-4C69-AA45-BEBBC94A81C5?ref_=ast_bln">fanxiang 2TB SSD SATA III 6Gb/s 2.5″ drives</a> were at a reasonable price on Smile.amazon.co.uk.  These SSD's had good reviews and it will be interesting to see how well they last.</p>
+<p>The fanxiang SSD are 2.5" size, so a <a href="https://www.amazon.co.uk/dp/B00UN550AC?ref=ppx_yo2ov_dt_b_fed_asin_title">SABRENT 2.5" to 3.5" Internal Hard Drive Adapter Converter mounting Frame</a> was used to fit them into the Thecus Nas.</p>
+<p>The Thecus NAS provides clip-in rails to fit the drives into the drive bay, with a thumbscrew on each rail to securely fit the drive without need for a tool (other than your finger and thumb).</p>
+<p>Using the Web console, it was very simple to create a RAID 5 array, although it did take more than a day to build the RAID 5 array, with all the parity checking.</p>
+<div class="admonition info">
+<p class="admonition-title">RAID 5 used as reliability of disks is an unknown</p>
+</div>
+<p>Once the RAID array was build, then there was a handy utility to create a shared folder which could be exposed via NFS, allowing me to write and read files from the NAS.</p>
+<div class="admonition note">
+<p class="admonition-title">Create local directory for NFS share mount point</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>/media/Entertainment
+</code></pre></div>
+</div>
+<p>As the Thecus N3200 Pro is quite old, there hasnt been a firmware upgrade in quite some time.  Therefore the NAS only had NFS version 3 (NFS 4 is not common).  This did prevent me from connecting with the usual NFS share commands.  I found that adding the <code>vers=3</code> (or its alias <code>nfsvers=3</code>) as an nfs mount option made it all work nicely.</p>
+<div class="admonition note">
+<p class="admonition-title">Define mount points for NFS shares</p>
+<div class="highlight"><span class="filename">/etc/fstab</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nas:/raid0/data/Ents    /media/Entertainment     nfs    defaults,user,noauto,nfsvers=3,rsize=8192,wsize=8192,timeo=14,intr
+</code></pre></div>
+</div>
+<p>Any changes to the <code>/etc/fstab</code> file should be reloaded using the <code>systemctl daemon-reload</code> command</p>
+<div class="admonition note">
+<p class="admonition-title">Reload fstab mount points</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>systemctl<span class="w"> </span>daemon-reload
+</code></pre></div>
+</div>
+<p>In nautilus file explorer the mount points are shown, so clicking on them I could start adding my files and backing up my laptops.</p>
 <h2 id="book-list">Book List<a class="headerlink" href="#book-list" title="Permanent link">λ︎</a></h2>
 <p>I have time to read and reread some of the physical books before I dispatch them to one of the book buying companies for a second chance at life.</p>
 <ul>
@@ -1031,7 +1071,7 @@ Goal</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2024</span>
   </span>
 
     
