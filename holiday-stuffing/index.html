@@ -853,13 +853,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#movie-reviess-this-week" class="md-nav__link">
+  <a href="#debian-tracker" class="md-nav__link">
     <span class="md-ellipsis">
-      Movie reviess this week
+      Debian Tracker
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Movie reviess this week">
+    <nav class="md-nav" aria-label="Debian Tracker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-tracker-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable the tracker service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movie-reviews-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movie reviews this week
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Movie reviews this week">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -972,7 +996,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -1034,7 +1058,46 @@
 <p>The <a href="https://mason-registry.dev/registry/list">Mason Registry</a> was updated to use the latest Clojure LSP server version, via <a href="https://github.com/mason-org/mason-registry/pull/7896">PR7896</a>.   Usually the versions are automatically updated via the <a href="https://docs.renovatebot.com/modules/manager/github-actions/">renovate GitHub action</a>, although this time the PR did not pass the tests so was not automatically merged.</p>
 <p>The maintainer updated and merged the PR manually.</p>
 <p>Practicalli Astro was updated to comment the configuration that was added to <code>lua/plugins/user-practicalli.lua</code> to use a local install of Clojure LSP.</p>
-<h2 id="movie-reviess-this-week">Movie reviess this week<a class="headerlink" href="#movie-reviess-this-week" title="Permanent link">λ︎</a></h2>
+<h2 id="debian-tracker">Debian Tracker<a class="headerlink" href="#debian-tracker" title="Permanent link">λ︎</a></h2>
+<p><a href="https://wiki.ubuntu.com/Tracker">Tracker service</a> indexes many types of files to enable discovery of files by other Gnome services and applications.</p>
+<ul>
+<li><a href="https://wiki.ubuntu.com/IntegratedDesktopSearch">desktop search</a></li>
+<li>Tag database for keyword tagging</li>
+<li>Extensible metadata database to add custom metadata to files, e.g. rhythmbox, gedit, etc.</li>
+<li>Store First Class Objects and the Gnome 3.0 Model</li>
+</ul>
+<blockquote>
+<p>NOTE: when actively using Gnome desktop and Gnome apps, disabling the tracker may reduce functionality</p>
+</blockquote>
+<h3 id="disable-the-tracker-service">Disable the tracker service<a class="headerlink" href="#disable-the-tracker-service" title="Permanent link">λ︎</a></h3>
+<p>The tracker service can be a significant drain on computer resources as it indexes files, especially when there have been a log of changes or for a newly installed system.</p>
+<p>The tracker has many dependencies, so its not easy to remove the <code>tracker-miner-fs-3</code> package when actively using the Gnome desktop.</p>
+<p>The recommended approach is to edit the <code>.desktop</code> files and add <code>Hidden=true</code> at the end of each tracker related file and reboot the operating system.</p>
+<div class="highlight"><span class="filename">/etc/xdg/autostart/tracker-miner-fs-3.desktop</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Desktop Entry]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Name=Tracker File System Miner
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Comment=Crawls and processes files on the file system
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Exec=/usr/libexec/tracker-miner-fs-3
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Terminal=false
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Type=Application
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Categories=Utility;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>X-GNOME-Autostart-enabled=false
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>X-GNOME-HiddenUnderSystemd=false
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a># X-KDE-autostart-after=panel
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>X-KDE-StartupNotify=false
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>X-KDE-UniqueApplet=true
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>NoDisplay=true
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>OnlyShowIn=GNOME;KDE;XFCE;X-IVI;Unity;
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>X-systemd-skip=true
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>Hidden=true
+</code></pre></div>
+<p>If adding "Hiddent=true" is not sufficient, then disable the services for all users by setting them to <code>/dev/null</code> using the <code>systemctl</code> command.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>--global<span class="w"> </span>mask<span class="w"> </span>tracker-miner-fs-3.service
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>--global<span class="w"> </span>mask<span class="w"> </span>tracker-xdg-portal-3.service
+</code></pre></div>
+<p>Remove the database of indexed files from each user account on the system</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$HOME</span>/.cache/tracker*
+</code></pre></div>
+<h2 id="movie-reviews-this-week">Movie reviews this week<a class="headerlink" href="#movie-reviews-this-week" title="Permanent link">λ︎</a></h2>
 <h3 id="luck-2022">Luck - 2022<a class="headerlink" href="#luck-2022" title="Permanent link">λ︎</a></h3>
 <p><a class="glightbox" href="https://upload.wikimedia.org/wikipedia/en/6/6e/Luck_%282022%29_poster.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Luck - movie from 2022" loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/6/6e/Luck_%282022%29_poster.png" /></a></p>
 <p><a href="https://en.wikipedia.org/wiki/Luck_(2022_film)">Luck</a> is a fun animated film.  Sam is a very unlucky human who meets a very cute and lucky black cat called Bob, voiced by Sean Pegg.  I wish I was as lucky as Bob the cat.</p>
@@ -1073,7 +1136,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2024</span>
   </span>
 
     
