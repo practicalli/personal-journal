@@ -133,6 +133,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#neovim" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -832,6 +837,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#neovim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neovim
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -965,6 +987,18 @@
 <p><a href="https://80000hours.org/">80,000 hours</a> is a guide to careers that have a positive impact on the world.</p>
 <!-- more -->
 
+<h2 id="neovim">Neovim<a class="headerlink" href="#neovim" title="Permanent link">λ︎</a></h2>
+<p><a href="https://github.com/neovim/neovim/releases/tag/v0.10.3">Neovim 0.11.3 released</a>.</p>
+<p>The nvim.appimage file was downloaded from the GitHub releases page, along with the SHA256 checksum.</p>
+<p>Check the integrity of the file download</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sha256sum<span class="w"> </span>--check<span class="w"> </span>nvim.appimage.sha256sum
+</code></pre></div>
+<p>Set the <code>nvim.appimage</code> file to executable.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod<span class="w"> </span>a+x<span class="w"> </span>nvim.appimage
+</code></pre></div>
+<p>Move the nvim.appimage to the shared executable path to make available to all users, renaming to nvim.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>mv<span class="w"> </span>nvim.appimage<span class="w"> </span>/usr/local/bin/nvim
+</code></pre></div>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
