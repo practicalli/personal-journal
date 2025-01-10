@@ -1026,15 +1026,15 @@
 <p>A quick solution would be to pin <code>nvim-treesitter</code> plugin to an earlier version, such as <a href="https://github.com/nvim-treesitter/nvim-treesitter/releases/tag/v0.9.2"><code>v0.9.2</code> released on 19 January 2024</a></p>
 <div class="admonition example">
 <p class="admonition-title">Pin plugin to specific version</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="s2">&quot;nvim-treesitter/nvim-treesitter&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.9.2&quot;</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="s2">&quot;nvim-treesitter/nvim-treesitter&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.9.2&quot;</span><span class="p">,</span>
 </code></pre></div>
 </div>
 <p>A plugin can be pinned to its current version by adding <code>pin = true</code> to the plugin configuration.  No further updates will e made to the package and avoids a known issue in an new release of that plugin.</p>
 <div class="admonition example">
 <p class="admonition-title">Pin plugin true</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  <span class="s2">&quot;nvim-treesitter/nvim-treesitter&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="n">pin</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="s2">&quot;nvim-treesitter/nvim-treesitter&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nv">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 </code></pre></div>
 </div>
 <p>The long term solution is to update <code>nvim-treesitter-sexp</code> to use the new <code>kind-eq</code> in its clojure query.</p>
