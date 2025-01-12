@@ -11,7 +11,7 @@ on:
 jobs:
   changelog:
     name: Changelog Update Check
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
       - run: echo "🐧 Job running on ${{ runner.os }} server"
