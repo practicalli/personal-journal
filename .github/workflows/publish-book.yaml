@@ -24,7 +24,7 @@ permissions:
 jobs:
   publish-book:
     name: MkDocs Publish
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
       - run: echo "🐧 Job running on ${{ runner.os }} server"
@@ -39,10 +39,11 @@ jobs:
             overrides
       - run: echo "🐙 ${{ github.repository }} repository sparse-checkout to the CI runner."
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
+      # setup-python only required to use non-default python version
+      # - name: Setup Python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: 3.x
 
       - name: Cache
         uses: actions/cache@v4
