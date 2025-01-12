@@ -854,6 +854,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#digital-music" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Music
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -932,7 +941,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -961,6 +970,18 @@
       <span class="md-tag">archlinux</span>
     
   
+    
+    
+    
+      <span class="md-tag">audacity</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">opus</span>
+    
+  
 </nav>
 
 
@@ -983,7 +1004,9 @@
 
   <h1>A freezing start to a new year</h1>
 
-<p>Arch Linux recommends not using <code>pacman -Syu</code> to update all packages and today I experience why.  I can no longer login to the desktop <img alt="🤦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f926.svg" title=":facepalm:" /></p>
+<p>Organising my <a href="#digital-music">digital music</a> and audio books so they all fit nicely on my smart phone (using Opus audio format and VLC to play the music).</p>
+<p><a href="#arch-linux">Arch Linux</a> recommends not using <code>pacman -Syu</code> to update all packages and today I experience why.  I can no longer login to the desktop <img alt="🤦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f926.svg" title=":facepalm:" /> EDIT: this seems to be specific to the NWG-shell configuration, as the vanilla hyprland desktop does work.</p>
+<p>I assume this is a breaking change of hyprland that NWG-shell has not resolved.  This is another reason to start again with hyprland and build my own config (although this will be a big time sink, so can wait).</p>
 <p>Its freezing temperatures outside in London, UK at the moment, so I am trying to get outside when the sun is still shining.  The paths are slippy and so are the roads, so even if I felt up to cycling outside, then it could be quite tricky.</p>
 <!-- more -->
 
@@ -991,6 +1014,18 @@
 <p>Unless using a distribution like Manjaro then Arch Linux can require more maintenance than using a Debian package based distribution.</p>
 <p><code>pacman -Syu</code>  command happily updated all my packages and after a reboot I cannot login to the desktop anymore.  I assume this was some breaking change of hyprland that is causing the problem.</p>
 <p>Rather than use the Nwg ISO for a quicker Hyprland install, I will start from the ArchLinux ISO and at least I will have a clearer idea of what all the configuration files do and where problems could occur as Hyprland continues to evolve.</p>
+<h2 id="digital-music">Digital Music<a class="headerlink" href="#digital-music" title="Permanent link">λ︎</a></h2>
+<p>I continue to organise my digital music and audio books with a bit of <a href="https://www.audacityteam.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Audacity</a> magic where editing is required.</p>
+<p><a href="https://www.audacityteam.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Audacity</a> is an excellent linear audio editor available on all good Operating Systems.  Audacity can export edited audio directly to an encoded file format, minimising the resources needed for laruge audio files.  I export directly to the <a href="https://en.wikipedia.org/wiki/Opus_(audio_format)" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Opus audio format</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Opus_(audio_format)" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Opus audio format</a> is very efficient so produces high quality sounds with very small file sizes.  I have a very large library of music on my smart phone which I can access without an internet connection (saving battery life).</p>
+<p>Music is encoded at 96Kb/second and although not quite as good as <a href="https://en.wikipedia.org/wiki/FLAC" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Flac</a> the Opus sounds indistinguishable even through the nicest headphones I have.  Music encoded at 96Kb/second with variable bit rate are comparable to lossless formats.</p>
+<p>Audiobooks are encoded at 24 Kb/second for mono track sources and 32 Kb/second for stereo, which is perfectly good for any spoken word content and makes the files tiny (especially compared to WAV and FLAC).</p>
+<p><a class="md-button" href="https://wiki.xiph.org/Opus_Recommended_Settings" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Opus recommended encoding bit rates</a></p>
+<p><a href="https://archive.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Archive.org</a> is a great source for Creative Commons and other open music.  This week I'm listening to <a href="https://archive.org/details/NineInchNailsTheSlip24bit96khz" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> The Slip by Nine Inch Nails</a> which was added to Archive.org by Trent Razor back in 2013.</p>
+<div class="admonition tip">
+<p class="admonition-title">Archiving sounds</p>
+<p><a href="https://en.wikipedia.org/wiki/FLAC" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Flac</a> audio format is lossless so should be used for archived sounds that are going to be processed over and over again, to avoid generational losses in sound qualities from encoding to a lossy format.</p>
+</div>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
@@ -1018,7 +1053,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 10, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2025</span>
   </span>
 
     
