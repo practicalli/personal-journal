@@ -892,6 +892,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hyprland" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyprland
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hyprland">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-user-to-input-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      add user to input group
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archlinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      ArchLinux
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -970,7 +1003,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              6 min read
                             
                           </span>
                         </div>
@@ -1047,6 +1080,133 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>clojure-lsp<span class="w"> </span>rename<span class="w"> </span>--from<span class="w"> </span>gameboard.gameboard.api.scoreboard<span class="w"> </span>--to<span class="w"> </span>practicalli.gameboard.api.scores
 </code></pre></div>
 </div>
+<h2 id="hyprland">Hyprland<a class="headerlink" href="#hyprland" title="Permanent link">λ︎</a></h2>
+<p>Hyprland has already taken up a lot of time with getting the basics up and running.  It will easily take weeks and most likely months to have a rich configuration with all the eye candy I have seen.  Investing that kind of time is not valuable to me, but I would still like to have an engaing setup.</p>
+<p>There is much discussion about configuring Hyprland and lots of different community projects.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>❯<span class="w"> </span>waybar
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">(</span>waybar:27164<span class="o">)</span>:<span class="w"> </span>Gtk-WARNING<span class="w"> </span>**:<span class="w"> </span><span class="m">23</span>:35:32.704:<span class="w"> </span>Theme<span class="w"> </span>parsing<span class="w"> </span>error:<span class="w"> </span>gtk.css:6691:68:<span class="w"> </span>Invalid<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>pseudo-class
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:35:32.740<span class="o">]</span><span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>configuration<span class="w"> </span>file<span class="w"> </span>/home/practicalli/.config/waybar/config.jsonc
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:35:32.741<span class="o">]</span><span class="w"> </span><span class="o">[</span>error<span class="o">]</span><span class="w"> </span>Error<span class="w"> </span>parsing<span class="w"> </span>JSON:<span class="w"> </span>*<span class="w"> </span>Line<span class="w"> </span><span class="m">71</span>,<span class="w"> </span>Column<span class="w"> </span><span class="m">18</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span>Syntax<span class="w"> </span>error:<span class="w"> </span>value,<span class="w"> </span>object<span class="w"> </span>or<span class="w"> </span>array<span class="w"> </span>expected.
+</code></pre></div>
+<p>The error seems related to the <code>"icon-size"</code> key which had the value <code>${i_task</code> which seems incomplete structure.</p>
+<p>Chaninging <code>"icon-size"</code> to a specific icon size seems to make waybar run (at least via the command line)</p>
+<div class="highlight"><span class="filename">/home/practicalli/.config/waybar/config.jsonc</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&quot;wlr/taskbar&quot;: {
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    &quot;all-outputs&quot;: true,
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    &quot;active-first&quot;: true,
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    &quot;markup&quot;: true,
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    &quot;format&quot;: &quot;{icon}&quot;,
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    &quot;rotate&quot;: &quot;0&quot;,
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    // &quot;icon-size&quot;: ${i_task
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    &quot;icon-size&quot;: &quot;8&quot;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    },
+</code></pre></div>
+<p>The <code>waybar</code> command in a terminal runs waybar okay, although there are some warnings to review.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>❯<span class="w"> </span>waybar
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">(</span>waybar:27230<span class="o">)</span>:<span class="w"> </span>Gtk-WARNING<span class="w"> </span>**:<span class="w"> </span><span class="m">23</span>:37:28.210:<span class="w"> </span>Theme<span class="w"> </span>parsing<span class="w"> </span>error:<span class="w"> </span>gtk.css:6691:68:<span class="w"> </span>Invalid<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>pseudo-class
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.246<span class="o">]</span><span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>configuration<span class="w"> </span>file<span class="w"> </span>/home/practicalli/.config/waybar/config.jsonc
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.250<span class="o">]</span><span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>receive<span class="w"> </span>desktop<span class="w"> </span>appearance:<span class="w"> </span>GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>interface<span class="w"> </span>“org.freedesktop.portal.Settings”<span class="w"> </span>on<span class="w"> </span>object<span class="w"> </span>at<span class="w"> </span>path<span class="w"> </span>/org/freedesktop/portal/desktop
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.250<span class="o">]</span><span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Using<span class="w"> </span>CSS<span class="w"> </span>file<span class="w"> </span>/home/practicalli/.config/waybar/style.css
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.262<span class="o">]</span><span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Hyprland<span class="w"> </span>IPC<span class="w"> </span>starting
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.263<span class="o">]</span><span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Loading<span class="w"> </span>persistent<span class="w"> </span>workspaces<span class="w"> </span>from<span class="w"> </span>Waybar<span class="w"> </span>config
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.263<span class="o">]</span><span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Loading<span class="w"> </span>persistent<span class="w"> </span>workspaces<span class="w"> </span>from<span class="w"> </span>Hyprland<span class="w"> </span>workspace<span class="w"> </span>rules
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/event0 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] Can&#39;</span>t<span class="w"> </span>open<span class="w"> </span>/dev/input/event1<span class="w"> </span><span class="o">(</span>are<span class="w"> </span>you<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>group?<span class="o">)</span>:<span class="w"> </span>EACCES<span class="w"> </span>Permission<span class="w"> </span>denied
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/event2 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] Can&#39;</span>t<span class="w"> </span>open<span class="w"> </span>/dev/input/event3<span class="w"> </span><span class="o">(</span>are<span class="w"> </span>you<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>group?<span class="o">)</span>:<span class="w"> </span>EACCES<span class="w"> </span>Permission<span class="w"> </span>denied
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/event4 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] Can&#39;</span>t<span class="w"> </span>open<span class="w"> </span>/dev/input/event5<span class="w"> </span><span class="o">(</span>are<span class="w"> </span>you<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>group?<span class="o">)</span>:<span class="w"> </span>EACCES<span class="w"> </span>Permission<span class="w"> </span>denied
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/event6 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] Can&#39;</span>t<span class="w"> </span>open<span class="w"> </span>/dev/input/event7<span class="w"> </span><span class="o">(</span>are<span class="w"> </span>you<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>group?<span class="o">)</span>:<span class="w"> </span>EACCES<span class="w"> </span>Permission<span class="w"> </span>denied
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/event8 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] Can&#39;</span>t<span class="w"> </span>open<span class="w"> </span>/dev/input/event9<span class="w"> </span><span class="o">(</span>are<span class="w"> </span>you<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>group?<span class="o">)</span>:<span class="w"> </span>EACCES<span class="w"> </span>Permission<span class="w"> </span>denied
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/event10 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] Can&#39;</span>t<span class="w"> </span>open<span class="w"> </span>/dev/input/mice<span class="w"> </span><span class="o">(</span>are<span class="w"> </span>you<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>group?<span class="o">)</span>:<span class="w"> </span>EACCES<span class="w"> </span>Permission<span class="w"> </span>denied
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/mouse0 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] Can&#39;</span>t<span class="w"> </span>open<span class="w"> </span>/dev/input/event11<span class="w"> </span><span class="o">(</span>are<span class="w"> </span>you<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>group?<span class="o">)</span>:<span class="w"> </span>EACCES<span class="w"> </span>Permission<span class="w"> </span>denied
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="o">[</span><span class="m">2025</span>-01-18<span class="w"> </span><span class="m">23</span>:37:28.264<span class="o">]</span><span class="w"> </span><span class="o">[</span>warning<span class="o">]</span><span class="w"> </span>Can<span class="s1">&#39;t open /dev/input/mouse1 (are you in the input group?): EACCES Permission denied</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="s1">[2025-01-18 23:37:28.264] [warning] module keyboard-state: Disabling module &quot;keyboard-state&quot;, Failed to find keyboard device: EACCES Permission denied</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="s1">[2025-01-18 23:37:28.488] [info] Bar configured (width: 1600, height: 30) for output: LVDS-1</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="s1">** (waybar:27230): WARNING **: 23:37:28.492: Status Notifier Item with bus name &#39;</span>:1.28<span class="s1">&#39; and object path &#39;</span>/org/ayatana/NotificationItem/udiskie<span class="s1">&#39; is already registered</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="s1">** (waybar:27230): WARNING **: 23:37:28.492: Status Notifier Item with bus name &#39;</span>:1.17<span class="s1">&#39; and object path &#39;</span>/org/ayatana/NotificationItem/nm_applet<span class="s1">&#39; is already registered</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="s1">[2025-01-18 23:37:28.497] [error] Item &#39;</span>udiskie<span class="s1">&#39;: Could not find an icon named &#39;</span>drive-removable-media-usb-panel<span class="err">&#39;</span><span class="w"> </span>and<span class="w"> </span>no<span class="w"> </span>pixmap<span class="w"> </span>given.
+</code></pre></div>
+<h3 id="add-user-to-input-group">add user to input group<a class="headerlink" href="#add-user-to-input-group" title="Permanent link">λ︎</a></h3>
+<p>A user account can be added to a group using either <code>gpasswd</code> or <code>usermod</code></p>
+<div class="admonition note">
+<p class="admonition-title">Add user to existing group</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>❯<span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>input<span class="w"> </span>practicalli
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">[</span>sudo<span class="o">]</span><span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>practicalli:
+</code></pre></div>
+</div>
+<h2 id="archlinux">ArchLinux<a class="headerlink" href="#archlinux" title="Permanent link">λ︎</a></h2>
+<p>Set the local time via the command line iusing the <code>timectrl</code> command</p>
+<p>ArchLinux uses an NTP server that automatically sets the local time from a remote server (at least after installing HyDE).</p>
+<p>To manually set the time with <code>timedatectl</code> the NTP server must be disabled first.</p>
+<div class="admonition note">
+<p class="admonition-title">Disable NTP server</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>timedatectl<span class="w"> </span>set-ntp<span class="w"> </span><span class="nb">false</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Set the local time</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>timedatectl<span class="w"> </span>set-time<span class="w"> </span><span class="s2">&quot;2025-01-18 22:00:00&quot;</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">enable NTP server</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>timedatectl<span class="w"> </span>set-ntp<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Check current date</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>date
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Sat<span class="w"> </span>Jan<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">10</span>:00:09<span class="w"> </span>PM<span class="w"> </span>UTC<span class="w"> </span><span class="m">2025</span>
+</code></pre></div>
+</div>
+<details class="example">
+<summary>timedatectl --help</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>timedatectl<span class="w"> </span><span class="o">[</span>OPTIONS...<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span>...
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Query<span class="w"> </span>or<span class="w"> </span>change<span class="w"> </span>system<span class="w"> </span><span class="nb">time</span><span class="w"> </span>and<span class="w"> </span>date<span class="w"> </span>settings.
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>Commands:
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span>status<span class="w">                   </span>Show<span class="w"> </span>current<span class="w"> </span><span class="nb">time</span><span class="w"> </span>settings
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span>show<span class="w">                     </span>Show<span class="w"> </span>properties<span class="w"> </span>of<span class="w"> </span>systemd-timedated
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span>set-time<span class="w"> </span>TIME<span class="w">            </span>Set<span class="w"> </span>system<span class="w"> </span><span class="nb">time</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span>set-timezone<span class="w"> </span>ZONE<span class="w">        </span>Set<span class="w"> </span>system<span class="w"> </span><span class="nb">time</span><span class="w"> </span>zone
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span>list-timezones<span class="w">           </span>Show<span class="w"> </span>known<span class="w"> </span><span class="nb">time</span><span class="w"> </span>zones
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span>set-local-rtc<span class="w"> </span>BOOL<span class="w">       </span>Control<span class="w"> </span>whether<span class="w"> </span>RTC<span class="w"> </span>is<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span><span class="nb">time</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span>set-ntp<span class="w"> </span>BOOL<span class="w">             </span>Enable<span class="w"> </span>or<span class="w"> </span>disable<span class="w"> </span>network<span class="w"> </span><span class="nb">time</span><span class="w"> </span>synchronization
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>systemd-timesyncd<span class="w"> </span>Commands:
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">  </span>timesync-status<span class="w">          </span>Show<span class="w"> </span>status<span class="w"> </span>of<span class="w"> </span>systemd-timesyncd
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">  </span>show-timesync<span class="w">            </span>Show<span class="w"> </span>properties<span class="w"> </span>of<span class="w"> </span>systemd-timesyncd
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">  </span>ntp-servers<span class="w"> </span>INTERFACE<span class="w"> </span>SERVER…
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">                           </span>Set<span class="w"> </span>the<span class="w"> </span>interface<span class="w"> </span>specific<span class="w"> </span>NTP<span class="w"> </span>servers
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">  </span>revert<span class="w"> </span>INTERFACE<span class="w">         </span>Revert<span class="w"> </span>the<span class="w"> </span>interface<span class="w"> </span>specific<span class="w"> </span>NTP<span class="w"> </span>servers
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>Options:
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">  </span>-h<span class="w"> </span>--help<span class="w">                </span>Show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">     </span>--version<span class="w">             </span>Show<span class="w"> </span>package<span class="w"> </span>version
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">     </span>--no-pager<span class="w">            </span>Do<span class="w"> </span>not<span class="w"> </span>pipe<span class="w"> </span>output<span class="w"> </span>into<span class="w"> </span>a<span class="w"> </span>pager
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">     </span>--no-ask-password<span class="w">     </span>Do<span class="w"> </span>not<span class="w"> </span>prompt<span class="w"> </span><span class="k">for</span><span class="w"> </span>password
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">  </span>-H<span class="w"> </span>--host<span class="o">=[</span>USER@<span class="o">]</span>HOST<span class="w">    </span>Operate<span class="w"> </span>on<span class="w"> </span>remote<span class="w"> </span>host
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">  </span>-M<span class="w"> </span>--machine<span class="o">=</span>CONTAINER<span class="w">   </span>Operate<span class="w"> </span>on<span class="w"> </span><span class="nb">local</span><span class="w"> </span>container
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">     </span>--adjust-system-clock<span class="w"> </span>Adjust<span class="w"> </span>system<span class="w"> </span>clock<span class="w"> </span>when<span class="w"> </span>changing<span class="w"> </span><span class="nb">local</span><span class="w"> </span>RTC<span class="w"> </span>mode
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">     </span>--monitor<span class="w">             </span>Monitor<span class="w"> </span>status<span class="w"> </span>of<span class="w"> </span>systemd-timesyncd
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">  </span>-p<span class="w"> </span>--property<span class="o">=</span>NAME<span class="w">       </span>Show<span class="w"> </span>only<span class="w"> </span>properties<span class="w"> </span>by<span class="w"> </span>this<span class="w"> </span>name
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">  </span>-a<span class="w"> </span>--all<span class="w">                 </span>Show<span class="w"> </span>all<span class="w"> </span>properties,<span class="w"> </span>including<span class="w"> </span>empty<span class="w"> </span>ones
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">     </span>--value<span class="w">               </span>When<span class="w"> </span>showing<span class="w"> </span>properties,<span class="w"> </span>only<span class="w"> </span>print<span class="w"> </span>the<span class="w"> </span>value
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">  </span>-P<span class="w"> </span>NAME<span class="w">                  </span>Equivalent<span class="w"> </span>to<span class="w"> </span>--value<span class="w"> </span>--property<span class="o">=</span>NAME
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>See<span class="w"> </span>the<span class="w"> </span>timedatectl<span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="w"> </span>man<span class="w"> </span>page<span class="w"> </span><span class="k">for</span><span class="w"> </span>details.
+</code></pre></div>
+</details>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
@@ -1074,7 +1234,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2025</span>
   </span>
 
     
