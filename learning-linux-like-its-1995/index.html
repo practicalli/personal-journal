@@ -926,9 +926,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archlinux" class="md-nav__link">
+  <a href="#arch-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      ArchLinux
+      Arch Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arch Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-local-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set local time
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-git-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store Git SSH Key
     </span>
   </a>
   
@@ -1021,7 +1045,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              7 min read
+                              8 min read
                             
                           </span>
                         </div>
@@ -1077,6 +1101,7 @@
 <p>Arch Linux wiki pages have a huge amount of information, showing all the possible options for every piece of software and service.  This does present a dilemma of choice.</p>
 <p>Having experienced many years with Linux, I know many of the concepts and software associated with a Linux system.  I don't need to read all the options, but do find myself scrolling a lot until I find something familiar (or simple).</p>
 <p>I have an <a href="#hyprland">Arch Linux desktop using Hyprland up and running</a>, using HyDE to configure all the extra tools to make Hyprland useable as a desktop (although there are still some things to tweak and add).</p>
+<p><a href="#neovim">LSP file renaming with Neovim &amp; LSP</a> still fails using the Neovim LSP client, although it is fairly simple to rename a namespace and its corresponding file name using <code>clojure-lsp</code> command line.</p>
 <h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">λ︎</a></h2>
 <p>The goals for this month include</p>
 <ul>
@@ -1171,7 +1196,11 @@
 </code></pre></div>
 </div>
 <p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/os/hyprland/hyprland-hyde-with-waybar.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Hyprland configured with HyDE after fixing waybar configuration" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/os/hyprland/hyprland-hyde-with-waybar.png?raw=true" /></a></p>
-<h2 id="archlinux">ArchLinux<a class="headerlink" href="#archlinux" title="Permanent link">λ︎</a></h2>
+<h2 id="arch-linux">Arch Linux<a class="headerlink" href="#arch-linux" title="Permanent link">λ︎</a></h2>
+<p>Arch Linux has many subtle differences from Debian Linux, but most differences were fairly easy to find by an internet search.</p>
+<p><a href="#set-local-time">Setting local time</a> is almost the same as Debian, except  Arch Linux uses <code>timedatectl</code> command rather than <code>systemctl</code> on Debian.</p>
+<p><a href="#store-git-ssh-key">Storing a Git SSH key</a> is more challenging (as I am not running a Gnome Destop) as there is no keyring.  Currently the agent needs to be started and then the key added to the agent.</p>
+<h3 id="set-local-time">Set local time<a class="headerlink" href="#set-local-time" title="Permanent link">λ︎</a></h3>
 <p>Set the local time via the command line iusing the <code>timectrl</code> command</p>
 <p>ArchLinux uses an NTP server that automatically sets the local time from a remote server (at least after installing HyDE).</p>
 <p>To manually set the time with <code>timedatectl</code> the NTP server must be disabled first.</p>
@@ -1235,6 +1264,18 @@
 <a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>See<span class="w"> </span>the<span class="w"> </span>timedatectl<span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="w"> </span>man<span class="w"> </span>page<span class="w"> </span><span class="k">for</span><span class="w"> </span>details.
 </code></pre></div>
 </details>
+<h2 id="store-git-ssh-key">Store Git SSH Key<a class="headerlink" href="#store-git-ssh-key" title="Permanent link">λ︎</a></h2>
+<p>Start the SSH agent</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ssh-agent
+</code></pre></div>
+<p>Set the SSH agent connection details in the current terminal shell</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ssh-agent<span class="k">)</span>
+</code></pre></div>
+<p>Add the key to the agent which will prompt for the passphrase of the SSH key.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ssh-add<span class="w"> </span>~/.ssh/engineering
+</code></pre></div>
+<p>Command that use the SSH key will now retrieve the details from the agent, avoiding the need to enter the passphrase again.</p>
+<p>The current limitation is that this needs to be done each time a terminal session is run.  Ideally the SSH key would be registered in the desktop keyring and the passphrase automatically unlocked when the user logs in.</p>
 <h2 id="health">Health<a class="headerlink" href="#health" title="Permanent link">λ︎</a></h2>
 <p>My health took more of a knock this week as I am finding it very difficult to walk.  I've had pain in my right hip for a couple of weeks and on Friday I started walking and felt a sharp pain.  Every step with my right leg is painful and going up and down stairs is particularly painful.</p>
 <p>The hip pain coupled with my left knee pain significantly limiting my ability to exercise this week.</p>
