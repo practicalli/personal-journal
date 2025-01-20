@@ -877,6 +877,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hyprland" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyprland
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -955,7 +964,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -1018,6 +1027,31 @@ lsp-gitpod is one example of a pre-configured Emacs setup in Gitpod, although an
 <p>Next Journal is relevant for a data science specific workshop and a custom environment can be created and access through the web.</p>
 <p>I assume both these could take some time to configure and test, although once one configuration has been created it should be reusable and easier to create other custom config.</p>
 <p>Limitations on free use of Gitpod and Next Journal should be investigated.</p>
+<h2 id="hyprland">Hyprland<a class="headerlink" href="#hyprland" title="Permanent link">λ︎</a></h2>
+<p>An early annoyance with Hyprland (before using HyDE) was using the kitty terminal. Text in the kitty app was too close to the hyprland window boarder.</p>
+<p>HyDE adds a <code>~/.config/kitty/hyde.conf</code> configuration file that includes a <code>window_padding_width</code> key that sets a very wide margin of <code>25</code> by default.</p>
+<p>The padding looks a little strange as it doesnt match with the everforest them I currently use with Neovim.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/os/hyprland/hyprland-hyde-kitty-padding-large.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Kitty terminal padding in Hyprland with HyDE configuration" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/os/hyprland/hyprland-hyde-kitty-padding-large.png?raw=true" /></a></p>
+<p>I am experimenting with a smaller padding, although the ideal approach would be to match themes between HyDE, Kitty and Neovim.</p>
+<div class="admonition example">
+<p class="admonition-title">Kitty config added by HyDE</p>
+<div class="highlight"><span class="filename">~/.config/kitty/hyde.conf</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># This is the configuration file for kitty terminal
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># For more information, see https://sw.kovidgoyal.net/kitty/conf.html
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># For your custom configurations, put it in ./kitty.conf
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>font_family CaskaydiaCove Nerd Font Mono
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>bold_font auto
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>italic_font auto
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>bold_italic_font auto
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>enable_audio_bell no
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>font_size 9.0
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a># window_padding_width 25
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>window_padding_width 12
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>include theme.conf
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>#background_opacity 0.60
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>#hide_window_decorations yes
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>#confirm_os_window_close 0
+</code></pre></div>
+</div>
 <hr />
 <p>Thank you.</p>
 <p><a class="md-button" href="https://practical.li" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practical.li Website</a></p>
